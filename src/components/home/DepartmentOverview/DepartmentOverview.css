@@ -1,0 +1,295 @@
+.department-overview {
+  position: relative;
+
+  padding: 110px 0;
+
+  overflow: hidden;
+
+  background: #f7f6f9;
+}
+
+.department-container {
+  width: min(1180px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.department-heading {
+  max-width: 720px;
+
+  margin-bottom: 55px;
+}
+
+.department-heading > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #7a2fe3;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.department-heading > span::before {
+  content: "";
+
+  width: 25px;
+  height: 2px;
+
+  background: #7a2fe3;
+}
+
+.department-heading h2 {
+  margin: 14px 0 0;
+
+  color: #211a28;
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.045em;
+}
+
+.department-heading h2 strong {
+  display: block;
+
+  color: #7a2fe3;
+
+  font-weight: 850;
+}
+
+.department-heading p {
+  max-width: 600px;
+
+  margin-top: 20px;
+
+  color: #77717d;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Grid */
+
+.department-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+/* Card */
+
+.department-card {
+  position: relative;
+
+  overflow: hidden;
+
+  min-height: 450px;
+
+  display: flex;
+  flex-direction: column;
+
+  border: 1px solid rgba(35,25,45,0.08);
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 50px rgba(37,20,50,0.06);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.department-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 30px 70px rgba(37,20,50,0.12);
+}
+
+/* Image */
+
+.department-image {
+  position: relative;
+
+  height: 210px;
+
+  overflow: hidden;
+
+  background: #26162f;
+}
+
+.department-image::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent 50%,
+      rgba(20,10,28,0.65)
+    );
+}
+
+.department-image img {
+  object-fit: cover;
+
+  transition:
+    transform 0.7s ease;
+}
+
+.department-card:hover .department-image img {
+  transform: scale(1.07);
+}
+
+.department-number {
+  position: absolute;
+
+  z-index: 2;
+
+  top: 15px;
+  right: 15px;
+
+  padding: 6px 9px;
+
+  border: 1px solid rgba(255,255,255,0.25);
+
+  border-radius: 999px;
+
+  background: rgba(20,10,28,0.4);
+
+  backdrop-filter: blur(8px);
+
+  color: #ffffff;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+/* Content */
+
+.department-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  padding: 25px;
+}
+
+.department-card-content h3 {
+  margin: 0;
+
+  color: #211a28;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  letter-spacing: -0.02em;
+}
+
+.department-card-content p {
+  margin: 13px 0 20px;
+
+  color: #77717d;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  display: -webkit-box;
+  line-clamp: 5;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+.department-link {
+  margin-top: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #7a2fe3;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1em;
+}
+
+.department-link span {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(122,47,227,0.08);
+
+  font-size: 17px;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.department-link:hover span {
+  transform: translate(3px,-3px);
+
+  background: #7a2fe3;
+
+  color: #ffffff;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+  .department-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .department-overview {
+    padding: 75px 0;
+  }
+
+  .department-container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .department-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .department-card {
+    min-height: 420px;
+  }
+}

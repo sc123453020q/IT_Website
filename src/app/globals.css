@@ -1,0 +1,267 @@
+@import "tailwindcss";
+
+/* =========================================================
+   DESIGN TOKENS
+   ========================================================= */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --transition-fast: 180ms ease;
+  --transition-normal: 300ms ease;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(122, 47, 227, 0.25);
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   PAGE BACKGROUNDS
+   Existing visual identity preserved
+   ========================================================= */
+
+.bg-home {
+  background: #ad5389;
+  background: -webkit-linear-gradient(to right, #3c1053, #ad5389);
+  background: linear-gradient(to right, #3c1053, #ad5389);
+}
+
+.bg-about {
+  background: #c31432;
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  background: linear-gradient(to right, #240b36, #c31432);
+}
+
+.bg-academics {
+  background: #43c6ac;
+  background: -webkit-linear-gradient(to right, #191654, #43c6ac);
+  background: linear-gradient(to right, #191654, #43c6ac);
+}
+
+.bg-faculty {
+  background: #c33764;
+  background: -webkit-linear-gradient(to right, #1d2671, #c33764);
+  background: linear-gradient(to right, #1d2671, #c33764);
+}
+
+.bg-innovation_initiatives {
+  background: #0f0c29;
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  );
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  );
+}
+
+.bg-land_students {
+  background: #1a2980;
+  background: -webkit-linear-gradient(to right, #26d0ce, #1a2980);
+  background: linear-gradient(to right, #26d0ce, #1a2980);
+}
+
+.bg-default {
+  background: linear-gradient(90deg, #f0f0f0, #d3d3d3);
+}
+
+/* =========================================================
+   CALENDAR
+   ========================================================= */
+
+.react-calendar {
+  width: 100% !important;
+  border: none !important;
+  font-family: "Inter", sans-serif !important;
+}
+
+.react-calendar__navigation__label__labelText {
+  font-weight: 600;
+}
+
+.react-calendar__tile--active {
+  background-color: #c3ebfa !important;
+  color: #000 !important;
+}
+
+.react-calendar__tile.highlight {
+  background-color: #cfceff;
+  border: 1px solid rgb(78, 14, 14);
+}
+
+/* =========================================================
+   REACT BIG CALENDAR
+   ========================================================= */
+
+.rbc-btn-group:first-child {
+  display: none !important;
+}
+
+.rbc-toolbar-label {
+  padding: 0 20px !important;
+  text-align: right !important;
+}
+
+.rbc-btn-group:last-child {
+  font-size: 13px !important;
+}
+
+.rbc-btn-group:last-child button {
+  margin-left: 2px !important;
+  border: none !important;
+  background-color: #f1f0ff !important;
+}
+
+.rbc-toolbar button.rbc-active {
+  background-color: #dbdafe !important;
+  box-shadow: none !important;
+}
+
+.rbc-time-view {
+  border-color: #eee !important;
+}
+
+.rbc-time-header {
+  display: none !important;
+}
+
+.rbc-time-content {
+  border: none !important;
+}
+
+.rbc-time-gutter.rbc-time-column {
+  font-size: 12px !important;
+}
+
+.rbc-time-gutter.rbc-time-column .rbc-timeslot-group {
+  padding: 0 20px !important;
+}
+
+.rbc-timeslot-group {
+  background-color: #f7fdff !important;
+}
+
+.rbc-day-slot {
+  font-size: 14px !important;
+}
+
+.rbc-event {
+  width: 99% !important;
+  margin: 10px !important;
+  padding: 10px !important;
+  border: none !important;
+  color: #000 !important;
+}
+
+.rbc-event:nth-child(1) {
+  background-color: #e2f8ff !important;
+}
+
+.rbc-event:nth-child(2) {
+  background-color: #fefce8 !important;
+}
+
+.rbc-event:nth-child(3) {
+  background-color: #f2f1ff !important;
+}
+
+.rbc-event:nth-child(4) {
+  background-color: #fdf2fb !important;
+}
+
+.rbc-event:nth-child(5) {
+  background-color: #e2f8ff !important;
+}
+
+.rbc-event:nth-child(6) {
+  background-color: #fefce8 !important;
+}
+
+.rbc-event:nth-child(7) {
+  background-color: #f2f1ff !important;
+}
+
+.rbc-event:nth-child(8) {
+  background-color: #fdf2fb !important;
+}
+
+.rbc-event-label {
+  margin-bottom: 5px;
+  color: gray !important;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (min-width: 96rem) {
+  .custom-class-card {
+    width: 46% !important;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,134 @@
+.magazine-section {
+  padding: 100px 6%;
+  background: #ffffff;
+}
+
+.magazine-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.magazine-heading {
+  max-width: 800px;
+  margin-bottom: 55px;
+}
+
+.magazine-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #6d28d9;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.magazine-eyebrow span {
+  width: 35px;
+  height: 2px;
+  background: #6d28d9;
+}
+
+.magazine-heading h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -2px;
+  color: #111;
+}
+
+.magazine-heading h1 span {
+  color: #6d28d9;
+}
+
+.magazine-heading p {
+  margin-top: 22px;
+  color: #707070;
+  line-height: 1.8;
+}
+
+.magazine-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.magazine-card {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  min-height: 260px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #e7def7;
+  background: #faf8ff;
+  transition: 0.35s ease;
+}
+
+.magazine-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 45px rgba(109, 40, 217, 0.1);
+}
+
+.magazine-year {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 35px;
+  background: #6d28d9;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.magazine-content {
+  padding: 35px;
+}
+
+.magazine-content h2 {
+  margin: 0 0 15px;
+  color: #171717;
+  font-size: 23px;
+}
+
+.magazine-content p {
+  margin: 0 0 25px;
+  color: #707070;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.magazine-content button {
+  border: none;
+  background: transparent;
+  color: #6d28d9;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.magazine-content button span {
+  margin-left: 8px;
+  font-size: 17px;
+}
+
+@media (max-width: 750px) {
+  .magazine-section {
+    padding: 70px 20px;
+  }
+
+  .magazine-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .magazine-card {
+    grid-template-columns: 80px 1fr;
+  }
+
+  .magazine-content {
+    padding: 25px;
+  }
+}

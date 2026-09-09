@@ -1,0 +1,603 @@
+/* =========================================================
+   IEM IT - MODERN NAVBAR
+   ========================================================= */
+
+.site-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  border-bottom: 1px solid rgba(60, 16, 83, 0.08);
+
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  box-shadow: 0 4px 20px rgba(30, 10, 45, 0.05);
+}
+
+
+/* =========================================================
+   NAVBAR CONTAINER
+   ========================================================= */
+
+.navbar-container {
+  width: min(1450px, calc(100% - 30px));
+
+  min-height: 78px;
+
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+
+/* =========================================================
+   BRAND
+   ========================================================= */
+
+.navbar-brand {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  flex-shrink: 0;
+
+  text-decoration: none;
+
+  transition: transform 0.25s ease;
+}
+
+.navbar-brand:hover {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   IEM LOGO
+   ========================================================= */
+
+.brand-logo {
+  width: 92px;
+  height: 66px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: transparent;
+
+  overflow: hidden;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   BRAND CONTENT
+   ========================================================= */
+
+.brand-content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  line-height: 1;
+}
+
+
+/* =========================================================
+   IEM IT
+   ========================================================= */
+
+.brand-title {
+  color: #24132e;
+
+  font-size: 21px;
+
+  font-weight: 800;
+
+  letter-spacing: -0.025em;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   INFORMATION TECHNOLOGY
+   ========================================================= */
+
+.brand-subtitle {
+  margin-top: 6px;
+
+  color: #817787;
+
+  font-size: 8px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
+
+.desktop-nav {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: flex-end;
+
+  gap: 2px;
+
+  margin-left: auto;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+   ========================================================= */
+
+.nav-link {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 11px;
+
+  border-radius: 10px;
+
+  color: #5c5362;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.nav-link:hover {
+  color: #70258f;
+
+  background: rgba(122, 47, 227, 0.07);
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ACTIVE PAGE
+   ========================================================= */
+
+.nav-link.active {
+  color: #ffffff;
+
+  background: linear-gradient(
+    135deg,
+    #3c1053,
+    #7a2fe3
+  );
+
+  box-shadow:
+    0 6px 16px rgba(122, 47, 227, 0.18);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.menu-toggle {
+  display: none;
+
+  position: relative;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background: rgba(122, 47, 227, 0.08);
+
+  cursor: pointer;
+}
+
+
+/* Hamburger lines */
+
+.menu-toggle span {
+  position: absolute;
+
+  left: 50%;
+
+  width: 20px;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background: #70258f;
+
+  transform: translateX(-50%);
+
+  transition:
+    top 0.3s ease,
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.menu-toggle span:nth-child(1) {
+  top: 13px;
+}
+
+.menu-toggle span:nth-child(2) {
+  top: 20px;
+}
+
+.menu-toggle span:nth-child(3) {
+  top: 27px;
+}
+
+
+/* =========================================================
+   HAMBURGER TO X
+   ========================================================= */
+
+.menu-toggle.open span:nth-child(1) {
+  top: 20px;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  top: 20px;
+
+  transform:
+    translateX(-50%)
+    rotate(-45deg);
+}
+
+
+/* =========================================================
+   MOBILE MENU
+   ========================================================= */
+
+.mobile-menu {
+  display: none;
+
+  width: 100%;
+
+  max-height: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  border-top: 1px solid transparent;
+
+  transition:
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.mobile-menu.show {
+  max-height: 600px;
+
+  opacity: 1;
+
+  border-top:
+    1px solid rgba(60, 16, 83, 0.08);
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
+.mobile-nav {
+  width: min(
+    1280px,
+    calc(100% - 30px)
+  );
+
+  margin: 0 auto;
+
+  padding: 10px 0 16px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+
+/* Mobile links */
+
+.mobile-nav-link {
+  display: grid;
+
+  grid-template-columns:
+    35px 1fr 30px;
+
+  align-items: center;
+
+  padding: 13px 14px;
+
+  border-radius: 11px;
+
+  color: #514858;
+
+  text-decoration: none;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mobile-nav-link:hover {
+  color: #70258f;
+
+  background:
+    rgba(122, 47, 227, 0.07);
+
+  transform: translateX(3px);
+}
+
+.mobile-nav-link.active {
+  color: #ffffff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #3c1053,
+      #7a2fe3
+    );
+}
+
+
+/* =========================================================
+   MOBILE NUMBER
+   ========================================================= */
+
+.mobile-number {
+  color: #9b8da5;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.08em;
+}
+
+.mobile-nav-link.active .mobile-number {
+  color:
+    rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================================
+   MOBILE LABEL
+   ========================================================= */
+
+.mobile-label {
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   MOBILE ARROW
+   ========================================================= */
+
+.mobile-arrow {
+  text-align: right;
+
+  font-size: 18px;
+
+  opacity: 0.5;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.mobile-nav-link:hover .mobile-arrow {
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+  .navbar-container {
+    width:
+      calc(100% - 24px);
+
+    gap: 12px;
+  }
+
+  .brand-logo {
+    width: 82px;
+    height: 60px;
+  }
+
+  .brand-title {
+    font-size: 20px;
+  }
+
+  .brand-subtitle {
+    font-size: 7px;
+  }
+
+  .desktop-nav {
+    gap: 0;
+  }
+
+  .nav-link {
+    padding:
+      9px 8px;
+
+    font-size: 13px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .navbar-container {
+    min-height: 72px;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .brand-logo {
+    width: 78px;
+    height: 56px;
+  }
+
+  .brand-title {
+    font-size: 20px;
+  }
+
+  .brand-subtitle {
+    font-size: 8px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .navbar-container {
+    width:
+      calc(100% - 18px);
+
+    min-height: 68px;
+  }
+
+  .navbar-brand {
+    gap: 9px;
+  }
+
+  .brand-logo {
+    width: 68px;
+    height: 50px;
+  }
+
+  .brand-title {
+    font-size: 18px;
+  }
+
+  .brand-subtitle {
+    margin-top: 5px;
+
+    font-size: 7px;
+
+    letter-spacing:
+      0.08em;
+  }
+
+  .menu-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .site-navbar,
+  .navbar-brand,
+  .nav-link,
+  .mobile-nav-link,
+  .mobile-menu,
+  .menu-toggle span,
+  .mobile-arrow {
+    transition: none;
+  }
+}

@@ -1,0 +1,516 @@
+/* =========================================================
+   ACADEMICS PAGE
+========================================================= */
+
+.academics-page {
+  background: #ffffff;
+  color: #21152e;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.academics-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.academics-intro {
+  position: relative;
+  overflow: hidden;
+
+  padding: 75px 0 65px;
+
+  background:
+    radial-gradient(
+      circle at 90% 10%,
+      rgba(168, 85, 247, 0.12),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 10% 90%,
+      rgba(124, 58, 237, 0.08),
+      transparent 30%
+    ),
+    #faf9fd;
+}
+
+.academics-intro::after {
+  content: "";
+
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -160px;
+  bottom: -190px;
+
+  border: 1px solid rgba(124, 58, 237, 0.1);
+
+  border-radius: 50%;
+}
+
+.academics-eyebrow {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-bottom: 17px;
+
+  font-size: 0.75rem;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+
+  color: #7c3aed;
+}
+
+.academics-eyebrow-line {
+  width: 32px;
+  height: 2px;
+
+  background: #7c3aed;
+
+  border-radius: 999px;
+}
+
+.academics-intro h1 {
+  max-width: 850px;
+
+  margin: 0;
+
+  font-size: clamp(3rem, 6vw, 5.2rem);
+
+  line-height: 0.95;
+
+  font-weight: 900;
+
+  letter-spacing: -0.055em;
+
+  color: #171122;
+}
+
+.academics-intro h1 span {
+  display: block;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #a855f7
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.academics-intro p {
+  max-width: 680px;
+
+  margin: 25px 0 0;
+
+  font-size: 16px;
+
+  line-height: 1.7;
+
+  color: #6b6475;
+}
+
+
+/* =========================================================
+   OPTIONS SECTION
+========================================================= */
+
+.academics-options {
+  padding: 75px 0 90px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+========================================================= */
+
+.academics-section-heading {
+  margin-bottom: 42px;
+}
+
+.academics-section-heading span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+
+  color: #7c3aed;
+}
+
+.academics-section-heading h2 {
+  margin: 0;
+
+  font-size: clamp(2.4rem, 5vw, 4rem);
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -0.05em;
+
+  color: #171122;
+}
+
+.academics-section-heading h2 strong {
+  margin-left: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #a855f7
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.academics-section-heading p {
+  max-width: 600px;
+
+  margin: 15px 0 0;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: #7b7284;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.academics-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.academic-card {
+  position: relative;
+
+  min-height: 250px;
+
+  padding: 27px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  text-align: left;
+
+  border: 1px solid #ebe5f3;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 30px rgba(42, 20, 70, 0.055);
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.academic-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #c9a9f7;
+
+  box-shadow:
+    0 20px 40px rgba(88, 45, 140, 0.12);
+}
+
+.academic-card-active {
+  border-color: #9b6be0;
+
+  box-shadow:
+    0 20px 45px rgba(88, 45, 140, 0.15);
+}
+
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.academic-card-number {
+  position: absolute;
+
+  top: 18px;
+  right: 21px;
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  color: #aaa1b3;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.academic-card-icon {
+  width: 58px;
+  height: 58px;
+
+  margin-bottom: 23px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: #f5effc;
+
+  overflow: hidden;
+}
+
+.academic-card-icon img {
+  width: 42px;
+  height: 42px;
+
+  object-fit: contain;
+}
+
+.academic-card-icon span {
+  font-size: 0.9rem;
+
+  font-weight: 900;
+
+  color: #7c3aed;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.academic-card-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.academic-card-content h3 {
+  margin: 0 0 8px;
+
+  font-size: 1.35rem;
+
+  font-weight: 800;
+
+  color: #21152e;
+}
+
+.academic-card-content p {
+  margin: 0;
+
+  max-width: 300px;
+
+  font-size: 0.9rem;
+
+  line-height: 1.6;
+
+  color: #817889;
+}
+
+.academic-card-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 19px;
+
+  font-size: 0.76rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.05em;
+
+  color: #7c3aed;
+}
+
+.academic-card-link span {
+  transition: transform 0.25s ease;
+}
+
+.academic-card:hover .academic-card-link span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.academic-card-arrow {
+  position: absolute;
+
+  right: 22px;
+  bottom: 19px;
+
+  font-size: 1.15rem;
+
+  color: #c2b4cf;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.academic-card:hover .academic-card-arrow {
+  color: #7c3aed;
+
+  transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   ACCENT
+========================================================= */
+
+.academic-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #a855f7
+  );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.3s ease;
+}
+
+.academic-card:hover::after,
+.academic-card-active::after {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .academics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .academics-intro {
+    padding: 60px 0;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .academics-container {
+    width: calc(100% - 28px);
+  }
+
+  .academics-intro {
+    padding: 50px 0 45px;
+  }
+
+  .academics-intro h1 {
+    font-size: clamp(2.6rem, 12vw, 4rem);
+  }
+
+  .academics-intro p {
+    font-size: 14px;
+  }
+
+  .academics-options {
+    padding: 55px 0 65px;
+  }
+
+  .academics-section-heading {
+    margin-bottom: 32px;
+  }
+
+  .academics-section-heading h2 {
+    font-size: 2.5rem;
+  }
+
+  .academics-section-heading h2 strong {
+    display: block;
+    margin-left: 0;
+    margin-top: 4px;
+  }
+
+  .academics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .academic-card {
+    min-height: 225px;
+
+    padding: 22px;
+  }
+}

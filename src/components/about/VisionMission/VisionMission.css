@@ -1,0 +1,155 @@
+.vision-mission {
+  padding: 110px 20px;
+  background: #f7f8fc;
+  overflow: hidden;
+}
+
+.vision-mission__container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* Header */
+
+.vision-mission__header {
+  max-width: 750px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.vision-mission__header span {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #7a2fe3;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+}
+
+.vision-mission__header h2 {
+  margin: 0;
+  color: #172554;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+
+.vision-mission__header p {
+  margin: 18px auto 0;
+  color: #64748b;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Blocks */
+
+.vision-mission__block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+  margin-bottom: 100px;
+}
+
+.vision-mission__block:last-child {
+  margin-bottom: 0;
+}
+
+.vision-mission__content {
+  position: relative;
+}
+
+.vision-mission__label {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #7a2fe3;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.vision-mission__content h3 {
+  margin: 0 0 24px;
+  color: #172554;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.vision-mission__content p {
+  margin-bottom: 18px;
+  color: #475569;
+  font-size: 16px;
+  line-height: 1.85;
+  text-align: left;
+}
+
+/* Image */
+
+.vision-mission__image {
+  position: relative;
+}
+
+.vision-mission__image::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 5%;
+  top: 8%;
+  border-radius: 30px;
+  background: #7a2fe3;
+  opacity: 0.12;
+  transform: rotate(4deg);
+}
+
+.vision-mission__image img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 26px;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.16);
+  transition: transform 0.4s ease;
+}
+
+.vision-mission__image:hover img {
+  transform: translateY(-6px);
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .vision-mission {
+    padding: 75px 16px;
+  }
+
+  .vision-mission__header {
+    margin-bottom: 50px;
+  }
+
+  .vision-mission__block,
+  .vision-mission__block--reverse {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    margin-bottom: 70px;
+  }
+
+  .vision-mission__block--reverse .vision-mission__image {
+    order: 1;
+  }
+
+  .vision-mission__block--reverse .vision-mission__content {
+    order: 2;
+  }
+
+  .vision-mission__image img {
+    height: 300px;
+  }
+
+  .vision-mission__content p {
+    font-size: 14px;
+  }
+}

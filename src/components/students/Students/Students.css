@@ -1,0 +1,279 @@
+.students-section {
+  width: 100%;
+  background: #f7f7fb;
+  padding: 90px 20px 110px;
+  overflow: hidden;
+}
+
+.students-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.students-heading {
+  max-width: 760px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.students-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  color: #7c3aed;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+
+  margin-bottom: 18px;
+}
+
+.students-eyebrow-line {
+  width: 35px;
+  height: 2px;
+  background: #7c3aed;
+  display: inline-block;
+}
+
+.students-heading h1 {
+  margin: 0;
+
+  color: #171322;
+
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.98;
+  letter-spacing: -2px;
+  font-weight: 800;
+}
+
+.students-heading h1 span {
+  display: block;
+  color: #7c3aed;
+}
+
+.students-heading p {
+  max-width: 650px;
+  margin: 25px auto 0;
+
+  color: #686475;
+
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 26px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.student-feature-card {
+  position: relative;
+
+  display: block;
+
+  background: #ffffff;
+
+  border: 1px solid #ebe8f2;
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+
+  box-shadow: 0 10px 35px rgba(42, 25, 76, 0.06);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.student-feature-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #d8c9f5;
+
+  box-shadow: 0 22px 55px rgba(92, 53, 145, 0.14);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.student-card-image {
+  position: relative;
+
+  width: 100%;
+  height: 270px;
+
+  overflow: hidden;
+}
+
+.student-card-image img {
+  object-fit: cover;
+
+  transition: transform 0.6s ease;
+}
+
+.student-feature-card:hover .student-card-image img {
+  transform: scale(1.06);
+}
+
+.student-card-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(20, 12, 38, 0.72),
+      rgba(20, 12, 38, 0.05)
+    );
+}
+
+.student-card-number {
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  color: #6d28d9;
+
+  font-size: 13px;
+  font-weight: 800;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.student-card-content {
+  padding: 28px 30px 30px;
+}
+
+.student-card-content h2 {
+  margin: 0 0 12px;
+
+  color: #1d1828;
+
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 750;
+
+  transition: color 0.3s ease;
+}
+
+.student-feature-card:hover .student-card-content h2 {
+  color: #7c3aed;
+}
+
+.student-card-content p {
+  margin: 0;
+
+  color: #777181;
+
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.student-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 22px;
+
+  color: #7c3aed;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.student-card-link span {
+  font-size: 20px;
+
+  transition: transform 0.3s ease;
+}
+
+.student-feature-card:hover .student-card-link span {
+  transform: translateX(6px);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .students-section {
+    padding: 70px 18px 80px;
+  }
+
+  .students-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .students-heading {
+    margin-bottom: 45px;
+  }
+
+  .student-card-image {
+    height: 250px;
+  }
+}
+
+@media (max-width: 500px) {
+  .students-section {
+    padding: 55px 14px 65px;
+  }
+
+  .students-heading h1 {
+    font-size: 2.6rem;
+    letter-spacing: -1.5px;
+  }
+
+  .students-heading p {
+    font-size: 14px;
+  }
+
+  .student-card-image {
+    height: 220px;
+  }
+
+  .student-card-content {
+    padding: 23px;
+  }
+
+  .student-card-content h2 {
+    font-size: 21px;
+  }
+}

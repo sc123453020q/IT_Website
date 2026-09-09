@@ -1,0 +1,582 @@
+/* =========================================================
+   CURRICULUM
+========================================================= */
+
+.curriculum-section {
+  padding: 80px 0 100px;
+
+  background: #faf9fd;
+
+  scroll-margin-top: 80px;
+}
+
+.curriculum-container {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.curriculum-heading {
+  max-width: 700px;
+
+  margin: 0 auto 40px;
+
+  text-align: center;
+}
+
+.curriculum-eyebrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 15px;
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+
+  color: #7c3aed;
+}
+
+.curriculum-eyebrow span {
+  width: 30px;
+  height: 2px;
+
+  background: #7c3aed;
+
+  border-radius: 999px;
+}
+
+.curriculum-heading h2 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 4rem);
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -0.05em;
+
+  color: #171122;
+}
+
+.curriculum-heading h2 strong {
+  margin-left: 10px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #a855f7
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.curriculum-heading p {
+  margin: 17px auto 0;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+
+  color: #7b7284;
+}
+
+
+/* =========================================================
+   TABS
+========================================================= */
+
+.curriculum-tabs {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+}
+
+.curriculum-tab {
+  padding: 12px 25px;
+
+  border: 1px solid #e5dcef;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: #665c70;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.05em;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.curriculum-tab:hover {
+  transform: translateY(-2px);
+
+  border-color: #c9a9f7;
+}
+
+.curriculum-tab.active {
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #9b5de5
+  );
+
+  border-color: #7c3aed;
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 24px rgba(124, 58, 237, 0.2);
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.curriculum-card {
+  margin-bottom: 25px;
+
+  overflow: hidden;
+
+  border: 1px solid #e6dfed;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 40px rgba(42, 20, 70, 0.06);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.curriculum-card-header {
+  padding: 22px 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #eee8f5;
+}
+
+.curriculum-card-header span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+
+  color: #7c3aed;
+}
+
+.curriculum-card-header h3 {
+  margin: 0;
+
+  font-size: 1.3rem;
+
+  font-weight: 800;
+
+  color: #21152e;
+}
+
+.curriculum-scroll {
+  font-size: 0.7rem !important;
+
+  color: #a198aa !important;
+
+  letter-spacing: 0 !important;
+
+  margin: 0 !important;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.curriculum-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.curriculum-table {
+  width: 100%;
+
+  min-width: 1050px;
+
+  border-collapse: collapse;
+
+  font-size: 12px;
+}
+
+.curriculum-table th {
+  padding: 13px 10px;
+
+  background: #f4edfb;
+
+  border: 1px solid #e5dcef;
+
+  color: #5b21b6;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  text-align: center;
+
+  white-space: nowrap;
+}
+
+.curriculum-table td {
+  padding: 12px 9px;
+
+  border: 1px solid #eee8f5;
+
+  text-align: center;
+
+  line-height: 1.4;
+
+  color: #5f5866;
+
+  background: #ffffff;
+}
+
+.curriculum-even-row td {
+  background: #ffffff;
+}
+
+.curriculum-odd-row td {
+  background: #fcfaff;
+}
+
+.curriculum-table tbody tr:hover td {
+  background: #f6f0fc;
+}
+
+
+/* =========================================================
+   SECTION ROWS
+========================================================= */
+
+.curriculum-section-row td {
+  padding: 13px;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #9b5de5
+  ) !important;
+
+  color: #ffffff !important;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.05em;
+}
+
+.curriculum-section-cell {
+  color: #ffffff !important;
+}
+
+
+/* =========================================================
+   TOTAL ROW
+========================================================= */
+
+.curriculum-total-row td {
+  background: #f0e7fa !important;
+
+  color: #5b21b6;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   EMPTY
+========================================================= */
+
+.curriculum-empty {
+  padding: 50px 30px;
+
+  margin-bottom: 25px;
+
+  text-align: center;
+
+  border: 1px solid #e6dfed;
+
+  border-radius: 20px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 35px rgba(42, 20, 70, 0.05);
+}
+
+.curriculum-empty-number {
+  margin-bottom: 15px;
+
+  font-size: 2.5rem;
+
+  font-weight: 900;
+
+  color: #7c3aed;
+
+  opacity: 0.35;
+}
+
+.curriculum-empty h3 {
+  margin: 0 0 8px;
+
+  font-size: 1.25rem;
+
+  color: #21152e;
+}
+
+.curriculum-empty p {
+  max-width: 550px;
+
+  margin: 0 auto;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  color: #817889;
+}
+
+
+/* =========================================================
+   SYLLABUS
+========================================================= */
+
+.syllabus-card {
+  padding: 22px 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border: 1px solid #e2d9eb;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7f1ff,
+      #ffffff
+    );
+}
+
+.syllabus-content {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+}
+
+.syllabus-icon {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 13px;
+
+  background: #7c3aed;
+
+  color: #ffffff;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.05em;
+}
+
+.syllabus-content span {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-size: 0.65rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  color: #7c3aed;
+}
+
+.syllabus-content h3 {
+  margin: 0 0 4px;
+
+  font-size: 1.15rem;
+
+  font-weight: 800;
+
+  color: #21152e;
+}
+
+.syllabus-content p {
+  margin: 0;
+
+  font-size: 13px;
+
+  color: #817889;
+}
+
+.syllabus-button {
+  flex-shrink: 0;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 11px 17px;
+
+  border-radius: 10px;
+
+  background: #21152e;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.syllabus-button:hover {
+  background: #7c3aed;
+
+  transform: translateY(-2px);
+}
+
+.syllabus-button span {
+  color: #ffffff;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .curriculum-section {
+    padding: 65px 0 75px;
+  }
+
+  .curriculum-container {
+    width: calc(100% - 28px);
+  }
+
+  .curriculum-heading h2 {
+    font-size: 2.6rem;
+  }
+
+  .curriculum-heading h2 strong {
+    display: block;
+
+    margin-left: 0;
+
+    margin-top: 5px;
+  }
+
+  .curriculum-tabs {
+    display: grid;
+
+    grid-template-columns: 1fr;
+
+    width: 100%;
+  }
+
+  .curriculum-tab {
+    width: 100%;
+  }
+
+  .curriculum-card-header {
+    padding: 18px;
+  }
+
+  .curriculum-scroll {
+    display: none !important;
+  }
+
+  .syllabus-card {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .syllabus-content {
+    align-items: flex-start;
+  }
+
+  .syllabus-button {
+    justify-content: center;
+  }
+}

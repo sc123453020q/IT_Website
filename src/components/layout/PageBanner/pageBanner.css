@@ -1,0 +1,372 @@
+/* =========================================
+   PAGE BANNER
+   ========================================= */
+
+.page-banner {
+  position: relative;
+  min-height: 235px;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(255, 255, 255, 0.08),
+      transparent 28%
+    ),
+    linear-gradient(
+      115deg,
+      #25256f 0%,
+      #42266f 48%,
+      #b52f65 100%
+    );
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.page-banner-content {
+  position: relative;
+  z-index: 5;
+
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  padding: 42px 0;
+}
+
+
+/* =========================================
+   DECORATIVE GRID
+   ========================================= */
+
+.page-banner-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.055;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.8) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.8) 1px,
+      transparent 1px
+    );
+
+  background-size: 45px 45px;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 25%,
+    black 75%,
+    transparent
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   GLOW EFFECTS
+   ========================================= */
+
+.page-banner-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(90px);
+
+  pointer-events: none;
+}
+
+.page-banner-glow-one {
+  width: 300px;
+  height: 300px;
+
+  top: -180px;
+  right: 8%;
+
+  background: rgba(255, 110, 170, 0.35);
+}
+
+.page-banner-glow-two {
+  width: 260px;
+  height: 260px;
+
+  bottom: -190px;
+  left: 8%;
+
+  background: rgba(95, 80, 255, 0.3);
+}
+
+
+/* =========================================
+   DECORATIVE CIRCLES
+   ========================================= */
+
+.page-banner-circle {
+  position: absolute;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  pointer-events: none;
+}
+
+.page-banner-circle-one {
+  width: 330px;
+  height: 330px;
+
+  right: -150px;
+  top: -180px;
+}
+
+.page-banner-circle-two {
+  width: 180px;
+  height: 180px;
+
+  right: 13%;
+  bottom: -130px;
+
+  opacity: 0.55;
+}
+
+
+/* =========================================
+   BREADCRUMB
+   ========================================= */
+
+.page-banner-breadcrumb {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 16px;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.page-banner-breadcrumb a {
+  color: rgba(255, 255, 255, 0.92);
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.page-banner-breadcrumb a:hover {
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.page-banner-separator {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.page-banner-title-wrap {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 17px;
+}
+
+
+/* Accent line */
+
+.page-banner-line {
+  width: 4px;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  margin-top: 2px;
+
+  border-radius: 999px;
+
+  background: #ffcc00;
+
+  box-shadow:
+    0 0 18px rgba(255, 204, 0, 0.25);
+}
+
+
+/* Heading */
+
+.page-banner h1 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+
+  line-height: 0.98;
+
+  font-weight: 800;
+
+  letter-spacing: -0.045em;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   DESCRIPTION
+   ========================================= */
+
+.page-banner-description {
+  max-width: 650px;
+
+  margin: 13px 0 0;
+
+  color: rgba(255, 255, 255, 0.7);
+
+  font-size: 14px;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================
+   TABLET
+   ========================================= */
+
+@media (max-width: 900px) {
+
+  .page-banner {
+    min-height: 220px;
+  }
+
+  .page-banner-content {
+    width: min(100% - 40px, 760px);
+
+    padding: 38px 0;
+  }
+
+  .page-banner h1 {
+    font-size: clamp(2.3rem, 6vw, 3.5rem);
+  }
+
+  .page-banner-line {
+    height: 46px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 640px) {
+
+  .page-banner {
+    min-height: 195px;
+  }
+
+  .page-banner-content {
+    width: calc(100% - 32px);
+
+    padding: 32px 0;
+  }
+
+  .page-banner-breadcrumb {
+    gap: 7px;
+
+    margin-bottom: 13px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.08em;
+  }
+
+  .page-banner-title-wrap {
+    gap: 12px;
+  }
+
+  .page-banner-line {
+    width: 3px;
+
+    height: 38px;
+
+    margin-top: 1px;
+  }
+
+  .page-banner h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+
+    letter-spacing: -0.04em;
+  }
+
+  .page-banner-description {
+    max-width: 95%;
+
+    margin-top: 10px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+  }
+
+  .page-banner-circle-one {
+    width: 220px;
+    height: 220px;
+
+    right: -130px;
+    top: -130px;
+  }
+
+  .page-banner-circle-two {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+  .page-banner {
+    min-height: 180px;
+  }
+
+  .page-banner-content {
+    padding: 28px 0;
+  }
+
+  .page-banner h1 {
+    font-size: 2rem;
+  }
+
+  .page-banner-description {
+    font-size: 12px;
+  }
+}

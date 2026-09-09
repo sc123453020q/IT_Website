@@ -1,0 +1,965 @@
+/* =========================================================
+   MENTORS SECTION
+========================================================= */
+
+.mentors-section {
+  position: relative;
+  padding: 90px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.mentors-container {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.mentors-heading {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto 55px;
+}
+
+.mentors-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  margin-bottom: 16px;
+
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+
+  color: #7c3aed;
+}
+
+.mentors-eyebrow-line {
+  width: 35px;
+  height: 2px;
+  background: #7c3aed;
+}
+
+.mentors-heading h1 {
+  margin: 0;
+
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 0.95;
+
+  font-weight: 900;
+  letter-spacing: -0.05em;
+
+  color: #171122;
+}
+
+.mentors-heading h1 span {
+  display: block;
+
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #a855f7
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+.mentors-heading p {
+  max-width: 650px;
+
+  margin: 22px auto 0;
+
+  font-size: 1rem;
+  line-height: 1.7;
+
+  color: #6b6475;
+}
+
+
+/* =========================================================
+   MENTOR GRID
+========================================================= */
+
+.mentors-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 24px;
+}
+
+
+/* =========================================================
+   MENTOR CARD
+========================================================= */
+
+.mentor-card {
+  position: relative;
+
+  width: 100%;
+
+  padding: 20px;
+
+  border: 1px solid #e9e3f3;
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(42, 20, 70, 0.07);
+
+  overflow: hidden;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.mentor-card:hover {
+  transform: translateY(-7px);
+
+  border-color: #c9a9f7;
+
+  box-shadow:
+    0 20px 45px rgba(88, 45, 140, 0.14);
+}
+
+
+/* Remove default button styles */
+
+.mentor-card:focus {
+  outline: none;
+}
+
+.mentor-card:focus-visible {
+  outline: 3px solid rgba(124, 58, 237, 0.3);
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
+.mentor-number {
+  position: absolute;
+
+  top: 17px;
+  right: 20px;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  color: #a89caf;
+
+  z-index: 3;
+}
+
+
+/* =========================================================
+   CARD IMAGE
+========================================================= */
+
+.mentor-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 270px;
+
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  border-radius: 17px;
+
+  background: #f5f0fb;
+}
+
+
+/* Purple glow behind image */
+
+.mentor-image-glow {
+  position: absolute;
+
+  width: 160px;
+  height: 160px;
+
+  border-radius: 50%;
+
+  background: rgba(139, 92, 246, 0.15);
+
+  filter: blur(40px);
+}
+
+
+/*
+   This controls the actual image area.
+   Reduced from 100% to 78%.
+*/
+
+.mentor-image {
+  position: relative;
+
+  width: 78%;
+  height: 88%;
+
+  z-index: 1;
+}
+
+
+/* Actual teacher image */
+
+.mentor-image img {
+  object-fit: contain;
+
+  object-position: center bottom;
+
+  transition: transform 0.4s ease;
+}
+
+
+/* Smaller hover zoom */
+
+.mentor-card:hover .mentor-image img {
+  transform: scale(1.02);
+}
+
+
+/* =========================================================
+   CARD INFO
+========================================================= */
+
+.mentor-info {
+  padding: 0 5px 10px;
+}
+
+.mentor-info h2 {
+  margin: 0 0 6px;
+
+  font-size: 1.3rem;
+  line-height: 1.25;
+
+  font-weight: 800;
+
+  color: #21152e;
+}
+
+.mentor-info p {
+  margin: 0 0 14px;
+
+  font-size: 0.88rem;
+
+  color: #817889;
+}
+
+.mentor-view {
+  display: inline-block;
+
+  font-size: 0.77rem;
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+
+  color: #7c3aed;
+
+  transition: transform 0.3s ease;
+}
+
+.mentor-card:hover .mentor-view {
+  transform: translateX(5px);
+}
+
+
+/* =========================================================
+   CARD ACCENT
+========================================================= */
+
+.mentor-card-accent {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #a855f7
+  );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.35s ease;
+}
+
+.mentor-card:hover .mentor-card-accent {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.mentor-empty {
+  text-align: center;
+
+  padding: 50px 20px;
+
+  border: 1px solid #e9e3f3;
+  border-radius: 20px;
+
+  background: #faf8fd;
+}
+
+.mentor-empty h2 {
+  margin: 0 0 10px;
+
+  color: #21152e;
+}
+
+.mentor-empty p {
+  margin: 0;
+
+  color: #817889;
+}
+
+
+/* =========================================================
+   MODAL OVERLAY
+========================================================= */
+
+.mentor-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(18, 10, 30, 0.65);
+
+  backdrop-filter: blur(8px);
+
+  animation: mentorOverlayIn 0.25s ease;
+}
+
+@keyframes mentorOverlayIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.mentor-modal {
+  position: relative;
+
+  width: min(1000px, 100%);
+
+  max-height: 88vh;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(124, 58, 237, 0.2);
+
+  border-radius: 24px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 30px 80px rgba(20, 10, 35, 0.3);
+
+  animation: mentorModalIn 0.3s ease;
+}
+
+@keyframes mentorModalIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
+========================================================= */
+
+.mentor-modal-close {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  z-index: 5;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f3edf9;
+
+  color: #6d28d9;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mentor-modal-close:hover {
+  background: #7c3aed;
+
+  color: #ffffff;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   MODAL LEFT
+========================================================= */
+
+.mentor-modal-left {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #f7f1ff,
+      #ffffff
+    );
+
+  border-right: 1px solid #eee7f5;
+}
+
+
+/* =========================================================
+   MODAL IMAGE
+========================================================= */
+
+.mentor-modal-image-wrapper {
+  position: relative;
+
+  width: 250px;
+  height: 280px;
+
+  max-width: 100%;
+
+  margin-bottom: 22px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #eee5f8;
+}
+
+.mentor-modal-image-wrapper img {
+  object-fit: contain;
+
+  object-position: center bottom;
+}
+
+
+/* =========================================================
+   MODAL PROFILE
+========================================================= */
+
+.mentor-modal-profile {
+  text-align: center;
+}
+
+.mentor-modal-profile h2 {
+  margin: 0 0 8px;
+
+  font-size: 1.4rem;
+  line-height: 1.25;
+
+  font-weight: 800;
+
+  color: #21152e;
+}
+
+.mentor-modal-profile p {
+  margin: 0;
+
+  font-size: 0.92rem;
+
+  color: #746b7d;
+}
+
+
+/* =========================================================
+   SOCIAL LINKS
+========================================================= */
+
+.mentor-socials {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 16px;
+}
+
+.mentor-socials a {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #7c3aed;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.mentor-socials a:hover {
+  transform: translateY(-3px);
+
+  background: #5b21b6;
+}
+
+
+/* =========================================================
+   MODAL RIGHT
+========================================================= */
+
+.mentor-modal-right {
+  min-width: 0;
+
+  padding: 42px 38px;
+
+  overflow-y: auto;
+}
+
+
+/* =========================================================
+   MENTEES HEADING
+========================================================= */
+
+.mentees-heading {
+  margin-bottom: 24px;
+}
+
+.mentees-heading span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: 0.7rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+
+  color: #7c3aed;
+}
+
+.mentees-heading h2 {
+  margin: 0;
+
+  font-size: 2.4rem;
+
+  line-height: 1;
+
+  font-weight: 900;
+
+  letter-spacing: -0.04em;
+
+  color: #21152e;
+}
+
+
+/* =========================================================
+   MENTEES CONTAINER
+========================================================= */
+
+.mentees-container {
+  max-height: 55vh;
+
+  padding-right: 8px;
+
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+
+  scrollbar-color: #c8a9ef transparent;
+}
+
+.mentees-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.mentees-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mentees-container::-webkit-scrollbar-thumb {
+  background: #c8a9ef;
+
+  border-radius: 20px;
+}
+
+
+/* =========================================================
+   YEAR
+========================================================= */
+
+.mentees-year {
+  margin-bottom: 25px;
+}
+
+.mentees-year h3 {
+  display: inline-block;
+
+  margin: 0 0 12px;
+
+  padding-bottom: 6px;
+
+  border-bottom: 2px solid #7c3aed;
+
+  font-size: 0.9rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  color: #5b21b6;
+}
+
+
+/* =========================================================
+   MENTEE LIST
+========================================================= */
+
+.mentees-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.mentee-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 13px;
+
+  border: 1px solid #eee7f5;
+
+  border-radius: 10px;
+
+  background: #faf8fd;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.mentee-item:hover {
+  transform: translateX(4px);
+
+  border-color: #d7c1f4;
+
+  background: #f5effc;
+}
+
+.mentee-serial {
+  min-width: 30px;
+
+  font-size: 0.78rem;
+
+  font-weight: 800;
+
+  color: #7c3aed;
+}
+
+.mentee-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.mentee-details strong {
+  font-size: 0.88rem;
+
+  font-weight: 700;
+
+  color: #29202f;
+}
+
+.mentee-details span {
+  font-size: 0.72rem;
+
+  color: #8a8191;
+}
+
+
+/* =========================================================
+   NO MENTEES
+========================================================= */
+
+.no-mentees {
+  padding: 30px;
+
+  text-align: center;
+
+  border-radius: 12px;
+
+  background: #faf8fd;
+
+  color: #817889;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  .mentors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mentor-image-wrapper {
+    height: 260px;
+  }
+
+  .mentor-image {
+    width: 78%;
+    height: 88%;
+  }
+
+  .mentor-modal {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+
+  .mentor-modal-image-wrapper {
+    width: 220px;
+    height: 260px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .mentors-section {
+    padding: 70px 0;
+  }
+
+  .mentors-container {
+    width: min(100% - 28px, 500px);
+  }
+
+  .mentors-heading {
+    margin-bottom: 40px;
+  }
+
+  .mentors-heading h1 {
+    font-size: clamp(2.6rem, 12vw, 3.8rem);
+  }
+
+  .mentors-heading p {
+    font-size: 0.92rem;
+  }
+
+
+  /* One card per row */
+
+  .mentors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mentor-card {
+    padding: 18px;
+  }
+
+
+  /* Smaller teacher image */
+
+  .mentor-image-wrapper {
+    height: 270px;
+  }
+
+  .mentor-image {
+    width: 75%;
+    height: 88%;
+  }
+
+
+  /* Modal */
+
+  .mentor-modal-overlay {
+    padding: 15px;
+  }
+
+  .mentor-modal {
+    width: 100%;
+
+    max-height: 92vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow-y: auto;
+
+    border-radius: 20px;
+  }
+
+  .mentor-modal-left {
+    padding: 32px 20px 24px;
+
+    border-right: none;
+
+    border-bottom: 1px solid #eee7f5;
+  }
+
+
+  /* Smaller modal teacher image */
+
+  .mentor-modal-image-wrapper {
+    width: 190px;
+    height: 210px;
+
+    margin-bottom: 18px;
+  }
+
+  .mentor-modal-profile h2 {
+    font-size: 1.2rem;
+  }
+
+  .mentor-modal-right {
+    padding: 28px 20px;
+  }
+
+  .mentees-heading h2 {
+    font-size: 2rem;
+  }
+
+  .mentees-container {
+    max-height: 40vh;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .mentor-image-wrapper {
+    height: 250px;
+  }
+
+  .mentor-image {
+    width: 72%;
+    height: 86%;
+  }
+
+  .mentor-info h2 {
+    font-size: 1.15rem;
+  }
+
+  .mentor-modal-image-wrapper {
+    width: 165px;
+    height: 185px;
+  }
+
+  .mentor-modal-right {
+    padding: 24px 16px;
+  }
+}

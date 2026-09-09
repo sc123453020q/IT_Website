@@ -1,0 +1,242 @@
+.naac-section {
+  padding: 110px 0;
+
+  background: #ffffff;
+}
+
+.naac-container {
+  width: min(1100px, calc(100% - 40px));
+
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.naac-heading {
+  margin-bottom: 55px;
+}
+
+.naac-heading > span {
+  color: #7a2fe3;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 0.18em;
+}
+
+.naac-heading h2 {
+  margin: 13px 0 0;
+
+  color: #211a28;
+
+  font-size: clamp(2.2rem, 5vw, 4rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+}
+
+.naac-heading strong {
+  color: #7a2fe3;
+}
+
+/* Layout */
+
+.naac-layout {
+  display: grid;
+
+  grid-template-columns: 0.8fr 1.2fr;
+
+  gap: 70px;
+
+  align-items: center;
+}
+
+/* Certificate */
+
+.naac-certificate {
+  position: relative;
+
+  padding: 28px;
+
+  border: 1px solid rgba(122,47,227,0.1);
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #faf8fc,
+      #f2edf8
+    );
+
+  box-shadow:
+    0 25px 70px rgba(45,20,60,0.08);
+}
+
+.certificate-label {
+  margin-bottom: 18px;
+
+  color: #7a2fe3;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+
+  text-align: center;
+}
+
+.certificate-image {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 10px;
+
+  border-radius: 15px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 40px rgba(30,15,40,0.1);
+}
+
+.certificate-img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  transition:
+    transform 0.5s ease;
+}
+
+.naac-certificate:hover .certificate-img {
+  transform: scale(1.025);
+}
+
+/* Content */
+
+.naac-overline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #8b8391;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.naac-overline::before {
+  content: "";
+
+  width: 24px;
+  height: 2px;
+
+  background: #7a2fe3;
+}
+
+.naac-content h3 {
+  margin: 18px 0 25px;
+
+  color: #211a28;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  line-height: 1;
+
+  letter-spacing: -0.05em;
+}
+
+.naac-content h3 span {
+  display: block;
+
+  color: #7a2fe3;
+}
+
+.naac-content p {
+  margin: 0 0 18px;
+
+  color: #6f6875;
+
+  font-size: 14px;
+
+  line-height: 1.85;
+}
+
+/* Stats */
+
+.naac-stats {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin-top: 35px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #eee9f0;
+}
+
+.naac-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.naac-stats strong {
+  color: #211a28;
+
+  font-size: 22px;
+  font-weight: 850;
+}
+
+.naac-stats span {
+  margin-top: 4px;
+
+  color: #9a929f;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .naac-layout {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .naac-certificate {
+    max-width: 500px;
+
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .naac-section {
+    padding: 75px 0;
+  }
+
+  .naac-container {
+    width: min(100% - 28px, 1100px);
+  }
+
+  .naac-stats strong {
+    font-size: 18px;
+  }
+}

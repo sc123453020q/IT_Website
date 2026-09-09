@@ -1,0 +1,255 @@
+.industry-visit-section {
+  width: 100%;
+  background: #f8f8fc;
+  padding: 90px 20px 110px;
+}
+
+.industry-visit-container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.industry-visit-heading {
+  max-width: 800px;
+  margin: 0 auto 75px;
+  text-align: center;
+}
+
+.industry-visit-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  color: #6d28d9;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 18px;
+}
+
+.industry-visit-eyebrow span {
+  width: 35px;
+  height: 1px;
+  background: #8b5cf6;
+}
+
+.industry-visit-heading h1 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: #18181b;
+}
+
+.industry-visit-heading h1 span {
+  display: block;
+  color: #7c3aed;
+}
+
+.industry-visit-heading p {
+  max-width: 680px;
+  margin: 25px auto 0;
+
+  color: #71717a;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* =========================
+   VISIT LIST
+========================= */
+
+.industry-visit-list {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.industry-visit-card {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+
+  background: #ffffff;
+  border: 1px solid #e4e4eb;
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.industry-visit-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 22px 55px rgba(91, 33, 182, 0.12);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.industry-visit-image {
+  position: relative;
+  min-height: 340px;
+  background: #ede9fe;
+  overflow: hidden;
+}
+
+.industry-visit-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.5s ease;
+}
+
+.industry-visit-card:hover .industry-visit-image img {
+  transform: scale(1.04);
+}
+
+.industry-visit-number {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.92);
+  color: #6d28d9;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  backdrop-filter: blur(8px);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.industry-visit-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 50px;
+}
+
+.industry-visit-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.industry-visit-meta span {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 7px 12px;
+
+  border-radius: 999px;
+
+  background: #f3e8ff;
+  color: #6d28d9;
+
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.industry-visit-content h2 {
+  margin: 0 0 18px;
+
+  color: #18181b;
+
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.industry-visit-content p {
+  margin: 0;
+
+  color: #71717a;
+
+  font-size: 0.98rem;
+  line-height: 1.85;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .industry-visit-card {
+    grid-template-columns: 1fr;
+  }
+
+  .industry-visit-image {
+    min-height: 280px;
+  }
+
+  .industry-visit-content {
+    padding: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .industry-visit-section {
+    padding: 65px 16px 80px;
+  }
+
+  .industry-visit-heading {
+    margin-bottom: 50px;
+  }
+
+  .industry-visit-heading h1 {
+    font-size: 3rem;
+  }
+
+  .industry-visit-heading p {
+    font-size: 0.9rem;
+  }
+
+  .industry-visit-image {
+    min-height: 230px;
+  }
+
+  .industry-visit-content {
+    padding: 28px 24px;
+  }
+
+  .industry-visit-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .industry-visit-content p {
+    font-size: 0.9rem;
+  }
+}
