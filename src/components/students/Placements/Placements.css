@@ -1,3 +1,7 @@
+/* =========================================================
+   PLACEMENTS SECTION
+========================================================= */
+
 .placements-section {
   background: #f7f7fb;
   padding: 80px 20px 100px;
@@ -7,6 +11,11 @@
   max-width: 1150px;
   margin: auto;
 }
+
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .placements-header {
   max-width: 760px;
@@ -24,9 +33,7 @@
 
 .placements-header h1 {
   margin: 15px 0;
-
   color: #191525;
-
   font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1;
   letter-spacing: -2px;
@@ -43,7 +50,10 @@
   font-size: 16px;
 }
 
-/* Stats */
+
+/* =========================================================
+   PLACEMENT STATISTICS
+========================================================= */
 
 .placement-stats {
   display: grid;
@@ -53,41 +63,43 @@
 
 .placement-stat-card {
   padding: 30px 20px;
-
   background: #ffffff;
-
   border: 1px solid #e9e5f1;
   border-radius: 20px;
-
   text-align: center;
 
-  box-shadow: 0 10px 30px rgba(54, 31, 90, 0.06);
+  box-shadow:
+    0 10px 30px rgba(54, 31, 90, 0.06);
 
-  transition: 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .placement-stat-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 18px 40px rgba(92, 53, 145, 0.12);
+
+  box-shadow:
+    0 18px 40px rgba(92, 53, 145, 0.12);
 }
 
 .placement-stat-card h2 {
   margin: 0;
-
   color: #7c3aed;
-
   font-size: 30px;
   font-weight: 800;
 }
 
 .placement-stat-card p {
   margin: 8px 0 0;
-
   color: #706b79;
   font-size: 14px;
 }
 
-/* Recruiters */
+
+/* =========================================================
+   RECRUITERS SECTION
+========================================================= */
 
 .recruiters-section {
   margin-top: 90px;
@@ -95,46 +107,159 @@
 
 .section-mini-heading {
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .section-mini-heading h2 {
-  margin: 10px 0 0;
-
+  margin: 10px 0 10px;
   color: #1d1828;
-
   font-size: 32px;
+  font-weight: 800;
 }
+
+.section-mini-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #706b79;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   RECRUITERS GRID
+========================================================= */
 
 .recruiters-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  gap: 18px;
 }
 
+
+/* =========================================================
+   RECRUITER CARD
+========================================================= */
+
 .recruiter-card {
-  padding: 28px 15px;
+  position: relative;
 
-  background: white;
+  min-height: 185px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 22px 18px;
+
+  background: #ffffff;
+
   border: 1px solid #ebe7f2;
-  border-radius: 16px;
+  border-radius: 18px;
 
-  text-align: center;
+  box-shadow:
+    0 8px 25px rgba(54, 31, 90, 0.045);
 
-  color: #352d40;
+  overflow: hidden;
 
-  font-size: 17px;
-  font-weight: 700;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
 
-  transition: 0.3s ease;
+.recruiter-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #7c3aed,
+    #a855f7
+  );
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.3s ease;
 }
 
 .recruiter-card:hover {
-  color: #7c3aed;
-  transform: translateY(-4px);
+  transform: translateY(-7px);
+
+  border-color: #d8c8f5;
+
+  box-shadow:
+    0 18px 40px rgba(92, 53, 145, 0.12);
 }
 
-/* Process */
+.recruiter-card:hover::before {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   COMPANY LOGO
+========================================================= */
+
+.recruiter-logo-wrapper {
+  position: relative;
+
+  width: 145px;
+  height: 85px;
+
+  margin-bottom: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recruiter-logo {
+  object-fit: contain;
+  object-position: center;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.recruiter-card:hover .recruiter-logo {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   COMPANY NAME
+========================================================= */
+
+.recruiter-name {
+  color: #352d40;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  text-align: center;
+
+  transition:
+    color 0.3s ease;
+}
+
+.recruiter-card:hover .recruiter-name {
+  color: #7c3aed;
+}
+
+
+/* =========================================================
+   PLACEMENT PROCESS
+========================================================= */
 
 .placement-process {
   margin-top: 90px;
@@ -152,18 +277,27 @@
   background: #ffffff;
 
   border-radius: 20px;
+
   border: 1px solid #ebe7f2;
 
-  transition: 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .process-card:hover {
   transform: translateY(-5px);
+
   border-color: #d8c8f5;
+
+  box-shadow:
+    0 15px 35px rgba(54, 31, 90, 0.08);
 }
 
 .process-card > span {
   color: #a78bfa;
+
   font-size: 14px;
   font-weight: 800;
 }
@@ -172,6 +306,7 @@
   margin: 15px 0 10px;
 
   color: #211b2b;
+
   font-size: 21px;
 }
 
@@ -181,27 +316,82 @@
   color: #706b79;
 
   line-height: 1.7;
+
   font-size: 14px;
 }
 
-@media (max-width: 850px) {
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
   .placement-stats {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .recruiters-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .process-grid {
     grid-template-columns: 1fr;
   }
+
 }
 
-@media (max-width: 500px) {
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
   .placements-section {
     padding: 60px 15px 70px;
   }
+
+  .placement-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .recruiters-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .recruiter-card {
+    min-height: 160px;
+    padding: 18px 12px;
+  }
+
+  .recruiter-logo-wrapper {
+    width: 115px;
+    height: 70px;
+    margin-bottom: 10px;
+  }
+
+  .recruiter-name {
+    font-size: 12px;
+  }
+
+  .section-mini-heading h2 {
+    font-size: 27px;
+  }
+
+  .section-mini-heading p {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
 
   .placement-stats {
     grid-template-columns: 1fr;
@@ -211,7 +401,17 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .section-mini-heading h2 {
-    font-size: 27px;
+  .recruiter-card {
+    min-height: 145px;
   }
+
+  .recruiter-logo-wrapper {
+    width: 100px;
+    height: 60px;
+  }
+
+  .recruiter-name {
+    font-size: 11px;
+  }
+
 }

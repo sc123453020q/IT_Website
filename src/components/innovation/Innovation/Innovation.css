@@ -1,152 +1,643 @@
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
 .innovation-section {
   position: relative;
-  padding: 90px 6%;
+  padding: 90px 0 120px;
   background: #ffffff;
   overflow: hidden;
 }
 
 .innovation-container {
-  max-width: 1250px;
+  position: relative;
+  z-index: 2;
+  width: min(1200px, calc(100% - 40px));
   margin: 0 auto;
 }
 
+
+/* =========================================================
+   BACKGROUND GLOWS
+========================================================= */
+
+.innovation-bg-glow {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(100px);
+}
+
+.innovation-bg-glow-one {
+  width: 420px;
+  height: 420px;
+  top: 100px;
+  right: -220px;
+  background: rgba(124, 58, 237, 0.08);
+}
+
+.innovation-bg-glow-two {
+  width: 350px;
+  height: 350px;
+  bottom: 500px;
+  left: -200px;
+  background: rgba(168, 85, 247, 0.07);
+}
+
+
+/* =========================================================
+   MAIN HEADING
+========================================================= */
+
 .innovation-heading {
   max-width: 800px;
-  margin-bottom: 60px;
+  margin: 0 auto 70px;
+  text-align: center;
 }
 
 .innovation-eyebrow {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
-  color: #6d28d9;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+
+  color: #7c3aed;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
 }
 
-.innovation-eyebrow span {
+.innovation-eyebrow-line {
   width: 35px;
   height: 2px;
-  background: #6d28d9;
-  display: block;
+  border-radius: 999px;
+  background: #7c3aed;
 }
 
 .innovation-heading h1 {
   margin: 0;
-  font-size: clamp(2.5rem, 5vw, 4.8rem);
-  line-height: 0.98;
-  font-weight: 800;
-  letter-spacing: -2px;
-  color: #111111;
+
+  color: #171122;
+
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: -0.055em;
 }
 
 .innovation-heading h1 span {
   display: block;
-  color: #6d28d9;
+
+  background: linear-gradient(
+    135deg,
+    #6d28d9,
+    #a855f7
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
 }
 
 .innovation-heading p {
-  margin-top: 25px;
-  max-width: 680px;
-  color: #666;
-  font-size: 16px;
+  max-width: 700px;
+  margin: 28px auto 0;
+
+  color: #71697c;
+
+  font-size: 1rem;
   line-height: 1.8;
 }
 
+
+/* =========================================================
+   MAIN CARD GRID
+========================================================= */
+
 .innovation-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 22px;
+
+  margin-bottom: 20px;
 }
+
+
+/* =========================================================
+   CARD
+========================================================= */
 
 .innovation-card {
   position: relative;
-  min-height: 280px;
+
+  min-height: 285px;
+
+  display: block;
+
   padding: 30px;
-  border: 1px solid #e9e3f5;
-  border-radius: 20px;
+
+  border: 1px solid #e9e3f2;
+  border-radius: 22px;
+
   background: #ffffff;
+
+  text-decoration: none;
+
   overflow: hidden;
-  transition: 0.35s ease;
+
+  box-shadow:
+    0 10px 35px rgba(45, 24, 72, 0.05);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
 .innovation-card:hover {
   transform: translateY(-8px);
-  border-color: #c4a7f5;
-  box-shadow: 0 20px 50px rgba(109, 40, 217, 0.1);
+
+  border-color: #cdb1f5;
+
+  box-shadow:
+    0 25px 60px rgba(88, 45, 140, 0.12);
 }
 
+
+/* =========================================================
+   CARD NUMBER
+========================================================= */
+
 .innovation-card-number {
-  font-size: 14px;
-  font-weight: 700;
-  color: #8b5cf6;
-  margin-bottom: 70px;
+  position: absolute;
+
+  top: 24px;
+  right: 27px;
+
+  color: #aaa1b4;
+
+  font-size: 0.72rem;
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.innovation-icon-wrapper {
+  position: relative;
+
+  width: 78px;
+  height: 78px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 35px;
+
+  border-radius: 20px;
+
+  background: #f6f0ff;
+
+  overflow: hidden;
+}
+
+.innovation-icon-glow {
+  position: absolute;
+
+  width: 70px;
+  height: 70px;
+
+  border-radius: 50%;
+
+  background: rgba(139, 92, 246, 0.18);
+
+  filter: blur(25px);
+}
+
+.innovation-icon {
+  position: relative;
+
+  z-index: 2;
+
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+
+  transition: transform 0.35s ease;
+}
+
+.innovation-card:hover .innovation-icon {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.innovation-card-content {
+  max-width: 430px;
 }
 
 .innovation-card-content h2 {
-  margin: 0 0 12px;
-  font-size: 23px;
-  color: #171717;
+  margin: 0 0 10px;
+
+  color: #21182d;
+
+  font-size: 1.45rem;
+
+  line-height: 1.25;
+
+  font-weight: 800;
 }
 
 .innovation-card-content p {
   margin: 0;
-  color: #707070;
+
+  color: #77707e;
+
+  font-size: 0.88rem;
+
   line-height: 1.7;
-  font-size: 14px;
 }
+
+
+/* =========================================================
+   ARROW
+========================================================= */
 
 .innovation-card-arrow {
   position: absolute;
-  right: 25px;
+
   top: 25px;
+  right: 52px;
+
   width: 38px;
   height: 38px;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   border-radius: 50%;
-  background: #f3edff;
-  color: #6d28d9;
-  font-size: 20px;
-  transition: 0.3s ease;
+
+  background: #f4edff;
+
+  color: #7c3aed;
+
+  font-size: 18px;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .innovation-card:hover .innovation-card-arrow {
-  background: #6d28d9;
-  color: white;
+  background: #7c3aed;
+
+  color: #ffffff;
+
+  transform: rotate(8deg);
 }
 
+
+/* =========================================================
+   BOTTOM ACCENT
+========================================================= */
+
+.innovation-card-line {
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    #6d28d9,
+    #a855f7
+  );
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.35s ease;
+}
+
+.innovation-card:hover .innovation-card-line {
+  transform: scaleX(1);
+}
+
+
+/* =========================================================
+   DETAIL SECTIONS
+========================================================= */
+
+.innovation-detail-section {
+  position: relative;
+
+  margin-top: 80px;
+
+  padding-top: 35px;
+
+  scroll-margin-top: 100px;
+}
+
+.innovation-detail-section::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 1px;
+
+  background: #e9e3f2;
+}
+
+
+/* =========================================================
+   ANNUAL REPORT
+========================================================= */
+
+.annual-report-wrapper {
+  width: 100%;
+
+  padding: 45px;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #faf7ff,
+      #ffffff
+    );
+
+  border: 1px solid #e9e3f2;
+
+  box-shadow:
+    0 15px 50px rgba(45, 24, 72, 0.07);
+}
+
+.annual-report-heading {
+  text-align: center;
+
+  max-width: 700px;
+
+  margin: 0 auto 35px;
+}
+
+.annual-report-heading span {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #7c3aed;
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+.annual-report-heading h2 {
+  margin: 0;
+
+  color: #21182d;
+
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+
+  font-weight: 900;
+
+  letter-spacing: -0.04em;
+}
+
+.annual-report-heading h2 strong {
+  color: #7c3aed;
+}
+
+.annual-report-heading p {
+  margin: 15px auto 0;
+
+  color: #77707e;
+
+  font-size: 0.92rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PDF VIEWER
+========================================================= */
+
+.annual-report-viewer {
+  width: 100%;
+
+  height: 80vh;
+
+  min-height: 600px;
+
+  overflow: hidden;
+
+  border-radius: 16px;
+
+  border: 1px solid #ddd5e8;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 10px 35px rgba(45, 24, 72, 0.08);
+}
+
+.annual-report-pdf {
+  width: 100%;
+  height: 100%;
+
+  border: none;
+
+  display: block;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
 @media (max-width: 900px) {
+
+  .innovation-section {
+    padding: 75px 0 90px;
+  }
+
+  .innovation-heading {
+    margin-bottom: 60px;
+  }
+
   .innovation-grid {
     grid-template-columns: 1fr;
   }
 
   .innovation-card {
-    min-height: 240px;
+    min-height: 260px;
+  }
+
+  .innovation-detail-section {
+    margin-top: 65px;
+  }
+
+  .annual-report-wrapper {
+    padding: 30px;
+  }
+
+  .annual-report-viewer {
+    height: 70vh;
+    min-height: 500px;
   }
 }
 
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 600px) {
+
   .innovation-section {
-    padding: 65px 20px;
+    padding: 65px 0 80px;
+  }
+
+  .innovation-container {
+    width: min(100% - 28px, 550px);
   }
 
   .innovation-heading {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 
   .innovation-heading h1 {
-    font-size: 2.8rem;
+    font-size: clamp(2.7rem, 13vw, 4rem);
+  }
+
+  .innovation-heading p {
+    font-size: 0.9rem;
   }
 
   .innovation-card {
+    min-height: 255px;
+
     padding: 25px;
+
+    border-radius: 19px;
   }
 
-  .innovation-card-number {
-    margin-bottom: 50px;
+  .innovation-icon-wrapper {
+    width: 68px;
+    height: 68px;
+
+    margin-bottom: 30px;
+  }
+
+  .innovation-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .innovation-card-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .innovation-card-content p {
+    font-size: 0.82rem;
+  }
+
+  .innovation-card-arrow {
+    right: 45px;
+  }
+
+  .innovation-detail-section {
+    margin-top: 50px;
+
+    padding-top: 25px;
+  }
+
+  /* Annual Report */
+
+  .annual-report-wrapper {
+    padding: 22px;
+
+    border-radius: 18px;
+  }
+
+  .annual-report-heading {
+    margin-bottom: 25px;
+  }
+
+  .annual-report-heading h2 {
+    font-size: 2.2rem;
+  }
+
+  .annual-report-heading p {
+    font-size: 0.84rem;
+  }
+
+  .annual-report-viewer {
+    height: 65vh;
+
+    min-height: 450px;
+
+    border-radius: 12px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .innovation-container {
+    width: min(100% - 22px, 550px);
+  }
+
+  .innovation-heading h1 {
+    font-size: 2.55rem;
+  }
+
+  .innovation-card {
+    min-height: 245px;
+
+    padding: 22px;
+  }
+
+  .annual-report-wrapper {
+    padding: 18px;
+  }
+
+  .annual-report-viewer {
+    height: 60vh;
+
+    min-height: 400px;
   }
 }

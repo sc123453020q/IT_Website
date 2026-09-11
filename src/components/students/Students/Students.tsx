@@ -10,7 +10,7 @@ const studentSections = [
     title: "Placements",
     description:
       "Explore placement opportunities, recruiters, statistics and career guidance for our students.",
-    image: "/images/students/placements.jpg",
+    image: "/images/students.jpg",
     href: "/students/placements",
     number: "01",
   },
@@ -18,7 +18,7 @@ const studentSections = [
     title: "Study Materials & Assignments",
     description:
       "Access study materials, notes, assignments and academic resources in one place.",
-    image: "/images/students/study-materials.jpg",
+    image: "/images/books.jpg",
     href: "/students/study-materials",
     number: "02",
   },
@@ -26,7 +26,7 @@ const studentSections = [
     title: "Students Achievements",
     description:
       "Discover the accomplishments, awards, competitions and milestones achieved by our students.",
-    image: "/images/students/achievements.jpg",
+    image: "/images/trophy.jpg",
     href: "/students/achievements",
     number: "03",
   },

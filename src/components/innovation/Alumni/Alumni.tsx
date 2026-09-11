@@ -1,66 +1,120 @@
 "use client";
 
+import Image from "next/image";
+
 import "./Alumni.css";
 
 const alumniItems = [
   {
-    number: "01",
-    title: "Alumni Network",
+    image: "/images/alumni_talk/Slide1.PNG",
+    title: "Legacy Builders",
     description:
-      "Stay connected with graduates of the Information Technology department and build meaningful professional relationships.",
+      "Empowering the next generation with wisdom and experience.",
   },
   {
-    number: "02",
-    title: "Alumni Achievements",
+    image: "/images/alumni_talk/Slide2.PNG",
+    title: "Innovation & Impact",
     description:
-      "Celebrating the professional achievements and contributions of our alumni across different industries.",
+      "Alumni shaping the future with cutting-edge ideas.",
   },
   {
-    number: "03",
-    title: "Industry Connect",
+    image: "/images/alumni_talk/Slide3.PNG",
+    title: "Success Stories",
     description:
-      "Creating opportunities for students to interact with alumni and gain valuable industry insights.",
+      "Celebrating milestones, achievements and inspiring journeys.",
+  },
+  {
+    image: "/images/alumni_talk/Slide4.PNG",
+    title: "Networking",
+    description:
+      "Connecting minds and building meaningful opportunities.",
+  },
+  {
+    image: "/images/alumni_talk/Slide5.PNG",
+    title: "Inspiring Journeys",
+    description:
+      "Turning dreams into reality through dedication and perseverance.",
+  },
+  {
+    image: "/images/alumni_talk/Slide6.PNG",
+    title: "Future Leaders",
+    description:
+      "Shaping tomorrow's world through knowledge and leadership.",
   },
 ];
 
 export default function Alumni() {
   return (
-    <section className="alumni-section" id="alumni">
-      <div className="alumni-container">
+    <div className="alumni-wrapper">
 
-        <div className="alumni-heading">
-          <div className="alumni-eyebrow">
-            <span />
-            OUR ALUMNI
-          </div>
+      {/* Heading */}
 
-          <h1>
-            From Campus
-            <span> To The World.</span>
-          </h1>
+      <div className="alumni-heading">
 
-          <p>
-            Our alumni continue to make an impact across technology,
-            research, entrepreneurship and leading organizations worldwide.
-          </p>
-        </div>
+        <span>
+          ALUMNI COMMUNITY
+        </span>
 
-        <div className="alumni-grid">
-          {alumniItems.map((item) => (
-            <article className="alumni-card" key={item.number}>
-              <span className="alumni-number">
-                {item.number}
-              </span>
+        <h2>
+          Alumni <strong>Report</strong>
+        </h2>
 
-              <div>
-                <h2>{item.title}</h2>
-                <p>{item.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
+        <p>
+          From the department to the world, discover the
+          achievements, journeys and memories of our alumni.
+        </p>
 
       </div>
-    </section>
+
+
+      {/* Cards */}
+
+      <div className="alumni-grid">
+
+        {alumniItems.map((item, index) => (
+
+          <article
+            className="alumni-card"
+            key={item.title}
+          >
+
+            <div className="alumni-number">
+              {String(index + 1).padStart(2, "0")}
+            </div>
+
+            <div className="alumni-image-wrapper">
+
+              <Image
+                src={item.image}
+                alt={item.title}
+                fill
+                sizes="(max-width: 700px) 90vw, (max-width: 1000px) 45vw, 33vw"
+                className="alumni-image"
+              />
+
+            </div>
+
+
+            <div className="alumni-content">
+
+              <h3>
+                {item.title}
+              </h3>
+
+              <p>
+                {item.description}
+              </p>
+
+            </div>
+
+            <div className="alumni-accent" />
+
+          </article>
+
+        ))}
+
+      </div>
+
+    </div>
   );
 }
