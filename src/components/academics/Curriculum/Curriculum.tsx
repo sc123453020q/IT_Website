@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 
-import "./Curriculum.css";
-
+import { motion, AnimatePresence } from "framer-motion";
+import { LuFileText, LuArrowRight, LuDownload } from "react-icons/lu";
 type SemesterType =
   | "4TH SEM"
   | "6TH SEM"
@@ -835,397 +835,224 @@ const syllabusFiles: Record<
     "/pdfs/IT_2021-2025.pdf",
 };
 
-
 export default function Curriculum() {
-  const [selectedSemester, setSelectedSemester] =
-    useState<SemesterType>("4TH SEM");
+  const [selectedSemester, setSelectedSemester] = useState<SemesterType>("4TH SEM");
 
   const data = courseStruct[selectedSemester];
 
   return (
-    <section
-      className="curriculum-section"
-      id="curriculum-section"
-    >
-
-      <div className="curriculum-container">
+    <section className="py-24 bg-white" id="curriculum-section">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-[1400px]">
 
         {/* Heading */}
-
-        <div className="curriculum-heading">
-
-          <div className="curriculum-eyebrow">
-            <span />
-            ACADEMIC STRUCTURE
-          </div>
-
-          <h2>
-            Course
-            <strong>Curriculum</strong>
+        <motion.div 
+          className="max-w-4xl mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <span className="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">
+            Academic Structure
+          </span>
+          <h2 className="text-4xl md:text-5xl font-semibold text-content mb-6 tracking-tight">
+            Course Curriculum.
           </h2>
-
-          <p>
-            Explore semester-wise course structures,
-            electives and detailed syllabus documents.
+          <p className="text-xl text-content-muted leading-relaxed font-light tracking-wide max-w-2xl">
+            Explore semester-wise course structures, electives and detailed syllabus documents.
           </p>
-
-        </div>
-
+        </motion.div>
 
         {/* Semester tabs */}
-
-        <div className="curriculum-tabs">
-
+        <div className="flex flex-wrap gap-4 mb-12">
           {semesters.map((semester) => (
             <button
               type="button"
               key={semester}
-              className={
+              className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 ${
                 selectedSemester === semester
-                  ? "curriculum-tab active"
-                  : "curriculum-tab"
-              }
-              onClick={() =>
-                setSelectedSemester(semester)
-              }
+                  ? "bg-content text-white shadow-lg"
+                  : "bg-surface-alt text-content-muted hover:bg-black/5"
+              }`}
+              onClick={() => setSelectedSemester(semester)}
             >
               {semester}
             </button>
           ))}
-
         </div>
 
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedSemester}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="space-y-12"
+          >
+            {/* Course structure */}
+            {data.struct && data.struct.length > 0 ? (
+              <div className="bg-white border border-black/5 rounded-[2rem] shadow-[0_8px_30px_rgba(0,0,0,0.04)] overflow-hidden">
+                <div className="p-8 border-b border-black/5 flex justify-between items-end bg-surface-alt/50">
+                  <div>
+                    <span className="text-primary font-bold tracking-widest text-[10px] uppercase block mb-2">
+                      Course Structure
+                    </span>
+                    <h3 className="text-2xl font-semibold text-content tracking-tight">
+                      {selectedSemester}
+                    </h3>
+                  </div>
+                  <span className="text-xs font-semibold text-content-muted uppercase tracking-widest flex items-center gap-2 hidden md:flex">
+                    <LuArrowRight className="rotate-180" /> Scroll table <LuArrowRight />
+                  </span>
+                </div>
 
-        {/* Course structure */}
-
-        {data.struct &&
-          data.struct.length > 0 ? (
-
-          <div className="curriculum-card">
-
-            <div className="curriculum-card-header">
-
-              <div>
-                <span>COURSE STRUCTURE</span>
-
-                <h3>
-                  {selectedSemester}
-                </h3>
-              </div>
-
-              <span className="curriculum-scroll">
-                ← Scroll table →
-              </span>
-
-            </div>
-
-
-            <div className="curriculum-table-wrapper">
-
-              <table className="curriculum-table">
-
-                <thead>
-
-                  {data.struct
-                    .slice(0, 2)
-                    .map((row, rowIndex) => (
-                      <tr key={rowIndex}>
-
-                        {row.map(
-                          (cell, cellIndex) => {
-
-                            const text =
-                              typeof cell ===
-                              "object"
-                                ? cell.text
-                                : cell;
-
-                            const colspan =
-                              typeof cell ===
-                              "object"
-                                ? cell.colspan
-                                : undefined;
-
-                            const rowspan =
-                              typeof cell ===
-                              "object"
-                                ? cell.rowspan
-                                : undefined;
-
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse">
+                    <thead>
+                      {data.struct.slice(0, 2).map((row, rowIndex) => (
+                        <tr key={rowIndex} className="bg-surface-alt text-content-muted text-xs uppercase tracking-widest">
+                          {row.map((cell, cellIndex) => {
+                            const text = typeof cell === "object" ? cell.text : cell;
+                            const colspan = typeof cell === "object" ? cell.colspan : undefined;
+                            const rowspan = typeof cell === "object" ? cell.rowspan : undefined;
                             return (
                               <th
                                 key={cellIndex}
                                 colSpan={colspan}
                                 rowSpan={rowspan}
+                                className="px-6 py-4 border-b border-r border-black/5 font-semibold whitespace-nowrap last:border-r-0"
                               >
                                 {text}
                               </th>
                             );
-                          }
-                        )}
-
-                      </tr>
-                    ))}
-
-                </thead>
-
-
-                <tbody>
-
-                  {data.struct
-                    .slice(2)
-                    .map((row, rowIndex) => {
-
-                      const isSection =
-                        row.some(
-                          (cell) =>
-                            typeof cell ===
-                              "object" &&
-                            cell.section
-                        );
-
-                      const firstCell =
-                        row[0];
-
-                      const firstText =
-                        typeof firstCell ===
-                        "object"
-                          ? firstCell.text
-                          : firstCell;
-
-                      const isTotal =
-                        String(firstText)
-                          .toLowerCase()
-                          .includes("total");
-
-                      return (
-                        <tr
-                          key={rowIndex}
-                          className={
-                            isSection
-                              ? "curriculum-section-row"
-                              : isTotal
-                              ? "curriculum-total-row"
-                              : rowIndex % 2 === 0
-                              ? "curriculum-even-row"
-                              : "curriculum-odd-row"
-                          }
-                        >
-
-                          {row.map(
-                            (cell, cellIndex) => {
-
-                              const text =
-                                typeof cell ===
-                                "object"
-                                  ? cell.text
-                                  : cell;
-
-                              const colspan =
-                                typeof cell ===
-                                "object"
-                                  ? cell.colspan
-                                  : undefined;
-
-                              const rowspan =
-                                typeof cell ===
-                                "object"
-                                  ? cell.rowspan
-                                  : undefined;
-
+                          })}
+                        </tr>
+                      ))}
+                    </thead>
+                    <tbody className="text-sm font-medium text-content">
+                      {data.struct.slice(2).map((row, rowIndex) => {
+                        const isSectionHeader = row.length === 1 && typeof row[0] === "object" && row[0].section;
+                        return (
+                          <tr 
+                            key={rowIndex} 
+                            className={`border-b border-black/5 last:border-0 hover:bg-black/[0.02] transition-colors ${
+                              isSectionHeader ? "bg-surface-alt/30" : ""
+                            }`}
+                          >
+                            {row.map((cell, cellIndex) => {
+                              const text = typeof cell === "object" ? cell.text : cell;
+                              const colspan = typeof cell === "object" ? cell.colspan : undefined;
+                              const rowspan = typeof cell === "object" ? cell.rowspan : undefined;
                               return (
                                 <td
                                   key={cellIndex}
                                   colSpan={colspan}
                                   rowSpan={rowspan}
-                                  className={
-                                    isSection
-                                      ? "curriculum-section-cell"
-                                      : ""
-                                  }
+                                  className={`px-6 py-4 border-r border-black/5 last:border-r-0 ${
+                                    isSectionHeader ? "font-bold text-primary tracking-wide text-xs uppercase py-6" : ""
+                                  }`}
                                 >
                                   {text}
                                 </td>
                               );
-                            }
-                          )}
-
-                        </tr>
-                      );
-                    })}
-
-                </tbody>
-
-              </table>
-
-            </div>
-
-          </div>
-
-        ) : (
-
-          <div className="curriculum-empty">
-
-            <div className="curriculum-empty-number">
-              08
-            </div>
-
-            <h3>
-              Detailed Course Structure
-            </h3>
-
-            <p>
-              The detailed course structure for this
-              semester is not available in the current
-              department data.
-            </p>
-
-          </div>
-
-        )}
-
-
-        {/* Electives */}
-
-        {selectedSemester === "6TH SEM" &&
-          data.elective && (
-
-          <div className="curriculum-card elective-card">
-
-            <div className="curriculum-card-header">
-
-              <div>
-                <span>ELECTIVE COURSES</span>
-
-                <h3>
-                  Elective Tracks
-                </h3>
+                            })}
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
               </div>
+            ) : (
+              <div className="p-12 text-center bg-surface-alt rounded-[2rem] border border-black/5">
+                <p className="text-content-muted font-medium">No course structure available for {selectedSemester}.</p>
+              </div>
+            )}
 
-              <span className="curriculum-scroll">
-                ← Scroll table →
-              </span>
-
-            </div>
-
-
-            <div className="curriculum-table-wrapper">
-
-              <table className="curriculum-table">
-
-                <thead>
-
-                  <tr>
-                    {data.elective[0].map(
-                      (cell, index) => (
-                        <th key={index}>
-                          {typeof cell ===
-                          "object"
-                            ? cell.text
-                            : cell}
-                        </th>
-                      )
-                    )}
-                  </tr>
-
-                </thead>
-
-
-                <tbody>
-
-                  {data.elective
-                    .slice(1)
-                    .map((row, rowIndex) => (
-
-                      <tr
-                        key={rowIndex}
-                        className={
-                          rowIndex % 2 === 0
-                            ? "curriculum-even-row"
-                            : "curriculum-odd-row"
-                        }
-                      >
-
-                        {row.map(
-                          (cell, cellIndex) => {
-
-                            const text =
-                              typeof cell ===
-                              "object"
-                                ? cell.text
-                                : cell;
-
-                            const rowspan =
-                              typeof cell ===
-                              "object"
-                                ? cell.rowspan
-                                : undefined;
-
+            {/* Elective Subjects (if any) */}
+            {data.elective && data.elective.length > 0 && (
+              <div className="bg-white border border-black/5 rounded-[2rem] shadow-[0_8px_30px_rgba(0,0,0,0.04)] overflow-hidden mt-12">
+                <div className="p-8 border-b border-black/5 bg-surface-alt/50">
+                  <span className="text-primary font-bold tracking-widest text-[10px] uppercase block mb-2">
+                    Electives
+                  </span>
+                  <h3 className="text-2xl font-semibold text-content tracking-tight">
+                    Professional Elective Courses
+                  </h3>
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse">
+                    <thead>
+                      <tr className="bg-surface-alt text-content-muted text-xs uppercase tracking-widest">
+                        {data.elective[0].map((cell, idx) => (
+                          <th key={idx} className="px-6 py-4 border-b border-r border-black/5 font-semibold whitespace-nowrap last:border-r-0">
+                            {typeof cell === "object" ? cell.text : cell}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody className="text-sm font-medium text-content">
+                      {data.elective.slice(1).map((row, rowIndex) => (
+                        <tr key={rowIndex} className="border-b border-black/5 last:border-0 hover:bg-black/[0.02] transition-colors">
+                          {row.map((cell, cellIndex) => {
+                            const text = typeof cell === "object" ? cell.text : cell;
+                            const colspan = typeof cell === "object" ? cell.colspan : undefined;
+                            const rowspan = typeof cell === "object" ? cell.rowspan : undefined;
                             return (
                               <td
                                 key={cellIndex}
+                                colSpan={colspan}
                                 rowSpan={rowspan}
+                                className="px-6 py-4 border-r border-black/5 last:border-r-0"
                               >
                                 {text}
                               </td>
                             );
-                          }
-                        )}
+                          })}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
 
-                      </tr>
-
-                    ))}
-
-                </tbody>
-
-              </table>
-
-            </div>
-
-          </div>
-
-        )}
-
-
-        {/* Syllabus */}
-
-        <div className="syllabus-card">
-
-          <div className="syllabus-content">
-
-            <div className="syllabus-icon">
-              PDF
-            </div>
-
-            <div>
-              <span>DETAILED DOCUMENT</span>
-
-              <h3>
-                {selectedSemester} Syllabus
-              </h3>
-
-              <p>
-                Open the detailed syllabus document
-                for this semester.
-              </p>
-            </div>
-
-          </div>
-
-          <a
-            href={syllabusFiles[selectedSemester]}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="syllabus-button"
-          >
-            Open Syllabus
-            <span>↗</span>
-          </a>
-
-        </div>
+            {/* Syllabus Document */}
+            {syllabusFiles[selectedSemester] && (
+              <div className="flex flex-col md:flex-row items-center justify-between p-8 md:p-10 bg-surface-alt border border-black/5 rounded-[2rem] gap-8">
+                <div className="flex items-center gap-6 w-full md:w-auto">
+                  <div className="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center text-primary flex-shrink-0 border border-black/5">
+                    <LuFileText className="text-2xl" />
+                  </div>
+                  <div>
+                    <span className="text-primary font-bold tracking-widest text-[10px] uppercase block mb-1">
+                      Detailed Document
+                    </span>
+                    <h3 className="text-xl font-semibold text-content tracking-tight mb-1">
+                      {selectedSemester} Syllabus
+                    </h3>
+                    <p className="text-sm text-content-muted font-medium">
+                      Open the detailed syllabus document.
+                    </p>
+                  </div>
+                </div>
+                
+                <a
+                  href={syllabusFiles[selectedSemester]}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full md:w-auto flex items-center justify-center gap-2 bg-content text-white px-8 py-4 rounded-xl font-semibold text-sm hover:bg-content/90 transition-colors shadow-lg shadow-content/20"
+                >
+                  <LuDownload className="text-lg" />
+                  Download PDF
+                </a>
+              </div>
+            )}
+          </motion.div>
+        </AnimatePresence>
 
       </div>
-
     </section>
   );
 }

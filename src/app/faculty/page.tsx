@@ -1,23 +1,25 @@
-import Footer from "@/components/common/Stack/Footer";
-import GoToTop from "@/components/common/GotoTop/GoToTop";
-
 import Back from "@/components/common/Carousel/Back";
-import ItFaculty from "@/components/faculty/Faculty/Faculty";
+
+import FacultyList from "@/components/faculty/Faculty/Faculty";
+import ClassTeachers from "@/components/faculty/ClassTeachers/ClassTeachers";
+import Mentors from "@/components/faculty/Mentors/Mentors";
 
 export default function FacultyPage() {
   return (
     <main className="min-h-screen overflow-x-hidden">
-      {/* Page Hero */}
-      <Back title="Faculty Corner" />
-
-      {/* Faculty */}
-      <section aria-label="IEM Information Technology faculty">
-        <ItFaculty />
+      <Back title="Our Faculty" />
+      
+      <section aria-label="Faculty Directory" id="faculty-list">
+        <FacultyList />
       </section>
 
-      <GoToTop />
+      <section aria-label="Class Teachers" id="class-teachers">
+        <ClassTeachers />
+      </section>
 
-      <Footer />
+      <section aria-label="Mentors" id="mentors">
+        <Mentors />
+      </section>
     </main>
   );
 }

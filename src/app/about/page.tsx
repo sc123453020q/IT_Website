@@ -1,5 +1,3 @@
-import Footer from "@/components/common/Stack/Footer";
-import GoToTop from "@/components/common/GotoTop/GoToTop";
 
 import Back from "@/components/common/Carousel/Back";
 
@@ -28,10 +26,6 @@ export default function AboutPage() {
       <section aria-label="Program outcomes">
         <ProgramOutcomes />
       </section>
-
-      <GoToTop />
-
-      <Footer />
     </main>
   );
 }

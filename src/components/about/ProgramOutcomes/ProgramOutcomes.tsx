@@ -1,7 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { peo, po, pso } from "@/lib/dummydata";
-import "./ProgramOutcomes.css";
 
 type OutcomeItem = {
   id: string | number;
@@ -19,27 +19,39 @@ function OutcomeSection({
   data: OutcomeItem[];
 }) {
   return (
-    <section className="outcomes__section">
-      <div className="outcomes__section-header">
-        <span>{eyebrow}</span>
-        <h3>{title}</h3>
+    <section className="mt-32">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 pb-6 border-b border-black/5">
+        <div>
+          <span className="text-primary font-bold tracking-widest text-xs uppercase mb-3 block">
+            {eyebrow}
+          </span>
+          <h3 className="text-4xl md:text-5xl font-semibold text-content tracking-tight">{title}</h3>
+        </div>
       </div>
 
-      <div className="outcomes__grid">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
         {data.map((item, index) => (
-          <article
-            className="outcome-card"
+          <motion.article
             key={`${item.id}-${index}`}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ delay: index * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="flex gap-6 group"
           >
-            <div className="outcome-card__number">
+            <div className="text-2xl font-bold text-primary/30 group-hover:text-primary transition-colors mt-1 font-mono">
               {String(item.id).padStart(2, "0")}
             </div>
 
-            <div>
-              <h4>{item.title}</h4>
-              <p>{item.desc}</p>
+            <div className="flex flex-col">
+              <h4 className="text-xl font-semibold text-content mb-3 tracking-tight group-hover:text-primary transition-colors">
+                {item.title}
+              </h4>
+              <p className="text-content-muted leading-relaxed font-light">
+                {item.desc}
+              </p>
             </div>
-          </article>
+          </motion.article>
         ))}
       </div>
     </section>
@@ -48,24 +60,28 @@ function OutcomeSection({
 
 export default function ProgramOutcomes() {
   return (
-    <section className="outcomes">
-      <div className="outcomes__container">
+    <section className="py-32 bg-white">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-[1400px]">
 
-        <header className="outcomes__header">
-          <span>ACADEMIC FRAMEWORK</span>
+        <motion.header 
+          className="max-w-4xl"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <span className="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">
+            Academic Framework
+          </span>
 
-          <h2>
-            Program Educational Objectives
-            <br />
-            & Outcomes
+          <h2 className="text-5xl md:text-7xl font-semibold text-content mb-8 tracking-tighter leading-[1.1]">
+            Educational Objectives <br className="hidden md:block" />& Outcomes.
           </h2>
 
-          <p>
-            Our academic framework defines the knowledge, skills and
-            professional qualities students are expected to develop
-            throughout the program.
+          <p className="text-2xl text-content-muted leading-relaxed font-light tracking-wide max-w-3xl">
+            Our academic framework defines the knowledge, skills and professional qualities students are expected to develop throughout the program.
           </p>
-        </header>
+        </motion.header>
 
         <OutcomeSection
           eyebrow="PEO"

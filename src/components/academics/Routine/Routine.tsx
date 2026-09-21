@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 
-import "./Routine.css";
+import { motion, AnimatePresence } from "framer-motion";
+import { LuArrowRight } from "react-icons/lu";
 
 type RoutineCell =
   | string
@@ -559,219 +560,131 @@ const routines: Record<string, RoutineRow[]> = {
 
 export default function Routine() {
   const years = Object.keys(routines);
-
-  const [selectedYear, setSelectedYear] =
-    useState<string>("2ND YEAR");
+  const [selectedYear, setSelectedYear] = useState<string>("2ND YEAR");
 
   const selectedRoutine = routines[selectedYear];
 
   return (
-    <section
-      className="routine-section"
-      id="routine-section"
-    >
-      <div className="routine-container">
+    <section className="py-24 bg-white" id="routine-section">
+      <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-[1400px]">
 
         {/* Header */}
-
-        <div className="routine-heading">
-
-          <div className="routine-eyebrow">
-            <span />
-            ACADEMIC SCHEDULE
-          </div>
-
-          <h2>
-            Class
-            <strong>Routine</strong>
+        <motion.div 
+          className="max-w-4xl mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <span className="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">
+            Academic Schedule
+          </span>
+          <h2 className="text-4xl md:text-5xl font-semibold text-content mb-6 tracking-tight">
+            Class Routine.
           </h2>
-
-          <p>
-            Select your academic year to view the current
-            class timetable.
+          <p className="text-xl text-content-muted leading-relaxed font-light tracking-wide max-w-2xl">
+            Select your academic year to view the current class timetable.
           </p>
-
-        </div>
-
+        </motion.div>
 
         {/* Year selector */}
-
-        <div className="routine-tabs">
-
+        <div className="flex flex-wrap gap-4 mb-12">
           {years.map((year) => (
             <button
               type="button"
               key={year}
-              className={
+              className={`px-6 py-3 rounded-full text-sm font-semibold tracking-wide transition-all duration-300 ${
                 selectedYear === year
-                  ? "routine-tab active"
-                  : "routine-tab"
-              }
+                  ? "bg-content text-white shadow-lg"
+                  : "bg-surface-alt text-content-muted hover:bg-black/5"
+              }`}
               onClick={() => setSelectedYear(year)}
             >
-              <span className="routine-tab-year">
-                {year}
-              </span>
-
-              <span className="routine-tab-arrow">
-                →
-              </span>
+              {year}
             </button>
           ))}
-
         </div>
 
-
         {/* Timetable */}
-
-        <div className="routine-table-card">
-
-          <div className="routine-table-header">
-
-            <div>
-              <span>WEEKLY SCHEDULE</span>
-
-              <h3>
-                {selectedYear}
-              </h3>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedYear}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.4 }}
+            className="bg-white border border-black/5 rounded-[2rem] shadow-[0_8px_30px_rgba(0,0,0,0.04)] overflow-hidden"
+          >
+            <div className="p-8 border-b border-black/5 flex justify-between items-end bg-surface-alt/50">
+              <div>
+                <span className="text-primary font-bold tracking-widest text-[10px] uppercase block mb-2">
+                  Weekly Schedule
+                </span>
+                <h3 className="text-2xl font-semibold text-content tracking-tight">
+                  {selectedYear}
+                </h3>
+              </div>
+              <span className="text-xs font-semibold text-content-muted uppercase tracking-widest flex items-center gap-2 hidden md:flex">
+                <LuArrowRight className="rotate-180" /> Scroll horizontally <LuArrowRight />
+              </span>
             </div>
 
-            <div className="routine-scroll-hint">
-              ← Scroll horizontally →
-            </div>
-
-          </div>
-
-
-          <div className="routine-table-wrapper">
-
-            <table className="routine-table">
-
-              <thead>
-                <tr>
-                  {selectedRoutine[0].map(
-                    (cell, index) => {
-
-                      const text =
-                        typeof cell === "object"
-                          ? cell.text
-                          : cell;
-
-                      const colspan =
-                        typeof cell === "object"
-                          ? cell.colspan
-                          : undefined;
-
-                      const rowspan =
-                        typeof cell === "object"
-                          ? cell.rowspan
-                          : undefined;
-
+            <div className="overflow-x-auto">
+              <table className="w-full text-left border-collapse min-w-[1000px]">
+                <thead>
+                  <tr className="bg-surface-alt text-content-muted text-xs uppercase tracking-widest">
+                    {selectedRoutine[0].map((cell, index) => {
+                      const text = typeof cell === "object" ? cell.text : cell;
+                      const colspan = typeof cell === "object" ? cell.colspan : undefined;
+                      const rowspan = typeof cell === "object" ? cell.rowspan : undefined;
                       return (
                         <th
                           key={index}
                           colSpan={colspan}
                           rowSpan={rowspan}
-                          className={
-                            index === 0
-                              ? "routine-day-header"
-                              : ""
-                          }
+                          className="px-6 py-4 border-b border-r border-black/5 font-semibold whitespace-nowrap last:border-r-0 text-center"
                         >
                           {text}
                         </th>
                       );
-                    }
-                  )}
-                </tr>
-              </thead>
-
-
-              <tbody>
-
-                {selectedRoutine
-                  .slice(1)
-                  .map((row, rowIndex) => {
-
-                    return (
-                      <tr key={rowIndex}>
-
-                        {row.map(
-                          (cell, cellIndex) => {
-
-                            const text =
-                              typeof cell ===
-                              "object"
-                                ? cell.text
-                                : cell;
-
-                            const colspan =
-                              typeof cell ===
-                              "object"
-                                ? cell.colspan
-                                : undefined;
-
-                            const rowspan =
-                              typeof cell ===
-                              "object"
-                                ? cell.rowspan
-                                : undefined;
-
-                            const isDay =
-                              [
-                                "Monday",
-                                "Tuesday",
-                                "Wednesday",
-                                "Thursday",
-                                "Friday",
-                              ].includes(text);
-
-                            const isBreak =
-                              [
-                                "L",
-                                "U",
-                                "N",
-                                "C",
-                                "H",
-                                "Mentoring",
-                              ].includes(text);
-
-                            return (
-                              <td
-                                key={cellIndex}
-                                colSpan={colspan}
-                                rowSpan={rowspan}
-                                style={
-                                  typeof cell ===
-                                  "object"
-                                    ? cell.style
-                                    : undefined
-                                }
-                                className={
-                                  isDay
-                                    ? "routine-day"
-                                    : isBreak
-                                    ? "routine-special"
-                                    : ""
-                                }
-                              >
-                                {text}
-                              </td>
-                            );
-                          }
-                        )}
-
-                      </tr>
-                    );
-                  })}
-
-              </tbody>
-
-            </table>
-
-          </div>
-
-        </div>
+                    })}
+                  </tr>
+                </thead>
+                <tbody className="text-sm font-medium text-content">
+                  {selectedRoutine.slice(1).map((row, rowIndex) => (
+                    <tr key={rowIndex} className="border-b border-black/5 last:border-0 hover:bg-black/[0.02] transition-colors">
+                      {row.map((cell, cellIndex) => {
+                        const text = typeof cell === "object" ? cell.text : cell;
+                        const colspan = typeof cell === "object" ? cell.colspan : undefined;
+                        const rowspan = typeof cell === "object" ? cell.rowspan : undefined;
+                        const style = typeof cell === "object" ? cell.style : undefined;
+                        
+                        const isDay = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"].includes(text);
+                        const isBreak = ["L", "U", "N", "C", "H", "Mentoring"].includes(text);
+                        
+                        return (
+                          <td
+                            key={cellIndex}
+                            colSpan={colspan}
+                            rowSpan={rowspan}
+                            style={style}
+                            className={`px-4 py-3 border-r border-black/5 last:border-r-0 text-center ${
+                              isDay ? "bg-surface-alt/50 font-bold text-content tracking-wide uppercase text-xs" : ""
+                            } ${
+                              isBreak ? "bg-black/[0.03] text-content-muted font-bold tracking-widest" : ""
+                            }`}
+                          >
+                            {text}
+                          </td>
+                        );
+                      })}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </motion.div>
+        </AnimatePresence>
 
       </div>
     </section>
