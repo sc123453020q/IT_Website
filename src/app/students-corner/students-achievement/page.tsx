@@ -7,7 +7,7 @@ export default function Page() {
       <Back title="Student's Achievement" />
       
       <section aria-label="Student's Achievement">
-        <Achievements />
+        <Achievements hideHeader={true} />
       </section>
     </main>
   );

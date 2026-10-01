@@ -27,30 +27,32 @@ const industryVisits = [
   },
 ];
 
-export default function IndustryVisit() {
+export default function IndustryVisit({ hideHeader = false }: { hideHeader?: boolean }) {
   return (
     <section className="industry-visit-section">
       <div className="industry-visit-container">
 
         {/* Heading */}
-        <div className="industry-visit-heading">
-          <div className="industry-visit-eyebrow">
-            <span />
-            INDUSTRY EXPOSURE
-            <span />
+        {!hideHeader && (
+          <div className="industry-visit-heading">
+            <div className="industry-visit-eyebrow">
+              <span />
+              INDUSTRY EXPOSURE
+              <span />
+            </div>
+
+            <h1>
+              Industry
+              <span>Visits</span>
+            </h1>
+
+            <p>
+              Explore the industry visits organized for our students,
+              providing valuable exposure to real-world technologies,
+              workplaces and professional environments.
+            </p>
           </div>
-
-          <h1>
-            Industry
-            <span>Visits</span>
-          </h1>
-
-          <p>
-            Explore the industry visits organized for our students,
-            providing valuable exposure to real-world technologies,
-            workplaces and professional environments.
-          </p>
-        </div>
+        )}
 
         {/* Industry Visits */}
         <div className="industry-visit-list">

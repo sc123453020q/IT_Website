@@ -7,7 +7,7 @@ export default function Page() {
       <Back title="Placement" />
       
       <section aria-label="Placement">
-        <Placements />
+        <Placements hideHeader={true} />
       </section>
     </main>
   );

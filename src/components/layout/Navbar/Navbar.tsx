@@ -32,7 +32,7 @@ const navItems = [
   },
   { 
     label: "Student's Corner", 
-    href: "/students-corner",
+    href: "#",
     dropdown: [
       { label: "Placement", href: "/students-corner/placement" },
       { label: "Academic ERP", href: "/students-corner/academic-erp" },

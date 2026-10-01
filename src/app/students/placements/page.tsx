@@ -6,12 +6,9 @@ import Placements from "@/components/students/Placements/Placements";
 export default function PlacementsPage() {
   return (
     <main className="min-h-screen overflow-x-hidden">
-
-      <Navbar />
-
       <Back title="Placements" />
 
-      <Placements />
+      <Placements hideHeader={true} />
 
     </main>
   );

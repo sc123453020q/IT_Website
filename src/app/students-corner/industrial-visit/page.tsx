@@ -7,7 +7,7 @@ export default function Page() {
       <Back title="Industrial Visit" />
       
       <section aria-label="Industrial Visit">
-        <IndustryVisit />
+        <IndustryVisit hideHeader={true} />
       </section>
     </main>
   );

@@ -69,7 +69,7 @@ const materials: Record<string, Material[]> = {
 
 const years = Object.keys(materials);
 
-export default function StudyMaterials() {
+export default function StudyMaterials({ hideHeader = false }: { hideHeader?: boolean }) {
   const [activeYear, setActiveYear] = useState("2nd Year");
 
   return (
@@ -78,21 +78,23 @@ export default function StudyMaterials() {
       <div className="study-materials-container">
 
         {/* Header */}
-        <div className="study-materials-header">
+        {!hideHeader && (
+          <div className="study-materials-header">
 
-          <span>ACADEMIC RESOURCES</span>
+            <span>ACADEMIC RESOURCES</span>
 
-          <h1>
-            Study Materials
-            <strong>& Assignments</strong>
-          </h1>
+            <h1>
+              Study Materials
+              <strong>& Assignments</strong>
+            </h1>
 
-          <p>
-            Find notes, assignments and academic resources organized
-            according to your year of study.
-          </p>
+            <p>
+              Find notes, assignments and academic resources organized
+              according to your year of study.
+            </p>
 
-        </div>
+          </div>
+        )}
 
         {/* Year Tabs */}
         <div className="study-year-tabs">

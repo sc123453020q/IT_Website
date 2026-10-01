@@ -86,26 +86,28 @@ const recruiters = [
   },
 ];
 
-export default function Placements() {
+export default function Placements({ hideHeader = false }: { hideHeader?: boolean }) {
   return (
     <section className="placements-section">
       <div className="placements-container">
 
         {/* Header */}
-        <div className="placements-header">
-          <span>CAREER & PROFESSIONAL GROWTH</span>
+        {!hideHeader && (
+          <div className="placements-header">
+            <span>CAREER & PROFESSIONAL GROWTH</span>
 
-          <h1>
-            Placements
-            <strong>That Build Careers.</strong>
-          </h1>
+            <h1>
+              Placements
+              <strong>That Build Careers.</strong>
+            </h1>
 
-          <p>
-            Our placement ecosystem connects students with leading
-            organizations while preparing them for successful professional
-            careers.
-          </p>
-        </div>
+            <p>
+              Our placement ecosystem connects students with leading
+              organizations while preparing them for successful professional
+              careers.
+            </p>
+          </div>
+        )}
 
         {/* Statistics */}
         <div className="placement-stats">

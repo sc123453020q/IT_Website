@@ -7,7 +7,7 @@ export default function Page() {
       <Back title="Conference" />
       
       <section aria-label="Conference">
-        <ICDC />
+        <ICDC hideHeader={true} />
       </section>
     </main>
   );

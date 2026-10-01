@@ -31,27 +31,29 @@ const achievements = [
   },
 ];
 
-export default function Achievements() {
+export default function Achievements({ hideHeader = false }: { hideHeader?: boolean }) {
   return (
     <section className="achievements-section">
 
       <div className="achievements-container">
 
-        <div className="achievements-header">
+        {!hideHeader && (
+          <div className="achievements-header">
 
-          <span>CELEBRATING EXCELLENCE</span>
+            <span>CELEBRATING EXCELLENCE</span>
 
-          <h1>
-            Student
-            <strong>Achievements</strong>
-          </h1>
+            <h1>
+              Student
+              <strong>Achievements</strong>
+            </h1>
 
-          <p>
-            Celebrating the dedication, creativity and achievements of
-            students who continue to make our department proud.
-          </p>
+            <p>
+              Celebrating the dedication, creativity and achievements of
+              students who continue to make our department proud.
+            </p>
 
-        </div>
+          </div>
+        )}
 
         <div className="achievements-list">
 

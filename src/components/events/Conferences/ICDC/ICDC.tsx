@@ -1,52 +1,171 @@
+import { 
+  LuSparkles, 
+  LuCpu, 
+  LuBrain, 
+  LuCloud, 
+  LuShieldCheck, 
+  LuVideo, 
+  LuGlobe, 
+  LuPresentation, 
+  LuCalendar
+} from "react-icons/lu";
 import "./ICDC.css";
 
-export default function ICDC() {
+export default function ICDC({ hideHeader = false }: { hideHeader?: boolean }) {
+  const highlights = [
+    {
+      icon: LuPresentation,
+      title: "Insightful Invited Talks",
+      desc: "Delivered by world-renowned researchers, academicians, and industry pioneers."
+    },
+    {
+      icon: LuSparkles,
+      title: "Innovative Technical Sessions",
+      desc: "Peer-reviewed paper presentations highlighting breakthrough research and novel algorithms."
+    },
+    {
+      icon: LuVideo,
+      title: "Hybrid Event Format",
+      desc: "Seamless physical and virtual interactive sessions enabling global collaboration."
+    },
+    {
+      icon: LuGlobe,
+      title: "Global Participation",
+      desc: "Delegates, researchers, and keynote speakers from premier institutions worldwide."
+    }
+  ];
+
+  const tracks = [
+    {
+      icon: LuBrain,
+      title: "AI And Robotics",
+      desc: "Machine Learning, Deep Learning, Autonomous Systems, Computer Vision, and Neural Networks.",
+      tag: "Track 01"
+    },
+    {
+      icon: LuCpu,
+      title: "Image Processing And NLP",
+      desc: "Computer Vision, Pattern Recognition, Natural Language Processing, and Computational Linguistics.",
+      tag: "Track 02"
+    },
+    {
+      icon: LuCloud,
+      title: "Cloud Computing And Big Data Analytics",
+      desc: "Distributed Systems, Cloud Architecture, Edge Computing, Data Mining, and Analytics.",
+      tag: "Track 03"
+    },
+    {
+      icon: LuShieldCheck,
+      title: "Cyber Security, Blockchain And IoT",
+      desc: "Network Security, Cryptography, Smart Contracts, Embedded Systems, and Internet of Things.",
+      tag: "Track 04"
+    }
+  ];
+
   return (
     <section className="icdc-section">
       <div className="icdc-container">
 
-        <div className="icdc-header">
-          <span>CONFERENCE</span>
+        {/* HERO / HEADER */}
+        {!hideHeader && (
+          <div className="icdc-header">
+            <span className="icdc-badge">
+              <LuCalendar className="inline-block mr-1 text-sm" /> INTERNATIONAL CONFERENCE
+            </span>
 
-          <h1>
-            ICDC
-          </h1>
+            <h1>
+              ICDC
+            </h1>
 
-          <p>
-            International Conference on emerging technologies,
-            research, innovation and ideas.
-          </p>
-        </div>
+            <p className="icdc-subtitle">
+              International Conference on Computational Intelligence, Data Science and Cloud Computing
+            </p>
+          </div>
+        )}
 
+        {/* MAIN CONTENT GRID: IMAGE + ABOUT WRITEUP */}
         <div className="icdc-content">
-
-          <div className="icdc-image">
-            <div className="icdc-image-placeholder">
-              EVENT IMAGE
+          <div className="icdc-image-wrapper">
+            <div className="icdc-image-card">
+              <img
+                src="/images/ICDC.jpg"
+                alt="ICDC - International Conference on Computational Intelligence, Data Science and Cloud Computing"
+                className="icdc-img"
+              />
+              <div className="icdc-image-overlay">
+                <span className="icdc-img-tag">IEM-ICDC Conference</span>
+              </div>
             </div>
           </div>
 
           <div className="icdc-writeup">
-            <span>ABOUT THE EVENT</span>
+            <span className="icdc-writeup-tag">ABOUT THE EVENT</span>
 
             <h2>
-              International Conference
+              Enticing Interest in Next-Gen Technologies
             </h2>
 
             <p>
-              Write the complete information about ICDC here.
-              You can include the purpose of the conference,
-              participating institutions, speakers, research
-              presentations and other important details.
+              International Conference on Computational Intelligence, Data Science and Cloud Computing is an endeavour in enticing interest for Computational Intelligence and Data Science applications in diverse domains.
             </p>
 
             <p>
-              Additional information about the conference,
-              achievements and student participation can also
-              be added here.
+              As the world is moving towards industry 4.0, Computational Intelligence, Data Science and Cloud Computing are becoming more and more relevant in our society in all possible ways.
+            </p>
+
+            <p>
+              The most substantial new findings about AI and Robotics, Image processing and NLP, Cloud Computing and big data analytics as well as in Cyber security, Blockchain and IoT and various allied fields will be presented in the three-day event.
             </p>
           </div>
+        </div>
 
+        {/* HIGHLIGHTS / EVENT FEATURES */}
+        <div className="icdc-features-section">
+          <div className="icdc-section-title">
+            <span>KEY HIGHLIGHTS</span>
+            <h3>Event Characteristics</h3>
+          </div>
+
+          <div className="icdc-highlights-grid">
+            {highlights.map((item, idx) => {
+              const IconComp = item.icon;
+              return (
+                <div key={idx} className="icdc-highlight-card">
+                  <div className="icdc-icon-box">
+                    <IconComp />
+                  </div>
+                  <h4>{item.title}</h4>
+                  <p>{item.desc}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* TRACKS & TOPICS */}
+        <div className="icdc-tracks-section">
+          <div className="icdc-section-title">
+            <span>CONFERENCE TRACKS</span>
+            <h3>Major Tracks and Topics</h3>
+          </div>
+
+          <div className="icdc-tracks-grid">
+            {tracks.map((track, idx) => {
+              const TrackIcon = track.icon;
+              return (
+                <div key={idx} className="icdc-track-card">
+                  <div className="icdc-track-header">
+                    <span className="icdc-track-tag">{track.tag}</span>
+                    <div className="icdc-track-icon">
+                      <TrackIcon />
+                    </div>
+                  </div>
+                  <h4>{track.title}</h4>
+                  <p>{track.desc}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
 
       </div>

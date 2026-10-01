@@ -8,7 +8,7 @@ export default function ICDCPage() {
 
       <Back title="ICDC" />
 
-      <ICDC />
+      <ICDC hideHeader={true} />
     </main>
   );
 }
