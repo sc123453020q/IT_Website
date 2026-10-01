@@ -55,7 +55,7 @@ export default function Hero() {
               Explore Department
             </Link>
             <Link 
-              href="/academics" 
+              href="/course-curriculum/curriculum" 
               className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-xl text-white border border-white/10 rounded-full font-semibold transition-all duration-300 active:scale-95"
             >
               Academic Programs

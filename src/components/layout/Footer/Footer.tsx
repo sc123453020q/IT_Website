@@ -3,12 +3,12 @@ import Link from "next/link";
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Academics", href: "/academics" },
+  { label: "Academics", href: "/course-curriculum/curriculum" },
   { label: "Faculty", href: "/faculty" },
 ];
 
 const exploreLinks = [
-  { label: "Innovation", href: "/innovation" },
+  { label: "Innovation", href: "/research/iedc-it" },
   { label: "Students", href: "/students" },
 ];
 

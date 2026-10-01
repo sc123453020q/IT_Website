@@ -835,7 +835,7 @@ const syllabusFiles: Record<
     "/pdfs/IT_2021-2025.pdf",
 };
 
-export default function Curriculum() {
+export default function Curriculum({ hideHeader = false }: { hideHeader?: boolean }) {
   const [selectedSemester, setSelectedSemester] = useState<SemesterType>("4TH SEM");
 
   const data = courseStruct[selectedSemester];
@@ -845,23 +845,25 @@ export default function Curriculum() {
       <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-[1400px]">
 
         {/* Heading */}
-        <motion.div 
-          className="max-w-4xl mb-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <span className="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">
-            Academic Structure
-          </span>
-          <h2 className="text-4xl md:text-5xl font-semibold text-content mb-6 tracking-tight">
-            Course Curriculum.
-          </h2>
-          <p className="text-xl text-content-muted leading-relaxed font-light tracking-wide max-w-2xl">
-            Explore semester-wise course structures, electives and detailed syllabus documents.
-          </p>
-        </motion.div>
+        {!hideHeader && (
+          <motion.div 
+            className="max-w-4xl mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+          >
+            <span className="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">
+              Academic Structure
+            </span>
+            <h2 className="text-4xl md:text-5xl font-semibold text-content mb-6 tracking-tight">
+              Course Curriculum.
+            </h2>
+            <p className="text-xl text-content-muted leading-relaxed font-light tracking-wide max-w-2xl">
+              Explore semester-wise course structures, electives and detailed syllabus documents.
+            </p>
+          </motion.div>
+        )}
 
         {/* Semester tabs */}
         <div className="flex flex-wrap gap-4 mb-12">

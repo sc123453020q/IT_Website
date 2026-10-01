@@ -9,8 +9,10 @@ const navItems = [
   { label: "Home", href: "/" },
   { 
     label: "Course & Curriculum", 
-    href: "/course-curriculum",
+    href: "#",
     dropdown: [
+      { label: "Course Curriculum", href: "/course-curriculum/curriculum" },
+      { label: "Routine", href: "/course-curriculum/routine" },
       { label: "Infrastructure", href: "/course-curriculum/infrastructure" },
       { label: "Library", href: "/course-curriculum/library" }
     ]
@@ -133,7 +135,7 @@ export default function Navbar() {
           {/* ================= DESKTOP NAVIGATION ================= */}
           <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navItems.map((item) => (
-              <div key={item.href} className="relative group">
+              <div key={item.label} className="relative group">
                 <Link
                   href={item.href}
                   className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 flex items-center gap-1.5
@@ -180,7 +182,7 @@ export default function Navbar() {
           {/* ================= CTA & MOBILE MENU ================= */}
           <div className="flex items-center gap-3">
             <Link 
-              href="/portal" 
+              href="/students-corner/academic-erp" 
               className={`hidden md:inline-flex items-center justify-center px-6 py-2.5 text-sm font-medium rounded-full transition-all duration-300 ${
                 isSolid 
                   ? "text-white bg-primary hover:bg-primary-hover shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5" 
@@ -214,7 +216,7 @@ export default function Navbar() {
           <nav className="flex flex-col gap-2">
             {navItems.map((item, i) => (
               <div 
-                key={item.href} 
+                key={item.label} 
                 className="flex flex-col border-b border-black/5 pb-2"
                 style={{ transitionDelay: `${i * 50}ms` }}
               >
@@ -248,7 +250,7 @@ export default function Navbar() {
           
           <div className="mt-10">
             <Link 
-              href="/portal" 
+              href="/students-corner/academic-erp" 
               onClick={() => setMenuOpen(false)}
               className="flex w-full items-center justify-center px-6 py-4 text-lg font-semibold text-white bg-content rounded-2xl shadow-xl shadow-black/10 active:scale-[0.98] transition-all"
             >

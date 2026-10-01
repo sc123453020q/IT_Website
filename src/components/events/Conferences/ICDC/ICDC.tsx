@@ -119,6 +119,62 @@ export default function ICDC({ hideHeader = false }: { hideHeader?: boolean }) {
           </div>
         </div>
 
+        {/* OFFICIAL CALL FOR PAPERS POSTER SECTION */}
+        <div className="icdc-poster-section">
+          <div className="icdc-section-title">
+            <span>OFFICIAL ANNOUNCEMENT</span>
+            <h3>Call for Papers &amp; Conference Poster</h3>
+          </div>
+
+          <div className="icdc-poster-card">
+            <div className="icdc-poster-image-container">
+              <img 
+                src="/images/ICDC2.jpg" 
+                alt="IEM-ICDC Call for Papers Official Poster" 
+                className="icdc-poster-img"
+              />
+            </div>
+
+            <div className="icdc-poster-info">
+              <span className="icdc-poster-badge">SUBMISSIONS OPEN</span>
+              <h2>IEM-ICDC 2027</h2>
+              <p className="icdc-poster-desc">
+                5th International Conference on Computational Intelligence, Data Science and Cloud Computing. Organized by Dept. of Information Technology &amp; Dept. of CSE, IEM Kolkata.
+              </p>
+
+              <div className="icdc-poster-dates">
+                <h4>Important Dates</h4>
+                <ul>
+                  <li><strong>Dec 10, 2026:</strong> Deadline for full paper submission</li>
+                  <li><strong>Feb 04, 2027:</strong> Acceptance Notification</li>
+                  <li><strong>Feb 10, 2027:</strong> Paper Registration Deadline</li>
+                  <li><strong>Feb 20, 2027:</strong> Camera Ready Submission</li>
+                  <li><strong>Mar 02, 2027:</strong> Presentation Submission</li>
+                </ul>
+              </div>
+
+              <div className="icdc-poster-actions">
+                <a 
+                  href="https://easychair.org/conferences/?conf=iemicdc2027" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="icdc-btn-primary"
+                >
+                  Submit Paper (EasyChair)
+                </a>
+                <a 
+                  href="https://iemicdc.org/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="icdc-btn-secondary"
+                >
+                  Official Website &rarr;
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* HIGHLIGHTS / EVENT FEATURES */}
         <div className="icdc-features-section">
           <div className="icdc-section-title">
