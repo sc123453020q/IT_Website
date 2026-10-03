@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { LuUserPlus, LuBookOpen, LuMicroscope, LuArrowRight } from "react-icons/lu";
+import { LuUsers, LuArrowRight } from "react-icons/lu";
 
 export default function Hero() {
   return (
@@ -70,32 +70,30 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white/70 backdrop-blur-3xl border border-white shadow-[0_20px_40px_rgba(0,0,0,0.08)] rounded-3xl overflow-hidden"
+          className="bg-white/80 backdrop-blur-3xl border border-white shadow-[0_20px_40px_rgba(0,0,0,0.08)] rounded-3xl overflow-hidden hover:shadow-[0_25px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
         >
-          <div className="grid grid-cols-3 divide-x divide-black/5">
-            {[
-              { title: "Prospective Students", desc: "Admissions & Campus Life", icon: LuUserPlus, link: "/admissions" },
-              { title: "Current Students", desc: "Resources & Support Portal", icon: LuBookOpen, link: "/students" },
-              { title: "Faculty & Research", desc: "Directories & Publications", icon: LuMicroscope, link: "/faculty" },
-            ].map((item, idx) => (
-              <Link 
-                key={idx} 
-                href={item.link}
-                className="group p-10 transition-colors hover:bg-white flex flex-col"
-              >
-                <div className="flex justify-between items-start mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-black/5 flex items-center justify-center text-content group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm">
-                    <item.icon className="text-2xl" />
-                  </div>
-                  <div className="w-8 h-8 rounded-full flex items-center justify-center text-content/30 group-hover:bg-black/5 group-hover:text-primary transition-all duration-300">
-                    <LuArrowRight className="text-xl transform group-hover:translate-x-0.5 transition-transform" />
-                  </div>
-                </div>
-                <h3 className="text-2xl font-semibold text-content mb-2 tracking-tight">{item.title}</h3>
-                <p className="text-content-muted font-medium">{item.desc}</p>
-              </Link>
-            ))}
-          </div>
+          <Link 
+            href="/faculty"
+            className="group p-8 md:p-10 flex items-center justify-between transition-colors hover:bg-white"
+          >
+            <div className="flex items-center gap-6">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
+                <LuUsers className="text-3xl" />
+              </div>
+              <div>
+                <h3 className="text-3xl font-semibold text-content mb-1 tracking-tight group-hover:text-primary transition-colors">
+                  Our Faculty
+                </h3>
+                <p className="text-content-muted font-medium text-base">
+                  Meet the educators, researchers, and academic leaders shaping the future of Information Technology.
+                </p>
+              </div>
+            </div>
+
+            <div className="w-12 h-12 rounded-full flex items-center justify-center bg-black/5 text-content/60 group-hover:bg-primary group-hover:text-white transition-all duration-300 flex-shrink-0">
+              <LuArrowRight className="text-2xl transform group-hover:translate-x-1 transition-transform" />
+            </div>
+          </Link>
         </motion.div>
       </div>
     </section>

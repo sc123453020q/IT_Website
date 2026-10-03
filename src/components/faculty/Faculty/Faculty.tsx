@@ -115,29 +115,7 @@ export default function Faculty() {
 
         <div className="faculty-container">
 
-          {/* -------------------------------------------------
-              HEADER
-          ------------------------------------------------- */}
 
-          <div className="faculty-heading">
-
-            <div className="faculty-eyebrow">
-              <span className="faculty-eyebrow-line" />
-              OUR PEOPLE
-            </div>
-
-            <h1>
-              Meet Our
-              <span>Faculty</span>
-            </h1>
-
-            <p>
-              Meet the educators, researchers and academic leaders
-              who contribute to the growth and development of the
-              Department of Information Technology.
-            </p>
-
-          </div>
 
 
           {/* -------------------------------------------------

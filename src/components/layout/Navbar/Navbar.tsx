@@ -14,7 +14,7 @@ const navItems = [
       { label: "Course Curriculum", href: "/course-curriculum/curriculum" },
       { label: "Routine", href: "/course-curriculum/routine" },
       { label: "Infrastructure", href: "/course-curriculum/infrastructure" },
-      { label: "Library", href: "/course-curriculum/library" }
+      { label: "Library", href: "https://iemgurukul-opac.l2c2.co.in/" }
     ]
   },
   { 
@@ -159,18 +159,23 @@ export default function Navbar() {
                       <div className={`max-h-[65vh] overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-track-transparent scrollbar-thumb-black/10 pr-2 -mr-2 ${
                         item.dropdown.length > 8 ? "grid grid-cols-2 gap-x-4 gap-y-1" : "flex flex-col gap-1"
                       }`}>
-                        {item.dropdown.map(drop => (
-                          <Link 
-                            key={drop.href} 
-                            href={drop.href}
-                            className="group/link flex items-center justify-between px-4 py-3 text-[14px] font-medium text-content/70 hover:text-primary hover:bg-primary/5 rounded-xl transition-all duration-200"
-                          >
-                            <span>{drop.label}</span>
-                            <span className="opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-300 text-primary">
-                              &rarr;
-                            </span>
-                          </Link>
-                        ))}
+                        {item.dropdown.map(drop => {
+                          const isExternal = drop.href.startsWith("http");
+                          return (
+                            <Link 
+                              key={drop.href} 
+                              href={drop.href}
+                              target={isExternal ? "_blank" : undefined}
+                              rel={isExternal ? "noopener noreferrer" : undefined}
+                              className="group/link flex items-center justify-between px-4 py-3 text-[14px] font-medium text-content/70 hover:text-primary hover:bg-primary/5 rounded-xl transition-all duration-200"
+                            >
+                              <span>{drop.label}</span>
+                              <span className="opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-300 text-primary">
+                                &rarr;
+                              </span>
+                            </Link>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
@@ -232,16 +237,21 @@ export default function Navbar() {
                 </Link>
                 {item.dropdown && (
                   <div className="flex flex-col pl-4 mt-2 gap-3 mb-2">
-                    {item.dropdown.map(drop => (
-                      <Link 
-                        key={drop.href} 
-                        href={drop.href}
-                        onClick={() => setMenuOpen(false)}
-                        className="text-lg font-medium text-content/60 hover:text-content transition-colors"
-                      >
-                        {drop.label}
-                      </Link>
-                    ))}
+                    {item.dropdown.map(drop => {
+                      const isExternal = drop.href.startsWith("http");
+                      return (
+                        <Link 
+                          key={drop.href} 
+                          href={drop.href}
+                          target={isExternal ? "_blank" : undefined}
+                          rel={isExternal ? "noopener noreferrer" : undefined}
+                          onClick={() => setMenuOpen(false)}
+                          className="text-lg font-medium text-content/60 hover:text-content transition-colors"
+                        >
+                          {drop.label}
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>

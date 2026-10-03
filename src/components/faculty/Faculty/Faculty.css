@@ -1,24 +1,24 @@
 /* =========================================================
-   IEM IT — FACULTY SECTION
+   IEM IT — FACULTY SECTION (SEAMLESS BLUE THEME)
    ========================================================= */
 
 .faculty-section {
   position: relative;
   overflow: hidden;
-  padding: 110px 0 90px;
+  padding: 40px 0 90px;
   background:
     radial-gradient(
-      circle at 10% 15%,
-      rgba(122, 47, 227, 0.08),
-      transparent 30%
+      circle at 10% 0%,
+      rgba(0, 102, 204, 0.05),
+      transparent 40%
     ),
     radial-gradient(
       circle at 90% 80%,
-      rgba(173, 83, 137, 0.08),
-      transparent 30%
+      rgba(59, 130, 246, 0.04),
+      transparent 40%
     ),
-    #faf9fc;
-  color: #24132e;
+    #ffffff;
+  color: #0f172a;
 }
 
 /* =========================================================
@@ -37,7 +37,7 @@
   height: 300px;
   top: -120px;
   left: -100px;
-  background: rgba(122, 47, 227, 0.12);
+  background: rgba(0, 102, 204, 0.06);
 }
 
 .faculty-bg-glow-two {
@@ -45,7 +45,7 @@
   height: 320px;
   right: -140px;
   bottom: -120px;
-  background: rgba(173, 83, 137, 0.1);
+  background: rgba(59, 130, 246, 0.05);
 }
 
 /* =========================================================
@@ -75,7 +75,7 @@
   gap: 10px;
   margin-bottom: 18px;
 
-  color: #7a2fe3;
+  color: #0066cc;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.2em;
@@ -87,15 +87,15 @@
   border-radius: 999px;
   background: linear-gradient(
     90deg,
-    #3c1053,
-    #7a2fe3
+    #004080,
+    #0066cc
   );
 }
 
 .faculty-heading h1 {
   margin: 0;
 
-  color: #24132e;
+  color: #0f172a;
   font-size: clamp(2.8rem, 6vw, 5rem);
   line-height: 0.95;
   font-weight: 850;
@@ -107,9 +107,9 @@
 
   background: linear-gradient(
     90deg,
-    #3c1053,
-    #7a2fe3,
-    #ad5389
+    #0f172a,
+    #0066cc,
+    #3b82f6
   );
 
   -webkit-background-clip: text;
@@ -121,7 +121,7 @@
   max-width: 650px;
   margin: 25px auto 0;
 
-  color: #756d7c;
+  color: #64748b;
   font-size: 15px;
   line-height: 1.8;
 }
@@ -150,13 +150,13 @@
 
   overflow: hidden;
 
-  border: 1px solid rgba(60, 16, 83, 0.09);
+  border: 1px solid rgba(0, 102, 204, 0.08);
   border-radius: 22px;
 
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
 
   box-shadow:
-    0 12px 35px rgba(36, 19, 46, 0.06);
+    0 12px 35px rgba(0, 50, 120, 0.04);
 
   transition:
     transform 0.35s ease,
@@ -167,10 +167,10 @@
 .faculty-card:hover {
   transform: translateY(-8px);
 
-  border-color: rgba(122, 47, 227, 0.2);
+  border-color: rgba(0, 102, 204, 0.25);
 
   box-shadow:
-    0 25px 55px rgba(60, 16, 83, 0.13);
+    0 25px 55px rgba(0, 102, 204, 0.12);
 }
 
 /* =========================================================
@@ -183,7 +183,7 @@
   top: 17px;
   right: 20px;
 
-  color: #b6adb9;
+  color: #94a3b8;
 
   font-size: 10px;
   font-weight: 800;
@@ -193,7 +193,7 @@
 }
 
 .faculty-card:hover .faculty-number {
-  color: #7a2fe3;
+  color: #0066cc;
 }
 
 /* =========================================================
@@ -224,7 +224,7 @@
 
   border-radius: 50%;
 
-  background: rgba(122, 47, 227, 0.1);
+  background: rgba(0, 102, 204, 0.12);
 
   filter: blur(25px);
 
@@ -252,13 +252,13 @@
   background:
     linear-gradient(
       135deg,
-      #3c1053,
-      #7a2fe3,
-      #ad5389
+      #004080,
+      #0066cc,
+      #3b82f6
     );
 
   box-shadow:
-    0 10px 30px rgba(60, 16, 83, 0.16);
+    0 10px 30px rgba(0, 102, 204, 0.16);
 
   z-index: 2;
 }
@@ -377,13 +377,13 @@
   display: inline-block;
 
   margin-bottom: 9px;
-  padding: 5px 9px;
+  padding: 5px 12px;
 
   border-radius: 999px;
 
-  color: #7a2fe3;
+  color: #0066cc;
 
-  background: rgba(122, 47, 227, 0.08);
+  background: rgba(0, 102, 204, 0.08);
 
   font-size: 8px;
   font-weight: 800;
@@ -391,10 +391,15 @@
   letter-spacing: 0.12em;
 }
 
+.faculty-program-badge {
+  color: #2563eb;
+  background: rgba(37, 99, 235, 0.08);
+}
+
 .faculty-info h2 {
   margin: 0;
 
-  color: #281a31;
+  color: #0f172a;
 
   font-size: 18px;
   line-height: 1.35;
@@ -404,7 +409,7 @@
 .faculty-info p {
   margin: 8px 0 0;
 
-  color: #827987;
+  color: #64748b;
 
   font-size: 12px;
   line-height: 1.5;
@@ -429,9 +434,9 @@
   background:
     linear-gradient(
       90deg,
-      #3c1053,
-      #7a2fe3,
-      #ad5389
+      #004080,
+      #0066cc,
+      #3b82f6
     );
 
   transform: scaleX(0);
@@ -450,13 +455,13 @@
    ========================================================= */
 
 .faculty-card-hod {
-  border-color: rgba(122, 47, 227, 0.2);
+  border-color: rgba(0, 102, 204, 0.25);
 
   background:
     linear-gradient(
       145deg,
       #ffffff,
-      #fbf7ff
+      #f0f7ff
     );
 }
 
@@ -467,7 +472,7 @@
 .faculty-empty {
   padding: 70px 20px;
 
-  border: 1px dashed rgba(60, 16, 83, 0.2);
+  border: 1px dashed rgba(0, 102, 204, 0.2);
   border-radius: 20px;
 
   text-align: center;
@@ -478,7 +483,7 @@
 .faculty-empty h2 {
   margin: 0;
 
-  color: #3c1053;
+  color: #0f172a;
 
   font-size: 22px;
 }
@@ -486,7 +491,7 @@
 .faculty-empty p {
   margin: 10px 0 0;
 
-  color: #77717d;
+  color: #64748b;
 }
 
 /* =========================================================
@@ -504,21 +509,21 @@
 
   gap: 30px;
 
-  border: 1px solid rgba(60, 16, 83, 0.1);
+  border: 1px solid rgba(0, 102, 204, 0.1);
   border-radius: 20px;
 
   background:
     linear-gradient(
       135deg,
-      rgba(60, 16, 83, 0.04),
-      rgba(122, 47, 227, 0.05)
+      rgba(0, 102, 204, 0.03),
+      rgba(59, 130, 246, 0.05)
     );
 }
 
 .faculty-navigation-text span {
   display: block;
 
-  color: #7a2fe3;
+  color: #0066cc;
 
   font-size: 9px;
   font-weight: 800;
@@ -529,7 +534,7 @@
 .faculty-navigation-text p {
   margin: 6px 0 0;
 
-  color: #665d6b;
+  color: #475569;
 
   font-size: 14px;
   font-weight: 600;
@@ -561,8 +566,8 @@
   background:
     linear-gradient(
       135deg,
-      #3c1053,
-      #7a2fe3
+      #004080,
+      #0066cc
     );
 
   text-decoration: none;
@@ -581,19 +586,19 @@
   transform: translateY(-3px);
 
   box-shadow:
-    0 12px 25px rgba(122, 47, 227, 0.2);
+    0 12px 25px rgba(0, 102, 204, 0.25);
 }
 
 .faculty-nav-button-outline {
-  color: #5f5566;
+  color: #475569;
 
   background: #ffffff;
 
-  border: 1px solid rgba(60, 16, 83, 0.12);
+  border: 1px solid rgba(0, 102, 204, 0.15);
 }
 
 .faculty-nav-button-outline:hover {
-  color: #7a2fe3;
+  color: #0066cc;
 
   background: #ffffff;
 }
@@ -611,7 +616,7 @@
 @media (max-width: 950px) {
 
   .faculty-section {
-    padding: 90px 0 75px;
+    padding: 40px 0 75px;
   }
 
   .faculty-grid {
@@ -633,7 +638,7 @@
 @media (max-width: 600px) {
 
   .faculty-section {
-    padding: 70px 0 60px;
+    padding: 30px 0 60px;
   }
 
   .faculty-container {
@@ -666,11 +671,6 @@
     width: 155px;
     height: 155px;
   }
-
-  /*
-   * On mobile the social buttons stay visible.
-   * This is much easier to use on touch screens.
-   */
 
   .faculty-socials {
     right: calc(50% - 110px);

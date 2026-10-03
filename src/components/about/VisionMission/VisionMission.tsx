@@ -47,26 +47,26 @@ export default function VisionMission() {
             </div>
 
             <h3 className="text-4xl font-semibold text-content tracking-tight mb-8">
-              Vision of the Program
+              Vision of the Department
             </h3>
 
             <div className="space-y-6 text-xl text-content/80 leading-relaxed font-light tracking-wide">
               <p>
-                The Department of Information Technology at IEM Kolkata strives to achieve excellence in academics, innovation, research, and student development. It is well-equipped to tackle novel challenges in this fast-evolving era of Information Technology through research and entrepreneurial initiatives, thereby creating true value for society.
+                To be a nationally and internationally distinguished Department of Information Technology that advances transformative digital solutions through experiential learning, interdisciplinary collaboration, and research excellence in alignment with NEP 2020.
               </p>
               <p>
-                The department is internationally recognized in distinctive areas of education and research, driven by a professional and technology-oriented focus, based on a culture of innovation and excellence.
+                To create technology leaders and responsible innovators who harness data, intelligent systems, and digital infrastructure to drive inclusive growth and sustainable development in accordance with the SDGs.
               </p>
             </div>
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden bg-black/5 shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+            <div className="relative w-full h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden bg-white border border-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-4 flex items-center justify-center">
               <Image
                 src="/images/vision.jpg"
-                alt="Vision of the Information Technology program"
+                alt="Vision of the Information Technology Department"
                 fill
-                className="object-cover transition-transform duration-1000 hover:scale-105"
+                className="object-contain p-2 transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
@@ -92,29 +92,32 @@ export default function VisionMission() {
             </div>
 
             <h3 className="text-4xl font-semibold text-content tracking-tight mb-8">
-              Mission of the Program
+              Mission of the Department
             </h3>
 
             <div className="space-y-6 text-lg text-content/80 leading-relaxed font-light tracking-wide">
-              <p>
-                To assist students in understanding and enjoying the seamless nature of knowledge, encouraging them to apply acquired knowledge to practical use, ensuring they become socially responsible individuals sought after for their leadership qualities.
-              </p>
-              <p>
-                To foster creativity, innovation, and excellence through an example-based teaching-learning process imparted in the most simple and understandable way.
-              </p>
-              <p>
-                To continuously upgrade knowledge bases, improve infrastructure, adopt the latest technological tools, and update curricula based on periodic stakeholder feedback, enabling students to meet professional requirements and expectations.
-              </p>
+              <div>
+                <h4 className="font-semibold text-content text-xl mb-1">Holistic & Experiential Education</h4>
+                <p>To deliver multidisciplinary, experiential, and outcome-based IT education aligned with NEP 2020, enabling students to integrate theory with practice and emerge as competent, ethical, and socially responsible professionals.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-content text-xl mb-1">Innovation, Research & Digital Transformation</h4>
+                <p>To foster innovation, applied research, and industry collaboration in emerging areas of Information Technology, encouraging entrepreneurship and the development of technology-driven solutions for national and global challenges.</p>
+              </div>
+              <div>
+                <h4 className="font-semibold text-content text-xl mb-1">Continuous Improvement & Sustainable Impact</h4>
+                <p>To continuously enhance curriculum, infrastructure, and faculty expertise through stakeholder engagement and modern pedagogical tools, preparing graduates to contribute to inclusive growth and the achievement of the Sustainable Development Goals (SDGs).</p>
+              </div>
             </div>
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="relative w-full aspect-[4/3] rounded-[2rem] overflow-hidden bg-black/5 shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
+            <div className="relative w-full h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden bg-white border border-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-4 flex items-center justify-center">
               <Image
                 src="/images/mission.jpg"
-                alt="Mission of the Information Technology program"
+                alt="Mission of the Information Technology Department"
                 fill
-                className="object-cover transition-transform duration-1000 hover:scale-105"
+                className="object-contain p-2 transition-transform duration-700 hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

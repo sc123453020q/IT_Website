@@ -31,13 +31,13 @@
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.18em;
-  color: #7c3aed;
+  color: #0066cc;
 }
 
 .class-teachers-eyebrow-line {
   width: 35px;
   height: 2px;
-  background: #7c3aed;
+  background: #0066cc;
 }
 
 .class-teachers-heading h1 {
@@ -48,7 +48,7 @@
   font-weight: 900;
   letter-spacing: -0.05em;
 
-  color: #171122;
+  color: #0f172a;
 }
 
 .class-teachers-heading h1 span {
@@ -56,8 +56,8 @@
 
   background: linear-gradient(
     135deg,
-    #7c3aed,
-    #a855f7
+    #0066cc,
+    #3b82f6
   );
 
   -webkit-background-clip: text;

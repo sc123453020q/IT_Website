@@ -179,24 +179,6 @@ export const deptCard = [
     deptName: "CAMPUS",
     desc: "All round excellence in management and engineering discipline is attained only by close interaction with the allied industries. To facilitate close interaction of modern industries, as well as to draw upon the vast academic & professional resources of a vibrant industrial sector.",
   },
-  {
-    id: 2,
-    cover: "/images/dept/dept_2.png",
-    deptName: "PLACEMENT",
-    desc: "The educational group has strong placement cell. Four placement officers under the chairmanship of the Institute’s director work as placement cell. Very effective Campus Interview is a regular feature of the institute. ",
-  },
-  {
-    id: 3,
-    cover: "/images/dept/dept_3.png",
-    deptName: "FACULTY",
-    desc: "The educational group believes that combination of good teachers and good students is the basic and most important aspect of achieving academic excellence. It is strength of our faculty consisting of professors from renowned institutes such as IIT Kharagpur and IIM Kolkata. We have academicians, professionals as well as dignitaries of the business world. The educational group is a true realm of the finest faculty members who has the spirit and standards to bring the best out of its students. ​",
-  },
-  {
-    id: 4,
-    cover: "/images/dept/dept_4.png",
-    deptName: "DIGITAL LIBRARY",
-    desc: "A beautiful & modern library well updated books, journals & multimedia learning aids, provides the student an opportunities to keep themselves well versed with all engineering & management related information. IEM group has excellent library with over 1,50,000 books, journals, magazines & e-journals for complementing the academic endeavors.",
-  },
 ];
 
 export const placement = [
@@ -540,24 +522,42 @@ export const aboutprog = [
 export const peo = [
   {
     id: 1,
-    title: "PEO1",
-    desc: "To provide students with good breadth of outcome based knowledge in mathematical, scientific, computing and basic engineering fundamentals necessary to formulate, analyze and solve hardware/software engineering problems and/or also to pursue advanced study or research.",
+    title: "PEO1: Core IT Systems & Digital Infrastructure",
+    desc: "Design, implement, and manage robust software systems, data platforms, networks, and cloud-based infrastructures using modern IT tools to solve complex real-world problems efficiently and securely.",
   },
   {
     id: 2,
-    title: "PEO2",
-    desc: "To educate students with proficiency in core areas of Information Technology and related engineering so as to comprehend engineering trade-offs, analyze, design, and synthesize data and technical concepts to create novel products and solutions for the real life problems",
+    title: "PEO2: Data-Driven Innovation & Emerging Technologies",
+    desc: "Apply analytics, artificial intelligence, cybersecurity, IoT, and emerging digital technologies to develop innovative, research-oriented, and industry-relevant solutions that support digital transformation.",
   },
   {
     id: 3,
-    title: "PEO3",
-    desc: "To instill in students a sense of high professionalism, to work as part of teams on multidisciplinary projects and diverse professional environments, needed for a successful professional career and relate engineering issues to the society, global economy and to emerging technologies",
+    title: "PEO3: Responsible Technology & Sustainable Development",
+    desc: "Demonstrate ethical practices, teamwork, leadership, and social responsibility while developing inclusive and sustainable IT solutions aligned with national priorities and the UN SDGs.",
+  },
+];
+
+export const peoMapping = [
+  {
+    itpeo: "PEO1",
+    relevantPos: "PO 1: Engineering Knowledge;\nPO 2: Problem Analysis;\nPO 3: Design/Development of Solutions;\nPO 4: Modern Tool Usage;\nPO 5: Project Management and Finance",
+    alignedSdgs: "SDG 4 (Quality Education),\nSDG 9 (Industry, Innovation & Infrastructure)",
   },
   {
-    id: 4,
-    title: "PEO4",
-    desc: "To provide our students with a learning environment consciousness of the life-long learning process, to develop effective oral and written communication skills and to introduce them to written ethical codes and guidelines, show leadership and entrepreneurship and exhibit good citizenship.",
+    itpeo: "PEO2",
+    relevantPos: "PO 3: Design/Development of Solutions;\nPO 4: Investigation of Complex Problems;\nPO 5: Modern Tool Usage;\nPO 9: Individual and Team Work;\nPO 11: Project Management and Finance",
+    alignedSdgs: "SDG 8 (Decent Work & Economic Growth),\nSDG 9 (Industry, Innovation & Infrastructure),\nSDG 17 (Partnerships for the Goals)",
   },
+  {
+    itpeo: "PEO3",
+    relevantPos: "PO 6: The Engineer and Society;\nPO 7: Environment and Sustainability;\nPO 8: Ethics;\nPO 9: Individual and Team Work;\nPO 10: Communication",
+    alignedSdgs: "SDG 4 (Quality Education),\nSDG 10 (Reduced Inequalities),\nSDG 11 (Sustainable Cities & Communities),\nSDG 16 (Peace, Justice & Strong Institutions)",
+  },
+];
+
+export const peoProcess = [
+  "Alumni Feedback",
+  "Recruiters Feedback",
 ];
 
 export const po = [
@@ -627,18 +627,18 @@ export const po = [
 export const pso = [
   {
     id: 1,
-    title: "PS01",
-    desc: "An ability to analyse problem, design algorithm, identify and define the computing requirements appropriate to its solution and implement them in the field of Algorithms, Database, Networking, Artificial Intelligence, Machine Learning, Computer Security and Blockchain and many other cutting edge fields of study of computer based systems of varying complexity.",
+    title: "PSO 1: Core IT Systems & Digital Infrastructure",
+    desc: "Graduates will be able to design, develop, deploy, and manage scalable software systems, databases, computer networks, and cloud-based infrastructures using modern IT tools and frameworks to solve complex real-world problems efficiently, securely, and reliably.",
   },
   {
     id: 2,
-    title: "PS02",
-    desc: "Anticipate the changing direction of information technology and evaluate and communicate the likely utility of new technologies to an individual or organization for performing tasks related to Research, Training and Management to meet desired needs.",
+    title: "PSO 2: Intelligent Systems & Emerging Technologies",
+    desc: "Graduates will be able to apply data analytics, artificial intelligence, cybersecurity, Internet of Things (IoT), and other emerging digital technologies to build innovative, research-driven, and industry-relevant solutions that support digital transformation at national and global levels.",
   },
   {
     id: 3,
-    title: "PS03",
-    desc: "Ability to develop and effectively integrate IT-based solutions into the user environment.",
+    title: "PSO 3: Responsible Innovation & Sustainable IT Practices",
+    desc: "Graduates will demonstrate ethical practices, teamwork, leadership, and project management skills while developing inclusive, secure, and sustainable IT solutions aligned with professional standards, societal needs, national priorities, and the UN Sustainable Development Goals (SDGs).",
   },
 ];
 
