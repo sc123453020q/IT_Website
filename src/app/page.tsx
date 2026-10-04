@@ -3,7 +3,6 @@ import Hero from "@/components/home/Hero/Hero";
 import Habout from "@/components/home/DepartmentOverview/DepartmentOverview";
 import Hodmsg from "@/components/home/HODMessage/HODMessage";
 import NaacCert from "@/components/home/NaacCertificate/NaacCertificate";
-import NoticeBoard from "@/components/home/NoticeBoard/NoticeBoard";
 
 import Statistics from "@/components/home/Statistics/Statistics";
 
@@ -18,11 +17,6 @@ export default function HomePage() {
       {/* Department Statistics */}
       <section aria-label="Department Statistics">
         <Statistics />
-      </section>
-
-      {/* Important Notices */}
-      <section aria-label="Important notices">
-        <NoticeBoard />
       </section>
 
       {/* Head of Department Message */}
