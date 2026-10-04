@@ -1,13 +1,15 @@
 import Back from "@/components/common/Carousel/Back";
+import PatentComponent from "@/components/research/Patent/Patent";
 
 export default function Page() {
   return (
     <main className="min-h-screen overflow-x-hidden">
-      <Back title="Patent" />
+      <Back title="Patents & Intellectual Property" />
       
       <section aria-label="Patent">
-        <div className="py-20 text-center"><h2 className="text-3xl font-bold mb-4">Patent</h2><p className="text-content-muted">Content coming soon...</p></div>
+        <PatentComponent />
       </section>
     </main>
   );
 }
+

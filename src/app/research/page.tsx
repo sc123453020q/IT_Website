@@ -2,6 +2,7 @@ import Back from "@/components/common/Carousel/Back";
 
 import InnovationList from "@/components/innovation/Innovation/Innovation";
 import Publications from "@/components/innovation/Publications/Publications";
+import PatentComponent from "@/components/research/Patent/Patent";
 import Books from "@/components/innovation/Books/Books";
 import Magazine from "@/components/innovation/Magazine/Magazine";
 import Alumni from "@/components/innovation/Alumni/Alumni";
@@ -17,6 +18,10 @@ export default function InnovationPage() {
 
       <section aria-label="Publications" id="publications">
         <Publications />
+      </section>
+
+      <section aria-label="Patents" id="patent">
+        <PatentComponent />
       </section>
 
       <section aria-label="Books Published" id="books">
