@@ -19,7 +19,7 @@ const navItems = [
   },
   { 
     label: "Events", 
-    href: "/events",
+    href: "#",
     dropdown: [
       { label: "Conference", href: "/events/conference" },
       { label: "Seminars and Lectures", href: "/events/seminars-and-lectures" },
@@ -55,7 +55,7 @@ const navItems = [
   },
   { 
     label: "Research", 
-    href: "/research",
+    href: "#",
     dropdown: [
       { label: "IEDC-IT", href: "/research/iedc-it" },
       { label: "AMRL Facility", href: "/research/amrl-facility" },
@@ -70,7 +70,7 @@ const navItems = [
   { label: "Calendar", href: "/calendar" },
   { 
     label: "More", 
-    href: "#more",
+    href: "#",
     dropdown: [
       { label: "Contact Us", href: "/more/contact-us" },
       { label: "Innovative Teaching", href: "/more/innovative-teaching" },
@@ -84,6 +84,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -97,9 +98,15 @@ export default function Navbar() {
   const isHomePage = pathname === "/";
   const isSolid = scrolled || !isHomePage;
 
-  const isActive = (href: string) => {
-    if (href === "/") return pathname === "/";
-    return pathname.startsWith(href);
+  const isActive = (item: (typeof navItems)[0]) => {
+    if (item.href && item.href !== "#") {
+      if (item.href === "/" && pathname === "/") return true;
+      if (item.href !== "/" && pathname.startsWith(item.href)) return true;
+    }
+    if (item.dropdown) {
+      return item.dropdown.some((drop) => pathname.startsWith(drop.href));
+    }
+    return false;
   };
 
   return (
@@ -138,10 +145,15 @@ export default function Navbar() {
               <div key={item.label} className="relative group">
                 <Link
                   href={item.href}
-                  className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 flex items-center gap-1.5
+                  onClick={(e) => {
+                    if (item.dropdown) {
+                      e.preventDefault();
+                    }
+                  }}
+                  className={`px-4 py-2 rounded-full font-medium text-sm transition-all duration-300 flex items-center gap-1.5 cursor-pointer
                     ${isSolid 
-                      ? (isActive(item.href) ? "text-primary bg-primary/5" : "text-content/70 hover:text-content hover:bg-black/5") 
-                      : (isActive(item.href) ? "text-white bg-white/20 backdrop-blur-md" : "text-white/80 hover:text-white hover:bg-white/10")
+                      ? (isActive(item) ? "text-primary bg-primary/5" : "text-content/70 hover:text-content hover:bg-black/5") 
+                      : (isActive(item) ? "text-white bg-white/20 backdrop-blur-md" : "text-white/80 hover:text-white hover:bg-white/10")
                     }`}
                 >
                   {item.label}
@@ -225,17 +237,26 @@ export default function Navbar() {
                 className="flex flex-col border-b border-black/5 pb-2"
                 style={{ transitionDelay: `${i * 50}ms` }}
               >
-                <Link
-                  href={item.href}
-                  onClick={() => !item.dropdown && setMenuOpen(false)}
-                  className={`py-3 text-2xl font-semibold tracking-tight transition-colors flex items-center justify-between ${
-                    isActive(item.href) ? "text-primary" : "text-content/80 hover:text-content"
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (item.dropdown) {
+                      setOpenMobileDropdown(openMobileDropdown === item.label ? null : item.label);
+                    } else {
+                      setMenuOpen(false);
+                    }
+                  }}
+                  className={`w-full py-3 text-2xl font-semibold tracking-tight transition-colors flex items-center justify-between text-left ${
+                    isActive(item) ? "text-primary" : "text-content/80 hover:text-content"
                   }`}
                 >
-                  {item.label}
-                  {item.dropdown && <LuChevronDown className="text-lg opacity-40" />}
-                </Link>
-                {item.dropdown && (
+                  <span>{item.label}</span>
+                  {item.dropdown && (
+                    <LuChevronDown className={`text-lg opacity-40 transition-transform duration-300 ${openMobileDropdown === item.label ? "rotate-180" : ""}`} />
+                  )}
+                </button>
+                
+                {item.dropdown && (openMobileDropdown === item.label || openMobileDropdown === null) && (
                   <div className="flex flex-col pl-4 mt-2 gap-3 mb-2">
                     {item.dropdown.map(drop => {
                       const isExternal = drop.href.startsWith("http");
