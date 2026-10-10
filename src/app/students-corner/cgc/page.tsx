@@ -1,37 +1,30 @@
 import Back from "@/components/common/Carousel/Back";
-import Link from "next/link";
-import { LuImage } from "react-icons/lu";
 
-interface GalleryCard {
+interface Member {
   name: string;
-  roleOrEmail: string;
-  imageSrc?: string;
+  role: string;
 }
 
-const galleryItems: GalleryCard[] = [
+const cgcMembers: Member[] = [
   {
-    name: "Member Name 01",
-    roleOrEmail: "Systems Engineer, IT Firm",
+    name: "Prof. Dr. Sanchita Ghosh",
+    role: "CGC Member",
   },
   {
-    name: "Faculty Member 01",
-    roleOrEmail: "Email: member01@iem.edu.in",
+    name: "Prof. Dr. Baisakhi Das",
+    role: "CGC Member",
   },
   {
-    name: "Faculty Member 02",
-    roleOrEmail: "Email: member02@iem.edu.in",
+    name: "Prof. Dr. Rupayan Das",
+    role: "CGC Member",
   },
   {
-    name: "Faculty Member 03",
-    roleOrEmail: "Email: member03@iem.edu.in",
+    name: "Prof. Dr. Avijit Bose",
+    role: "CGC Member",
   },
   {
-    name: "External Researcher",
-    roleOrEmail: "Post Doctoral Researcher, Technical Institute",
-  },
-  {
-    name: "Faculty Member 04",
-    roleOrEmail: "Email: member04@iem.edu.in",
+    name: "Prof. Partha Chakraborty",
+    role: "CGC Member",
   },
 ];
 
@@ -79,149 +72,29 @@ export default function CGCPage() {
               </ul>
             </div>
 
-            {/* CGC ACTIVITIES GALLERY (BLANK IMAGE SPACES) */}
-            <div className="mb-10">
+            {/* CGC MEMBERS */}
+            <div className="mb-8">
               <h2 className="text-xl font-bold text-[#0f2744] mb-4">
-                CGC Activities Gallery
+                CGC Members
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {galleryItems.map((item, idx) => (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                {cgcMembers.map((member, idx) => (
                   <div 
                     key={idx}
-                    className="bg-white border border-slate-200/90 rounded-2xl p-4 flex items-center gap-4 shadow-sm hover:shadow-md transition-all duration-300"
+                    className="bg-white border border-slate-200/90 rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between"
                   >
-                    {/* BLANK IMAGE PLACEHOLDER */}
-                    <div className="w-24 h-28 md:w-28 md:h-32 bg-slate-100 rounded-xl shrink-0 overflow-hidden flex items-center justify-center border border-slate-200/80">
-                      {item.imageSrc ? (
-                        <img 
-                          src={item.imageSrc} 
-                          alt={item.name} 
-                          className="w-full h-full object-cover" 
-                        />
-                      ) : (
-                        <div className="flex flex-col items-center justify-center text-slate-400 p-2 text-center">
-                          <LuImage className="text-xl mb-1" />
-                          <span className="text-[10px] font-medium text-slate-400">Photo Space</span>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* MEMBER TEXT INFO */}
-                    <div className="flex-1 min-w-0">
-                      <h3 className="font-bold text-slate-900 text-sm md:text-base leading-tight mb-1">
-                        {item.name}
+                    <div>
+                      <span className="inline-block text-[10px] font-extrabold tracking-wider uppercase text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md border border-blue-200/60 mb-2">
+                        {member.role}
+                      </span>
+                      <h3 className="font-bold text-slate-900 text-base md:text-lg leading-snug">
+                        {member.name}
                       </h3>
-                      <p className="text-xs md:text-sm text-slate-600 leading-snug break-words">
-                        {item.roleOrEmail}
-                      </p>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
-
-            {/* MEMBERS SECTION (2-COL GRID) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              
-              {/* Internal Members */}
-              <div className="bg-[#eef4ff] rounded-2xl p-6 md:p-8 border border-blue-100/80">
-                <h2 className="text-xl font-bold text-[#0f2744] mb-4">
-                  Internal Members
-                </h2>
-                
-                <ul className="space-y-3 text-sm md:text-base text-slate-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">Faculty Member 01</strong> (Chairman) — member01@iem.edu.in</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">Faculty Member 02</strong> — member02@iem.edu.in</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">Faculty Member 03</strong> — member03@iem.edu.in</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">Faculty Member 04</strong> — member04@iem.edu.in</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">Faculty Member 05</strong> — member05@iem.edu.in</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">Faculty Member 06</strong> — member06@iem.edu.in</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">Faculty Member 07</strong> — member07@iem.edu.in</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">Faculty Member 08</strong> — member08@iem.edu.in</span>
-                  </li>
-                </ul>
-              </div>
-
-              {/* External Members */}
-              <div className="bg-[#faf5ff] rounded-2xl p-6 md:p-8 border border-purple-100/80">
-                <h2 className="text-xl font-bold text-[#0f2744] mb-4">
-                  External Members
-                </h2>
-                
-                <ul className="space-y-3 text-sm md:text-base text-slate-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">External Member 01</strong> — Systems Engineer, Tech Organization</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">External Member 02</strong> — Lead Engineer (Senior), Industry Firm</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">External Member 03</strong> — Post Doctoral Researcher, University</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">External Member 04</strong> — Assistant Professor, University</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-amber-500 font-bold mt-1">•</span>
-                    <span><strong className="font-semibold text-slate-900">External Member 05</strong> — Founder and CEO, Startup</span>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-
-            {/* DOCUMENTS & NOTICES */}
-            <div className="bg-[#fffbeb] rounded-2xl p-6 md:p-8 border border-amber-100/80 mb-6">
-              <h2 className="text-xl font-bold text-[#0f2744] mb-4">
-                Documents &amp; Notices
-              </h2>
-              
-              <ul className="space-y-3 text-sm md:text-base text-slate-700">
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 font-bold mt-1">•</span>
-                  <span>Career Guidance Cell (CGC) Formation Notice: <Link href="#" className="text-[#aa7827] underline font-semibold hover:text-[#885c18]">Click Here</Link></span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 font-bold mt-1">•</span>
-                  <span>CDC_MOM_Dt.06.08.2025: <Link href="#" className="text-[#aa7827] underline font-semibold hover:text-[#885c18]">Click Here</Link></span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 font-bold mt-1">•</span>
-                  <span>Collection of CV and ATS score_Notice Dt.08.08.2025: <Link href="#" className="text-[#aa7827] underline font-semibold hover:text-[#885c18]">Click Here</Link></span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-amber-500 font-bold mt-1">•</span>
-                  <span>To know more about Applicant Tracking System (ATS): <Link href="#" className="text-[#aa7827] underline font-semibold hover:text-[#885c18]">Click Here</Link></span>
-                </li>
-              </ul>
             </div>
 
             {/* CONTACT CGC */}
@@ -241,3 +114,6 @@ export default function CGCPage() {
     </main>
   );
 }
+
+
+
