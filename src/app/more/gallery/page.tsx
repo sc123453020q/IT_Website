@@ -1,12 +1,13 @@
 import Back from "@/components/common/Carousel/Back";
+import PhotoGallery from "@/components/gallery/PhotoGallery/PhotoGallery";
 
-export default function Page() {
+export default function GalleryPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden">
+    <main className="min-h-screen overflow-x-hidden bg-[#f8f9fc]">
       <Back title="Gallery" />
       
-      <section aria-label="Gallery">
-        <div className="py-20 text-center"><h2 className="text-3xl font-bold mb-4">Gallery</h2><p className="text-content-muted">Content coming soon...</p></div>
+      <section className="py-12 md:py-16 px-4">
+        <PhotoGallery />
       </section>
     </main>
   );
