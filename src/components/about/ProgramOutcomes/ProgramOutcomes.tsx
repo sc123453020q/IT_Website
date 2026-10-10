@@ -87,44 +87,20 @@ export default function ProgramOutcomes() {
         {/* PEO Section */}
         <OutcomeSection
           eyebrow="PEO"
-          title="Program Educational Objectives (ITPEOs)"
+          title="Program Educational Objectives"
           data={peo}
         />
 
-        {/* PEO Mapping Table */}
+        {/* Process of Defining PEO */}
         <div className="mt-16 bg-surface-muted/60 p-8 rounded-3xl border border-black/5">
-          <h4 className="text-2xl font-bold text-content mb-6">Mapping of ITPEOs with POs and SDGs</h4>
-          <div className="overflow-x-auto rounded-2xl border border-black/10 bg-white">
-            <table className="w-full text-left border-collapse min-w-[700px]">
-              <thead>
-                <tr className="bg-surface-muted text-content font-bold text-sm">
-                  <th className="p-4 border-b border-black/10 w-1/6">ITPEO</th>
-                  <th className="p-4 border-b border-black/10 w-1/2">Relevant POs (Number & Statement)</th>
-                  <th className="p-4 border-b border-black/10 w-1/3">Aligned SDGs</th>
-                </tr>
-              </thead>
-              <tbody className="text-sm text-content-muted divide-y divide-black/5">
-                {peoMapping.map((row) => (
-                  <tr key={row.itpeo}>
-                    <td className="p-4 font-bold text-content font-mono">{row.itpeo}</td>
-                    <td className="p-4 whitespace-pre-line leading-relaxed">{row.relevantPos}</td>
-                    <td className="p-4 whitespace-pre-line font-semibold text-primary">{row.alignedSdgs}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <div className="mt-8">
-            <h5 className="text-lg font-bold text-content mb-3">Process of Defining PEO</h5>
-            <div className="flex flex-wrap gap-4">
-              {peoProcess.map((proc, idx) => (
-                <div key={idx} className="flex items-center gap-3 px-6 py-2.5 bg-white rounded-full border border-black/5 font-semibold text-content text-sm">
-                  <LuCircleCheck className="text-primary text-lg" />
-                  <span>{idx + 1}. {proc}</span>
-                </div>
-              ))}
-            </div>
+          <h5 className="text-lg font-bold text-content mb-4">Process of Defining PEO</h5>
+          <div className="flex flex-wrap gap-4">
+            {peoProcess.map((proc, idx) => (
+              <div key={idx} className="flex items-center gap-3 px-6 py-2.5 bg-white rounded-full border border-black/5 font-semibold text-content text-sm">
+                <LuCircleCheck className="text-primary text-lg" />
+                <span>{idx + 1}. {proc}</span>
+              </div>
+            ))}
           </div>
         </div>
 

@@ -256,7 +256,7 @@ export default function DepartmentOverview() {
             <div>
               <span className="text-xs font-bold text-primary uppercase tracking-widest block">PEO</span>
               <h3 className="text-3xl font-bold text-content tracking-tight">
-                Program Educational Objectives (ITPEOs)
+                Program Educational Objectives
               </h3>
             </div>
           </div>
@@ -273,31 +273,6 @@ export default function DepartmentOverview() {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Mapping Table */}
-          <div className="mb-12">
-            <h4 className="text-2xl font-bold text-content mb-6">Mapping of ITPEOs with POs and SDGs</h4>
-            <div className="overflow-x-auto rounded-2xl border border-black/10">
-              <table className="w-full text-left border-collapse min-w-[700px]">
-                <thead>
-                  <tr className="bg-surface-muted text-content font-bold text-sm">
-                    <th className="p-4 border-b border-black/10 w-1/6">ITPEO</th>
-                    <th className="p-4 border-b border-black/10 w-1/2">Relevant POs (Number & Statement)</th>
-                    <th className="p-4 border-b border-black/10 w-1/3">Aligned SDGs</th>
-                  </tr>
-                </thead>
-                <tbody className="text-sm text-content-muted divide-y divide-black/5">
-                  {peoMapping.map((row) => (
-                    <tr key={row.itpeo}>
-                      <td className="p-4 font-bold text-content font-mono">{row.itpeo}</td>
-                      <td className="p-4 whitespace-pre-line leading-relaxed">{row.relevantPos}</td>
-                      <td className="p-4 whitespace-pre-line font-semibold text-primary">{row.alignedSdgs}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
           </div>
 
           {/* Process of Defining PEO */}

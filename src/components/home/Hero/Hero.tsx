@@ -3,11 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { LuUsers, LuArrowRight } from "react-icons/lu";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[95vh] flex flex-col justify-end bg-black">
+    <section className="relative w-full min-h-[85vh] flex flex-col justify-end bg-black">
       {/* Background Image & Overlay */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -23,7 +22,7 @@ export default function Hero() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-12 max-w-[1400px] pb-32 pt-40 md:pb-48">
+      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-12 max-w-[1400px] pb-20 pt-36 md:pb-28">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -61,39 +60,6 @@ export default function Hero() {
               Academic Programs
             </Link>
           </div>
-        </motion.div>
-      </div>
-
-      {/* Quick Nav Overlay */}
-      <div className="relative z-20 w-full px-4 md:px-6 lg:px-12 max-w-[1400px] mx-auto -mb-20 hidden md:block">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          className="bg-white/80 backdrop-blur-3xl border border-white shadow-[0_20px_40px_rgba(0,0,0,0.08)] rounded-3xl overflow-hidden hover:shadow-[0_25px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
-        >
-          <Link 
-            href="/faculty"
-            className="group p-8 md:p-10 flex items-center justify-between transition-colors hover:bg-white"
-          >
-            <div className="flex items-center gap-6">
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-sm flex-shrink-0">
-                <LuUsers className="text-3xl" />
-              </div>
-              <div>
-                <h3 className="text-3xl font-semibold text-content mb-1 tracking-tight group-hover:text-primary transition-colors">
-                  Our Faculty
-                </h3>
-                <p className="text-content-muted font-medium text-base">
-                  Meet the educators, researchers, and academic leaders shaping the future of Information Technology.
-                </p>
-              </div>
-            </div>
-
-            <div className="w-12 h-12 rounded-full flex items-center justify-center bg-black/5 text-content/60 group-hover:bg-primary group-hover:text-white transition-all duration-300 flex-shrink-0">
-              <LuArrowRight className="text-2xl transform group-hover:translate-x-1 transition-transform" />
-            </div>
-          </Link>
         </motion.div>
       </div>
     </section>

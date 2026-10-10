@@ -1,6 +1,5 @@
 import Hero from "@/components/home/Hero/Hero";
 
-import Habout from "@/components/home/DepartmentOverview/DepartmentOverview";
 import Hodmsg from "@/components/home/HODMessage/HODMessage";
 import NaacCert from "@/components/home/NaacCertificate/NaacCertificate";
 
@@ -22,11 +21,6 @@ export default function HomePage() {
       {/* Head of Department Message */}
       <section aria-label="Head of Department message">
         <Hodmsg />
-      </section>
-
-      {/* Department Overview */}
-      <section aria-label="About the department">
-        <Habout />
       </section>
 
       {/* Accreditation */}
