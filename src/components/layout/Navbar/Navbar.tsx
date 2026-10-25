@@ -79,7 +79,6 @@ const navItems = [
     href: "#",
     dropdown: [
       { label: "Contact Us", href: "/more/contact-us" },
-      { label: "Innovative Teaching", href: "/more/innovative-teaching" },
       { label: "Alumni", href: "/more/alumni" },
       { label: "Gallery", href: "/more/gallery" },
       { label: "Calendar", href: "/calendar" }
@@ -124,11 +123,11 @@ export default function Navbar() {
           : "bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5 md:py-6"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-[1440px]">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-12 max-w-[1600px]">
+        <div className="flex items-center justify-between gap-6 xl:gap-12">
           
           {/* ================= BRAND ================= */}
-          <Link href="/" className="flex items-center gap-3.5 group" onClick={() => setMenuOpen(false)}>
+          <Link href="/" className="flex items-center gap-3.5 group shrink-0 mr-4 lg:mr-8 xl:mr-12" onClick={() => setMenuOpen(false)}>
             <div className="w-12 h-12 md:w-13 md:h-13 flex-shrink-0 overflow-hidden rounded-2xl bg-white shadow-[0_2px_12px_rgba(0,0,0,0.1)] flex items-center justify-center border border-black/5">
               <img
                 src="/iem_logo_.png"
@@ -147,7 +146,7 @@ export default function Navbar() {
           </Link>
 
           {/* ================= DESKTOP NAVIGATION ================= */}
-          <nav className="hidden lg:flex items-center gap-1.5 xl:gap-2.5">
+          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <Link
@@ -157,7 +156,7 @@ export default function Navbar() {
                       e.preventDefault();
                     }
                   }}
-                  className={`px-4 py-2.5 rounded-full font-semibold text-base transition-all duration-200 flex items-center gap-1.5 cursor-pointer whitespace-nowrap
+                  className={`px-3 xl:px-3.5 2xl:px-4 py-2 xl:py-2.5 rounded-full font-semibold text-[14px] xl:text-[15px] 2xl:text-base transition-all duration-200 flex items-center gap-1.5 cursor-pointer whitespace-nowrap
                     ${isSolid 
                       ? (isActive(item) ? "text-primary bg-primary/10" : "text-content/80 hover:text-primary hover:bg-black/5") 
                       : (isActive(item) ? "text-white bg-white/25 backdrop-blur-md" : "text-white/90 hover:text-white hover:bg-white/15")

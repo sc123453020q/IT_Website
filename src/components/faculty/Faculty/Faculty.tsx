@@ -1,15 +1,17 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaLinkedinIn, FaGraduationCap } from "react-icons/fa";
+import { FaLinkedinIn, FaGraduationCap, FaTimes } from "react-icons/fa";
 
-import { itfaculty } from "@/lib/dummydata";
+import { itfaculty, mentorsList } from "@/lib/dummydata";
 
 import ClassTeachers from "@/components/faculty/ClassTeachers/ClassTeachers";
-import Mentors from "@/components/faculty/Mentors/Mentors";
-
+import "@/components/faculty/Mentors/Mentors.css";
 import "./Faculty.css";
+
+type MenteeData = (string | number)[];
 
 interface FacultyMember {
   id: string | number;
@@ -18,6 +20,9 @@ interface FacultyMember {
   img?: string;
   linkedin?: string;
   gscholar?: string;
+  mentees?: {
+    [year: string]: MenteeData[] | undefined;
+  };
 }
 
 interface FacultyGroup {
@@ -29,7 +34,7 @@ interface FacultyGroup {
 }
 
 /* ---------------------------------------------------------
-   FLATTEN FACULTY DATA
+   FLATTEN FACULTY DATA & ATTACH MENTEES
 --------------------------------------------------------- */
 
 const getFacultyMembers = (data: FacultyGroup): FacultyMember[] => {
@@ -41,6 +46,30 @@ const getFacultyMembers = (data: FacultyGroup): FacultyMember[] => {
     ...(data.faculty ?? []),
   ];
 
+  const allMentors = [
+    ...(mentorsList.hod ?? []),
+    ...(mentorsList.prof ?? []),
+    ...(mentorsList.asso_prof ?? []),
+    ...(mentorsList.assi_prof ?? []),
+  ];
+
+  const normalize = (s: string) =>
+    s
+      .toLowerCase()
+      .replace(/^(prof\.|dr\.|prof|dr)\s*/gi, "")
+      .replace(/[^a-z]/g, "");
+
+  const membersWithMentees = members.map((faculty) => {
+    const norm = normalize(faculty.title);
+    const mentorMatch = allMentors.find(
+      (m) => m.id === faculty.id || normalize(m.title) === norm
+    );
+    return {
+      ...faculty,
+      mentees: mentorMatch?.mentees || faculty.mentees,
+    };
+  });
+
   /*
    * Faculty priority:
    * 1. HOD
@@ -48,7 +77,7 @@ const getFacultyMembers = (data: FacultyGroup): FacultyMember[] => {
    * 3. Everyone else
    */
 
-  return members.sort((a, b) => {
+  return membersWithMentees.sort((a, b) => {
     const aDesg = a.desg?.toLowerCase() || "";
     const bDesg = b.desg?.toLowerCase() || "";
 
@@ -95,8 +124,34 @@ const getFacultyMembers = (data: FacultyGroup): FacultyMember[] => {
 
 export default function Faculty() {
   const facultyData = itfaculty as FacultyGroup;
-
   const facultyMembers = getFacultyMembers(facultyData);
+
+  const [selectedFaculty, setSelectedFaculty] = useState<FacultyMember | null>(null);
+
+  /* Lock body scroll on modal open */
+  useEffect(() => {
+    if (selectedFaculty) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [selectedFaculty]);
+
+  /* Escape key to close modal */
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setSelectedFaculty(null);
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <>
@@ -114,9 +169,6 @@ export default function Faculty() {
         <div className="faculty-bg-glow faculty-bg-glow-two" />
 
         <div className="faculty-container">
-
-
-
 
           {/* -------------------------------------------------
               FACULTY GRID
@@ -156,6 +208,7 @@ export default function Faculty() {
                         : ""
                     }`}
                     key={faculty.id}
+                    onClick={() => setSelectedFaculty(faculty)}
                   >
 
                     {/* Card number */}
@@ -177,7 +230,7 @@ export default function Faculty() {
                         <Image
                           src={
                             faculty.img ||
-                            "/default-profile.png"
+                            "/profile.png"
                           }
                           alt={faculty.title}
                           fill
@@ -208,6 +261,7 @@ export default function Faculty() {
                               rel="noopener noreferrer"
                               aria-label={`${faculty.title} LinkedIn profile`}
                               className="faculty-social linkedin"
+                              onClick={(e) => e.stopPropagation()}
                             >
                               <FaLinkedinIn />
                             </Link>
@@ -222,6 +276,7 @@ export default function Faculty() {
                               rel="noopener noreferrer"
                               aria-label={`${faculty.title} Google Scholar profile`}
                               className="faculty-social scholar"
+                              onClick={(e) => e.stopPropagation()}
                             >
                               <FaGraduationCap />
                             </Link>
@@ -268,6 +323,17 @@ export default function Faculty() {
                       <p>
                         {faculty.desg}
                       </p>
+
+                      <button
+                        type="button"
+                        className="faculty-view-mentees"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setSelectedFaculty(faculty);
+                        }}
+                      >
+                        View Mentees →
+                      </button>
 
                     </div>
 
@@ -318,7 +384,7 @@ export default function Faculty() {
               </span>
 
               <p>
-                Discover our class teachers and mentors.
+                Discover our class teachers.
               </p>
 
             </div>
@@ -340,21 +406,6 @@ export default function Faculty() {
                 </span>
               </a>
 
-
-              {/* Mentors Button */}
-              <a
-                href="#mentors-section"
-                className="faculty-nav-button faculty-nav-button-outline"
-              >
-                <span>
-                  Mentors
-                </span>
-
-                <span className="faculty-nav-arrow">
-                  ↓
-                </span>
-              </a>
-
             </div>
 
           </div>
@@ -365,17 +416,125 @@ export default function Faculty() {
 
 
       {/* =====================================================
+          MENTOR DETAILS MODAL
+      ===================================================== */}
+
+      {selectedFaculty && (
+        <div
+          className="mentor-modal-overlay"
+          onClick={() => setSelectedFaculty(null)}
+        >
+          <div
+            className="mentor-modal"
+            onClick={(event) => event.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              type="button"
+              className="mentor-modal-close"
+              onClick={() => setSelectedFaculty(null)}
+              aria-label="Close mentor details"
+            >
+              <FaTimes />
+            </button>
+
+            {/* LEFT SIDE - PHOTO & DETAILS */}
+            <div className="mentor-modal-left">
+              <div className="mentor-modal-image-wrapper">
+                <Image
+                  src={selectedFaculty.img || "/profile.png"}
+                  alt={selectedFaculty.title}
+                  fill
+                  sizes="(max-width: 768px) 80vw, 40vw"
+                />
+              </div>
+
+              <div className="mentor-modal-profile">
+                <h2>{selectedFaculty.title}</h2>
+                <p>{selectedFaculty.desg}</p>
+
+                {(selectedFaculty.linkedin || selectedFaculty.gscholar) && (
+                  <div className="mentor-socials">
+                    {selectedFaculty.linkedin && (
+                      <Link
+                        href={selectedFaculty.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${selectedFaculty.title} LinkedIn`}
+                        onClick={(event) => event.stopPropagation()}
+                      >
+                        <FaLinkedinIn />
+                      </Link>
+                    )}
+
+                    {selectedFaculty.gscholar && (
+                      <Link
+                        href={selectedFaculty.gscholar}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${selectedFaculty.title} Google Scholar`}
+                        onClick={(event) => event.stopPropagation()}
+                      >
+                        <FaGraduationCap />
+                      </Link>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+
+            {/* RIGHT SIDE - MENTEES */}
+            <div className="mentor-modal-right">
+              <div className="mentees-heading">
+                <span>STUDENT GUIDANCE</span>
+                <h2>Mentees</h2>
+              </div>
+
+              <div className="mentees-container">
+                {selectedFaculty.mentees && Object.keys(selectedFaculty.mentees).length > 0 ? (
+                  Object.entries(selectedFaculty.mentees).map(([year, mentees]) =>
+                    mentees && mentees.length > 0 ? (
+                      <div className="mentees-year" key={year}>
+                        <h3>{year}</h3>
+                        <div className="mentees-list">
+                          {mentees.map((mentee, index) => {
+                            const roll = mentee[0];
+                            const serial = mentee[1];
+                            const name = mentee[2];
+
+                            return (
+                              <div
+                                className="mentee-item"
+                                key={`${roll}-${index}`}
+                              >
+                                <span className="mentee-serial">
+                                  {serial}.
+                                </span>
+                                <div className="mentee-details">
+                                  <strong>{name}</strong>
+                                  <span>{roll}</span>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    ) : null
+                  )
+                ) : (
+                  <div className="no-mentees">No mentees assigned.</div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* =====================================================
           CLASS TEACHERS SECTION
       ===================================================== */}
 
       <ClassTeachers />
-
-
-      {/* =====================================================
-          MENTORS SECTION
-      ===================================================== */}
-
-      <Mentors />
 
     </>
   );

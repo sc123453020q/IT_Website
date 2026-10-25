@@ -61,12 +61,12 @@ export default function VisionMission() {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="relative w-full h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden bg-white border border-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-4 flex items-center justify-center">
+            <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:h-[460px] rounded-[2rem] overflow-hidden bg-white border border-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.08)] group">
               <Image
                 src="/images/vision.jpg"
                 alt="Vision of the Information Technology Department"
                 fill
-                className="object-contain p-2 transition-transform duration-700 hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
@@ -112,12 +112,12 @@ export default function VisionMission() {
           </div>
 
           <div className="w-full lg:w-1/2">
-            <div className="relative w-full h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden bg-white border border-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.08)] p-4 flex items-center justify-center">
+            <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:h-[460px] rounded-[2rem] overflow-hidden bg-white border border-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.08)] group">
               <Image
                 src="/images/mission.jpg"
                 alt="Mission of the Information Technology Department"
                 fill
-                className="object-contain p-2 transition-transform duration-700 hover:scale-105"
+                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>

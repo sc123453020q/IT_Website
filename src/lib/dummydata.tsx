@@ -1539,14 +1539,22 @@ export const itfaculty = {
     },
     {
       id: "as-10",
-      title: "Prof. Mohua Ghosh",
+      title: "Prof. Mahuya Ghosh",
       desg: "Assistant Professor",
-      linkedin: "https://www.linkedin.com/in/sudipta-bhuyan-076764229/",
-      gscholar: "https://scholar.google.co.in/citations?hl=en&user=VWV3V9kAAAAJ",
-      img: "/images/teachers/mohua_ghosh.png",
+      linkedin: "",
+      gscholar: "",
+      img: "/images/teachers/mahuya_ghosh.png",
     },
     {
       id: "as-11",
+      title: "Prof. Dr. Tanima Bhowmik",
+      desg: "Assistant Professor",
+      linkedin: "",
+      gscholar: "",
+      img: "/images/teachers/tanima_bhowmik.png",
+    },
+    {
+      id: "as-12",
       title: "Prof. Shreyashi Dutta",
       desg: "Assistant Professor",
       linkedin: "https://www.linkedin.com/in/shreyasi-datta-475b1599/",
@@ -1554,7 +1562,7 @@ export const itfaculty = {
       img: "/images/teachers/shreyashi_dutta.jpeg",
     },
     {
-      id: "as-12",
+      id: "as-13",
       title: "Prof. Partha Bhattacharya",
       desg: "Assistant Professor",
       linkedin: "",
@@ -1562,7 +1570,7 @@ export const itfaculty = {
       img: "/images/teachers/partha_bhata.png",
     },
     {
-      id: "as-13",
+      id: "as-14",
       title: "Prof. Aditya Ray",
       desg: "Assistant Professor",
       linkedin: "",
@@ -1937,5 +1945,63 @@ Each certificate represents the hard work, dedication, and problem-solving skill
 We look forward to breaking new records in the upcoming editions of HashCode! 🎯💡`,
     img: "/images/achievements/Picture3.jpg",
   }
+];
+
+export const industrialVisits = [
+  {
+    id: 1,
+    industry: "Ericsson",
+    date: "19-03-2025",
+    organizedBy: "Dr. Moutushi Singh & Dr. Baisakhi Das",
+    attendedBy: "Students",
+    nature: "Physical",
+    image: "/images/ericsson_visit1.jpeg",
+  },
+  {
+    id: 2,
+    industry: "Webel",
+    date: "11-03-2025",
+    organizedBy: "Dr. Moutushi Singh & Dr. Baisakhi Das",
+    attendedBy: "Students",
+    nature: "Physical",
+    image: "/images/webel_visit.jpeg",
+  },
+  {
+    id: 3,
+    industry: "PwC",
+    date: "14-03-2026",
+    organizedBy: "Dr. Baisakhi Das and Placement Cell",
+    attendedBy: "Students",
+    nature: "Physical",
+    image: "/images/PWC.jpg",
+  },
+  {
+    id: 4,
+    industry: "Ericsson",
+    date: "24-02-2026",
+    organizedBy: "Dr. Moutushi Singh & Dr. Baisakhi Das, Placement Cell",
+    attendedBy: "Students",
+    nature: "Physical",
+    image: "/images/ericsson2.jpg",
+  },
+  {
+    id: 5,
+    industry: "TCS",
+    date: "04-09-2025",
+    organizedBy: "Dr. Moutushi Singh",
+    attendedBy: "Students of IT, CSE and allied branches",
+    nature: "Physical",
+    image: "",
+  },
+  {
+    id: 6,
+    industry: "Field Visit — Sundarbans Mangrove Project",
+    subtitle: "Enhancing Sundarbans Mangrove Health: Integrative Fractal Dimension Analysis and Arduino-Based Cyclone Mitigation",
+    date: "25-09-2025",
+    organizedBy: "Dr. Moutushi Singh, Kajari Sur in association with IEM, Saltlake INNOVE AI Cell",
+    attendedBy: "Students of IT, CSE and allied branches",
+    nature: "Physical",
+    image: "",
+  },
 ];
 

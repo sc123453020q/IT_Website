@@ -698,10 +698,6 @@
 
 }
 
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
 @media (prefers-reduced-motion: reduce) {
 
   .faculty-card,
@@ -712,4 +708,36 @@
     transition: none;
   }
 
+}
+
+/* =========================================================
+   VIEW MENTEES BUTTON & CARD INTERACTION
+   ========================================================= */
+
+.faculty-card {
+  cursor: pointer;
+}
+
+.faculty-view-mentees {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(0, 102, 204, 0.08);
+  color: #0066cc;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: 1px solid rgba(0, 102, 204, 0.16);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.faculty-card:hover .faculty-view-mentees {
+  background: #0066cc;
+  color: #ffffff;
+  border-color: #0066cc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.25);
 }
