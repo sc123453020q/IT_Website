@@ -18,6 +18,7 @@ export const homeAbout = [
     desc: "A state-of-the-art campus featuring advanced labs, modern classrooms, and collaborative learning spaces to foster innovation and growth.",
   },
 ];
+
 export const awrapper = [
   {
     cover:
@@ -746,7 +747,7 @@ export const mentorsList = {
       id: "p-1",
       title: "Prof. Dr. Sanchita Ghosh",
       desg: "Professor",
-      linkedin: "https://www.linkedin.com/in/sanchita-ghosh-a093a41a4/",
+      linkedin: "https://www.linkedin.com/in/prof-sanchita-ghosh/",
       gscholar:
         "https://scholar.google.co.in/citations?hl=en&user=yiJnfpsAAAAJ",
       img: "/images/teachers/sanchita_ghosh.png",
@@ -1393,7 +1394,7 @@ export const itfaculty = {
       id: "p-1",
       title: "Prof. Dr. Sanchita Ghosh",
       desg: "Professor",
-      linkedin: "https://www.linkedin.com/in/sanchita-ghosh-a093a41a4/",
+      linkedin: "https://www.linkedin.com/in/prof-sanchita-ghosh/",
       gscholar: "https://scholar.google.co.in/citations?hl=en&user=yiJnfpsAAAAJ",
       img: "/images/teachers/sanchita_ghosh.png",
     },
@@ -2004,4 +2005,3 @@ export const industrialVisits = [
     image: "",
   },
 ];
-
