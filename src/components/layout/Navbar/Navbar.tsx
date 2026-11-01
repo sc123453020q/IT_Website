@@ -18,6 +18,7 @@ const navItems = [
     href: "#",
     dropdown: [
       { label: "Course Curriculum", href: "/course-curriculum/curriculum" },
+      { label: "Syllabus", href: "/course-curriculum/syllabus" },
       { label: "Routine", href: "/course-curriculum/routine" },
       { label: "Infrastructure", href: "/course-curriculum/infrastructure" },
       { label: "Library", href: "https://iemgurukul-opac.l2c2.co.in/" }
@@ -63,15 +64,14 @@ const navItems = [
     label: "Events", 
     href: "#",
     dropdown: [
-      { label: "Conference", href: "/events/conference" },
-      { label: "Seminars and Lectures", href: "/events/seminars-and-lectures" },
-      { label: "Faculty Development Program", href: "/events/faculty-development-program" },
-      { label: "Workshops", href: "/events/workshops" },
-      { label: "Event Reports", href: "/events/event-reports" },
-      { label: "Newsletter", href: "/events/newsletter" },
-      { label: "Magazine", href: "/events/magazine" },
-      { label: "NSS & CSR Activity", href: "/events/nss-csr-activity" },
-      { label: "Outreach Activity", href: "/events/outreach-activity" }
+      { label: "Seminars & Workshops", href: "/events/seminars-workshops" },
+      { label: "Competitions", href: "/events/competitions" },
+      { label: "Departmental Magazines", href: "/events/departmental-magazines" },
+      { label: "Distinguished Lecture Series", href: "/events/distinguished-lectures" },
+      { label: "Faculty Development Programs", href: "/events/faculty-development-programs" },
+      { label: "Hackathons", href: "/events/hackathons" },
+      { label: "Industrial Tours", href: "/events/industrial-tours" },
+      { label: "Student Chapter & Club Activities", href: "/events/student-chapter-activities" }
     ]
   },
   { 
@@ -119,34 +119,34 @@ export default function Navbar() {
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isSolid 
-          ? "bg-white/95 backdrop-blur-2xl border-b border-black/10 py-3.5 shadow-md" 
-          : "bg-gradient-to-b from-black/80 via-black/40 to-transparent py-5 md:py-6"
+          ? "bg-white/95 backdrop-blur-2xl border-b border-black/10 py-2.5 shadow-md"
+          : "bg-gradient-to-b from-black/80 via-black/40 to-transparent py-3 md:py-4"
       }`}
     >
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 xl:px-12 max-w-[1600px]">
-        <div className="flex items-center justify-between gap-6 xl:gap-12">
+      <div className="mx-auto w-full max-w-[1920px] px-3 sm:px-5 xl:px-6 2xl:px-8">
+        <div className="flex items-center justify-between gap-3 2xl:gap-5">
           
           {/* ================= BRAND ================= */}
-          <Link href="/" className="flex items-center gap-3.5 group shrink-0 mr-4 lg:mr-8 xl:mr-12" onClick={() => setMenuOpen(false)}>
-            <div className="w-12 h-12 md:w-13 md:h-13 flex-shrink-0 overflow-hidden rounded-2xl bg-white shadow-[0_2px_12px_rgba(0,0,0,0.1)] flex items-center justify-center border border-black/5">
+          <Link href="/" className="group flex shrink-0 items-center gap-2.5 xl:max-w-[205px] 2xl:max-w-none" onClick={() => setMenuOpen(false)}>
+            <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center overflow-hidden rounded-xl border border-black/5 bg-white shadow-[0_2px_12px_rgba(0,0,0,0.1)] 2xl:h-12 2xl:w-12">
               <img
                 src="/iem_logo_.png"
                 alt="IEM Logo"
-                className="w-9 h-9 md:w-10 md:h-10 object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-8 w-8 object-contain transition-transform duration-300 group-hover:scale-105 2xl:h-9 2xl:w-9"
               />
             </div>
             <div className="flex flex-col">
-              <span className={`font-semibold text-base md:text-lg leading-tight tracking-tight transition-colors duration-300 ${isSolid ? 'text-content' : 'text-white'}`}>
-                Department of<br className="hidden md:block" /> Information Technology
+              <span className={`text-sm font-semibold leading-tight tracking-tight transition-colors duration-300 2xl:text-base ${isSolid ? 'text-content' : 'text-white'}`}>
+                Department of<br /> Information Technology
               </span>
-              <span className={`text-[11px] uppercase tracking-wider hidden md:block font-medium mt-0.5 transition-colors duration-300 ${isSolid ? 'text-content-muted' : 'text-white/80'}`}>
+              <span className={`mt-0.5 hidden text-[9px] font-medium uppercase tracking-wide transition-colors duration-300 2xl:block ${isSolid ? 'text-content-muted' : 'text-white/80'}`}>
                 Institute of Engineering and Management
               </span>
             </div>
           </Link>
 
           {/* ================= DESKTOP NAVIGATION ================= */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <nav className="hidden min-w-0 items-center gap-0.5 xl:flex 2xl:gap-1">
             {navItems.map((item) => (
               <div key={item.label} className="relative group">
                 <Link
@@ -156,7 +156,7 @@ export default function Navbar() {
                       e.preventDefault();
                     }
                   }}
-                  className={`px-3 xl:px-3.5 2xl:px-4 py-2 xl:py-2.5 rounded-full font-semibold text-[14px] xl:text-[15px] 2xl:text-base transition-all duration-200 flex items-center gap-1.5 cursor-pointer whitespace-nowrap
+                  className={`flex cursor-pointer items-center gap-1 whitespace-nowrap rounded-full px-2 py-2 text-[11px] font-semibold transition-all duration-200 2xl:px-3 2xl:text-[13px]
                     ${isSolid 
                       ? (isActive(item) ? "text-primary bg-primary/10" : "text-content/80 hover:text-primary hover:bg-black/5") 
                       : (isActive(item) ? "text-white bg-white/25 backdrop-blur-md" : "text-white/90 hover:text-white hover:bg-white/15")
@@ -185,7 +185,7 @@ export default function Navbar() {
                               href={drop.href}
                               target={isExternal ? "_blank" : undefined}
                               rel={isExternal ? "noopener noreferrer" : undefined}
-                              className="group/link flex items-center justify-between px-4 py-3 text-[15px] font-semibold text-content/80 hover:text-primary hover:bg-primary/5 rounded-xl transition-all duration-150"
+                              className="group/link flex items-center justify-between rounded-xl px-4 py-2.5 text-[13px] font-semibold text-content/80 transition-all duration-150 hover:bg-primary/5 hover:text-primary"
                             >
                               <span>{drop.label}</span>
                               <span className="opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-200 text-primary">
@@ -206,7 +206,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             <button
               type="button"
-              className={`lg:hidden p-3 rounded-full transition-colors ${
+              className={`rounded-full p-3 transition-colors xl:hidden ${
                 isSolid ? "text-content hover:bg-black/5" : "text-white hover:bg-white/10"
               }`}
               aria-label="Toggle Menu"
@@ -220,7 +220,7 @@ export default function Navbar() {
 
       {/* ================= MOBILE NAVIGATION ================= */}
       <div 
-        className={`lg:hidden fixed inset-0 top-[76px] bg-white/98 backdrop-blur-3xl z-40 transition-all duration-300 ease-out ${
+        className={`fixed inset-0 top-[68px] z-40 bg-white/98 backdrop-blur-3xl transition-all duration-300 ease-out xl:hidden ${
           menuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
@@ -238,7 +238,7 @@ export default function Navbar() {
                     onClick={() => {
                       setOpenMobileDropdown(openMobileDropdown === item.label ? null : item.label);
                     }}
-                    className={`w-full py-3.5 text-2xl font-semibold tracking-tight transition-colors flex items-center justify-between text-left ${
+                    className={`flex w-full items-center justify-between py-3 text-left text-xl font-semibold tracking-tight transition-colors ${
                       isActive(item) ? "text-primary" : "text-content/85 hover:text-content"
                     }`}
                   >
@@ -249,7 +249,7 @@ export default function Navbar() {
                   <Link
                     href={item.href}
                     onClick={() => setMenuOpen(false)}
-                    className={`w-full py-3.5 text-2xl font-semibold tracking-tight transition-colors flex items-center justify-between text-left ${
+                    className={`flex w-full items-center justify-between py-3 text-left text-xl font-semibold tracking-tight transition-colors ${
                       isActive(item) ? "text-primary" : "text-content/85 hover:text-content"
                     }`}
                   >
@@ -257,7 +257,7 @@ export default function Navbar() {
                   </Link>
                 )}
                 
-                {item.dropdown && (openMobileDropdown === item.label || openMobileDropdown === null) && (
+                {item.dropdown && openMobileDropdown === item.label && (
                   <div className="flex flex-col pl-4 mt-1 gap-3 mb-2 border-l-2 border-primary/20 ml-2">
                     {item.dropdown.map(drop => {
                       const isExternal = drop.href.startsWith("http");
@@ -268,7 +268,7 @@ export default function Navbar() {
                           target={isExternal ? "_blank" : undefined}
                           rel={isExternal ? "noopener noreferrer" : undefined}
                           onClick={() => setMenuOpen(false)}
-                          className="text-lg font-semibold text-content/70 hover:text-primary transition-colors py-1"
+                          className="py-1 text-base font-semibold text-content/70 transition-colors hover:text-primary"
                         >
                           {drop.label}
                         </Link>

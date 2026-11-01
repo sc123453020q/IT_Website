@@ -1,0 +1,1453 @@
+[
+    {
+        "source":  "_Seminar_Workshops_template.xlsx",
+        "records":  [
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Organized",
+                            "organizing_institute":  "Career Guidance Cell of Dept. of IT, CSE (IOTCSBT), CSE (IOT)",
+                            "topic_name":  "Industry Talk on AI using Graph neural network and supply chain",
+                            "date":  "12 Mar 2025",
+                            "proof_of_document":  "https://drive.google.com/open?id=170GddV8nXgiPd9tym9K3yhxkwFcHGHN5"
+                        },
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Organized",
+                            "organizing_institute":  "Career Guidance Cell of Dept. of IT, CSE (IOTCSBT), CSE (IOT)",
+                            "topic_name":  "Beyond Classroom: For better life",
+                            "date":  "17 Jul 2025",
+                            "proof_of_document":  "https://drive.google.com/file/d/1bOJ_jJeUi2HRM1U5FeoKUyzxCEsTWlnS/view?usp=sharing"
+                        },
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Organized",
+                            "organizing_institute":  "Career Guidance Cell of Dept. of IT, CSE (IOTCSBT), CSE (IOT)",
+                            "topic_name":  "“Guide to MBA after B.Tech”",
+                            "date":  "01 Sep 2025",
+                            "proof_of_document":  "https://drive.google.com/open?id=1EiPg4SOJuZybMWnN1qnBMX6PKaRZneEH"
+                        },
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Organized",
+                            "organizing_institute":  "Career Guidance Cell of Dept. of IT, CSE (IOTCSBT), CSE (IOT)",
+                            "topic_name":  "“Shaping Attitude, Behaviour, Mindset, and Technical Skills\nin the Era of Artificial Intelligence”",
+                            "date":  "27 Aug 2025",
+                            "proof_of_document":  "https://drive.google.com/open?id=1HKxHwe-zaWs1ipmK-R3Fk8tz4mRiowyk"
+                        },
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Organized",
+                            "organizing_institute":  "Career Guidance Cell of Dept. of IT, CSE (IOTCSBT), CSE (IOT)",
+                            "topic_name":  "“Shaping Attitude, Behaviour, Mindset, and Technical Skills\nin the Era of Artificial Intelligence”",
+                            "date":  "27 Aug 2025",
+                            "proof_of_document":  "https://drive.google.com/open?id=1HKxHwe-zaWs1ipmK-R3Fk8tz4mRiowyk"
+                        },
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Organized",
+                            "organizing_institute":  "Career Guidance Cell of Dept. of IT, CSE (IOTCSBT), CSE (IOT)",
+                            "topic_name":  "“Augmentation of Agentic AI in Machine Learning and Data Science”",
+                            "date":  "19 Sep 2025",
+                            "proof_of_document":  "https://drive.google.com/open?id=1Uy74a5R8dKZj7-j2ak2nmGfrjoUtd8ZA"
+                        },
+                        {
+                            "event_type":  "Workshop",
+                            "type":  "Attended",
+                            "organizing_institute":  "Department of Computer Science \u0026 Engineering in association with Centre for Career Development, IIT Guwahati",
+                            "topic_name":  "Skill Enhancement Workshop in Teaching and Research",
+                            "date":  "February 28 - March 1, 2025."
+                        },
+                        {
+                            "event_type":  "Workshop",
+                            "type":  "Attended",
+                            "organizing_institute":  "Wipro",
+                            "topic_name":  "Wipro Certified Faculty Program",
+                            "date":  "24 June 2024-12 July 2024"
+                        },
+                        {
+                            "event_type":  "Workshop",
+                            "type":  "Attended",
+                            "organizing_institute":  "LTI MINDTREE",
+                            "topic_name":  "TRAIN THE TRAINERS PROGRAM",
+                            "date":  "9th July to 11th July 2024"
+                        },
+                        {
+                            "event_type":  "Workshop",
+                            "type":  "Attended",
+                            "organizing_institute":  "LTI MINDTREE",
+                            "topic_name":  "TRAIN THE TRAINERS PROGRAM",
+                            "date":  "22nd July to 24th July 2024"
+                        },
+                        {
+                            "event_type":  "Workshop",
+                            "type":  "Organized",
+                            "organizing_institute":  "IEMK",
+                            "topic_name":  "Code To Conquer: Your Ultimate Survival Skill",
+                            "date":  "16th Sep, 2024"
+                        },
+                        {
+                            "event_type":  "Workshop",
+                            "type":  "Organized",
+                            "organizing_institute":  "IEMK",
+                            "topic_name":  "Top Trends Shaping IT Industry",
+                            "date":  "26 Feb 2025"
+                        },
+                        {
+                            "event_type":  "Conference",
+                            "type":  "Attended",
+                            "organizing_institute":  "Closerstill",
+                            "topic_name":  "Cyber Security World Asia 2024, Singapore",
+                            "date":  "9-10 October 2024"
+                        },
+                        {
+                            "event_type":  "Conference",
+                            "type":  "Attended",
+                            "organizing_institute":  "IIT Kharagpur",
+                            "topic_name":  "21st IEEE India Council International Conference (INDICON)",
+                            "date":  "19-21st December 2024"
+                        },
+                        {
+                            "event_type":  "Conference",
+                            "type":  "Attended",
+                            "organizing_institute":  "UEM",
+                            "topic_name":  "2nd International Conference on Recent Advances in Artificial Intelligence \u0026 Smart Applications (RAAISA),",
+                            "date":  "Dec 14-15, 2024"
+                        },
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Attended",
+                            "organizing_institute":  "Mathworks and the IEEE Kolkata Section",
+                            "topic_name":  "Tech Seminar on AI and IoT: Empowering Academia and Industry",
+                            "date":  "6thMarch 2025"
+                        },
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Organized",
+                            "organizing_institute":  "IEM-IETE Students\u0027 Forum",
+                            "topic_name":  "Alumni Talk - \"Aspirant to Achiever: A Roadmap to Success in GATE Examination\"",
+                            "date":  "17 Aug 2024"
+                        },
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Organized",
+                            "organizing_institute":  "IEM-IETE Students\u0027 Forum",
+                            "topic_name":  "5-Days Faculty Development Program on Exploring IoT \u0026 AI Frontier in Teaching and Research",
+                            "date":  "2 Sep 2024 to 6 Sep 2024"
+                        },
+                        {
+                            "event_type":  "Workshop",
+                            "type":  "Organized",
+                            "organizing_institute":  "IEM-IETE Students\u0027 Forum",
+                            "topic_name":  "Hands-on Workshop on \"Top Trends Shaping IT Industry\"",
+                            "date":  "26 Feb 2025"
+                        },
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Organized",
+                            "organizing_institute":  "IEM-IETE Students\u0027 Forum",
+                            "topic_name":  "Invited talk on “Innovative Pedagogy in Human-Computer Interaction: Exploring using Deep Learning”",
+                            "date":  "28 Feb 2025"
+                        },
+                        {
+                            "event_type":  "Workshop",
+                            "type":  "Organized",
+                            "organizing_institute":  "Department of IT, IEM",
+                            "topic_name":  "Workshop on Matlab",
+                            "date":  "04 Sep 2025",
+                            "proof_of_document":  "https://iemcollege-my.sharepoint.com/my?id=%2Fpersonal%2Fbaisakhi%5Fdas%5Fiem%5Fedu%5Fin%2FDocuments%2FAPI%202026%2FMatlab%20Workshop%2Epdf\u0026parent=%2Fpersonal%2Fbaisakhi%5Fdas%5Fiem%5Fedu%5Fin%2FDocuments%2FAPI%202026\u0026ga=1"
+                        },
+                        {
+                            "event_type":  "Workshop",
+                            "type":  "Attended",
+                            "organizing_institute":  "Indian Institute of Science, Bengaluru",
+                            "topic_name":  "Familiarisation Workshop on Quantum Computing",
+                            "date":  "09th – 13th Feb, 2026",
+                            "proof_of_document":  "IISC.pdf"
+                        },
+                        {
+                            "event_type":  "Workshop",
+                            "type":  "Attended",
+                            "organizing_institute":  "IEEE India Council",
+                            "topic_name":  "IEEE Conference Leadership Workshop",
+                            "date":  "September 11 \u0026 12, 2025",
+                            "proof_of_document":  "IEEE Leadership Workshop.pdf"
+                        },
+                        {
+                            "event_type":  "Workshop",
+                            "type":  "Attended",
+                            "organizing_institute":  "Wipro Limited",
+                            "topic_name":  "12-day faculty  development program on ‘Automotive’",
+                            "date":  "09-June-2025 to 21-June-2025",
+                            "proof_of_document":  "Wipro Completion certificate"
+                        },
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Organized",
+                            "organizing_institute":  "AlgoZenith IEM",
+                            "topic_name":  "Industry talk on Responsible AI and It’s Principle",
+                            "date":  "28th August, 2025",
+                            "proof_of_document":  "AlgoZenith IEM Student\u0027s Forum"
+                        },
+                        {
+                            "event_type":  "Seminar",
+                            "type":  "Organized",
+                            "organizing_institute":  "AlgoZenith IEM",
+                            "topic_name":  "Alumni talk on Introduction to DSA \u0026 Competitive Coding Contest",
+                            "date":  "16th September, 2025",
+                            "proof_of_document":  "AlgoZenith IEM Student\u0027s Forum"
+                        }
+                    ]
+    },
+    {
+        "source":  "IT Competition_template.xlsx",
+        "records":  [
+                        {
+                            "competition_name":  "Code Combat",
+                            "competition_type":  "Coding Competition",
+                            "date":  "02 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "HackFest",
+                            "competition_type":  "Coding Competition",
+                            "date":  "03 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Odyssey",
+                            "competition_type":  "Coding Competition",
+                            "date":  "04 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Bug Hunt",
+                            "competition_type":  "Coding Competition",
+                            "date":  "05 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "The Coding Clash",
+                            "competition_type":  "Coding Competition",
+                            "date":  "09 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Script Surge",
+                            "competition_type":  "Coding Competition",
+                            "date":  "10 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Conquest",
+                            "competition_type":  "Coding Competition",
+                            "date":  "11 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hack Heroes",
+                            "competition_type":  "Coding Competition",
+                            "date":  "12 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Byte Fest",
+                            "competition_type":  "Coding Competition",
+                            "date":  "16 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Architects",
+                            "competition_type":  "Coding Competition",
+                            "date":  "17 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Marathon",
+                            "competition_type":  "Coding Competition",
+                            "date":  "18 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "The Debuggers’ Challenge",
+                            "competition_type":  "Coding Competition",
+                            "date":  "19 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathon Hustle",
+                            "competition_type":  "Coding Competition",
+                            "date":  "23 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Craze",
+                            "competition_type":  "Coding Competition",
+                            "date":  "24 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Alchemists",
+                            "competition_type":  "Coding Competition",
+                            "date":  "25 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Function Face-off",
+                            "competition_type":  "Coding Competition",
+                            "date":  "26 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Battle of the Bytes",
+                            "competition_type":  "Coding Competition",
+                            "date":  "30 Sep 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hack Overdrive",
+                            "competition_type":  "Coding Competition",
+                            "date":  "September 31, 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "CodeFest Mania",
+                            "competition_type":  "Coding Competition",
+                            "date":  "01 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Bug Blitz",
+                            "competition_type":  "Coding Competition",
+                            "date":  "02 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Showdown",
+                            "competition_type":  "Coding Competition",
+                            "date":  "06 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Script Samurai",
+                            "competition_type":  "Coding Competition",
+                            "date":  "07 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Champions",
+                            "competition_type":  "Coding Competition",
+                            "date":  "08 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Debugathon",
+                            "competition_type":  "Coding Competition",
+                            "date":  "09 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hack Night",
+                            "competition_type":  "Coding Competition",
+                            "date":  "13 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Function Frenemies",
+                            "competition_type":  "Coding Competition",
+                            "date":  "14 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Coding Pandemonium",
+                            "competition_type":  "Coding Competition",
+                            "date":  "15 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithmic Warfare",
+                            "competition_type":  "Coding Competition",
+                            "date":  "16 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Collide",
+                            "competition_type":  "Coding Competition",
+                            "date":  "20 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Bug Eliminators",
+                            "competition_type":  "Coding Competition",
+                            "date":  "21 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "CodeCon Quest",
+                            "competition_type":  "Coding Competition",
+                            "date":  "22 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hack the Matrix",
+                            "competition_type":  "Coding Competition",
+                            "date":  "23 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Ace",
+                            "competition_type":  "Coding Competition",
+                            "date":  "27 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "The Ultimate Code War",
+                            "competition_type":  "Coding Competition",
+                            "date":  "28 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Binary Knights",
+                            "competition_type":  "Coding Competition",
+                            "date":  "29 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hack Arena",
+                            "competition_type":  "Coding Competition",
+                            "date":  "29 Oct 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Rumble",
+                            "competition_type":  "Coding Competition",
+                            "date":  "01 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Debugathon Xtreme",
+                            "competition_type":  "Coding Competition",
+                            "date":  "05 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Agility",
+                            "competition_type":  "Coding Competition",
+                            "date":  "06 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "ScriptMaster Showdown",
+                            "competition_type":  "Coding Competition",
+                            "date":  "07 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Annihilation",
+                            "competition_type":  "Coding Competition",
+                            "date":  "08 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hack the Planet",
+                            "competition_type":  "Coding Competition",
+                            "date":  "12 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Byte Bash",
+                            "competition_type":  "Coding Competition",
+                            "date":  "13 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Adrenaline",
+                            "competition_type":  "Coding Competition",
+                            "date":  "14 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Coding Mastery",
+                            "competition_type":  "Coding Competition",
+                            "date":  "15 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Debugger’s Paradise",
+                            "competition_type":  "Coding Competition",
+                            "date":  "19 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathon Heatwave",
+                            "competition_type":  "Coding Competition",
+                            "date":  "20 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Legends",
+                            "competition_type":  "Coding Competition",
+                            "date":  "21 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Bug Off Battle",
+                            "competition_type":  "Coding Competition",
+                            "date":  "22 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Script Wars",
+                            "competition_type":  "Coding Competition",
+                            "date":  "26 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Frenzy Arena",
+                            "competition_type":  "Coding Competition",
+                            "date":  "27 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathon Rivals",
+                            "competition_type":  "Coding Competition",
+                            "date":  "28 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Binary Breakers",
+                            "competition_type":  "Coding Competition",
+                            "date":  "29 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Adventurers",
+                            "competition_type":  "Coding Competition",
+                            "date":  "30 Nov 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Craze Royale",
+                            "competition_type":  "Coding Competition",
+                            "date":  "02 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Debugger’s Delight",
+                            "competition_type":  "Coding Competition",
+                            "date":  "03 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "The Code Champion Challenge",
+                            "competition_type":  "Coding Competition",
+                            "date":  "04 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathon All-Stars",
+                            "competition_type":  "Coding Competition",
+                            "date":  "05 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Function Fury",
+                            "competition_type":  "Coding Competition",
+                            "date":  "09 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code and Conquer",
+                            "competition_type":  "Coding Competition",
+                            "date":  "10 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Supremacy",
+                            "competition_type":  "Coding Competition",
+                            "date":  "11 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Script Conquerors",
+                            "competition_type":  "Coding Competition",
+                            "date":  "12 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "BugQuest",
+                            "competition_type":  "Coding Competition",
+                            "date":  "16 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Gauntlet",
+                            "competition_type":  "Coding Competition",
+                            "date":  "17 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "IoT \u0026 Cloud\nComputing Project Competition",
+                            "competition_type":  "Project Competition",
+                            "date":  "15.04.2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Byte Blitzkrieg",
+                            "competition_type":  "Coding Competition",
+                            "date":  "01 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "The Debugging Showdown",
+                            "competition_type":  "Coding Competition",
+                            "date":  "02 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathon Heroes",
+                            "competition_type":  "Coding Competition",
+                            "date":  "07 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Battles",
+                            "competition_type":  "Coding Competition",
+                            "date":  "08 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Script Revolution",
+                            "competition_type":  "Coding Competition",
+                            "date":  "09 Dec 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Pioneers",
+                            "competition_type":  "Coding Competition",
+                            "date":  "04 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "The Bug Brawl",
+                            "competition_type":  "Coding Competition",
+                            "date":  "05 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "CodeMaster Quest",
+                            "competition_type":  "Coding Competition",
+                            "date":  "06 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathon Victory",
+                            "competition_type":  "Coding Competition",
+                            "date":  "07 Jan 2024",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Assassins",
+                            "competition_type":  "Coding Competition",
+                            "date":  "11 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Script Scribes Showdown",
+                            "competition_type":  "Coding Competition",
+                            "date":  "12 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "BugBash Tournament",
+                            "competition_type":  "Coding Competition",
+                            "date":  "13 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Havoc",
+                            "competition_type":  "Coding Competition",
+                            "date":  "14 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "HackMania",
+                            "competition_type":  "Coding Competition",
+                            "date":  "18 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Architects Arena",
+                            "competition_type":  "Coding Competition",
+                            "date":  "02 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Debug Domination",
+                            "competition_type":  "Coding Competition",
+                            "date":  "03 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Rage",
+                            "competition_type":  "Coding Competition",
+                            "date":  "04 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathletes",
+                            "competition_type":  "Coding Competition",
+                            "date":  "05 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Script Rush",
+                            "competition_type":  "Coding Competition",
+                            "date":  "09 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Giants",
+                            "competition_type":  "Coding Competition",
+                            "date":  "10 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithmic Duel",
+                            "competition_type":  "Coding Competition",
+                            "date":  "11 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Bug Bounty Clash",
+                            "competition_type":  "Coding Competition",
+                            "date":  "12 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "CodeKnights Battle",
+                            "competition_type":  "Coding Competition",
+                            "date":  "16 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathon Knockout",
+                            "competition_type":  "Coding Competition",
+                            "date":  "17 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Function Fighters",
+                            "competition_type":  "Coding Competition",
+                            "date":  "18 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Byte Busters",
+                            "competition_type":  "Coding Competition",
+                            "date":  "19 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Ascension",
+                            "competition_type":  "Coding Competition",
+                            "date":  "23 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "CodeFest Showdown",
+                            "competition_type":  "Coding Competition",
+                            "date":  "24 Jan 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Gear",
+                            "competition_type":  "Coding Competition",
+                            "date":  "01 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Gear",
+                            "competition_type":  "Coding Competition",
+                            "date":  "02 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Debug Demons",
+                            "competition_type":  "Coding Competition",
+                            "date":  "06 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathon Rumble",
+                            "competition_type":  "Coding Competition",
+                            "date":  "07 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "ByteCon Brawl",
+                            "competition_type":  "Coding Competition",
+                            "date":  "08 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Script Surge Royale",
+                            "competition_type":  "Coding Competition",
+                            "date":  "09 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Grandmasters",
+                            "competition_type":  "Coding Competition",
+                            "date":  "13 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Bug Zapper Championship",
+                            "competition_type":  "Coding Competition",
+                            "date":  "14 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathon Hyperdrive",
+                            "competition_type":  "Coding Competition",
+                            "date":  "15 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Avengers",
+                            "competition_type":  "Coding Competition",
+                            "date":  "20 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Gear",
+                            "competition_type":  "Coding Competition",
+                            "date":  "21 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Gear",
+                            "competition_type":  "Coding Competition",
+                            "date":  "22 Feb 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Drawing and\nCreative Writing on Independence Day",
+                            "competition_type":  "Drawing and\nCreative Writing Competition",
+                            "date":  "14.08.2024",
+                            "proof_of_document":  "Event Report - 14.08.2024 - Dr. Avipsita Chatterjee.pdf"
+                        },
+                        {
+                            "competition_name":  "Algorithm Battles",
+                            "competition_type":  "Coding Competition",
+                            "date":  "01 Apr 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Pioneers",
+                            "competition_type":  "Coding Competition",
+                            "date":  "03 Apr 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "CodeMaster Quest",
+                            "competition_type":  "Coding Competition",
+                            "date":  "07 Apr 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Assassins",
+                            "competition_type":  "Coding Competition",
+                            "date":  "10 Apr 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "BugBash Tournament",
+                            "competition_type":  "Coding Competition",
+                            "date":  "15 Apr 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "HackMania",
+                            "competition_type":  "Coding Competition",
+                            "date":  "18 Apr 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Debug Domination",
+                            "competition_type":  "Coding Competition",
+                            "date":  "22 Apr 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathletes",
+                            "competition_type":  "Coding Competition",
+                            "date":  "25 Apr 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Giants",
+                            "competition_type":  "Coding Competition",
+                            "date":  "01 May 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Bug Bounty Clash",
+                            "competition_type":  "Coding Competition",
+                            "date":  "05 May 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathon Knockout",
+                            "competition_type":  "Coding Competition",
+                            "date":  "08 May 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Byte Busters",
+                            "competition_type":  "Coding Competition",
+                            "date":  "12 May 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "CodeFest Showdown",
+                            "competition_type":  "Coding Competition",
+                            "date":  "16 May 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Code Gear",
+                            "competition_type":  "Coding Competition",
+                            "date":  "20 May 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Hackathon Rumble",
+                            "competition_type":  "Coding Competition",
+                            "date":  "23 May 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Script Surge Royale",
+                            "competition_type":  "Coding Competition",
+                            "date":  "28 May 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Bug Zapper Championship",
+                            "competition_type":  "Coding Competition",
+                            "date":  "01 Aug 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "CodeStorm",
+                            "competition_type":  "Coding Competition",
+                            "date":  "05 Aug 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "AlgoArena",
+                            "competition_type":  "Coding Competition",
+                            "date":  "08 Aug 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "ByteBattles",
+                            "competition_type":  "Coding Competition",
+                            "date":  "12 Aug 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "HackHorizon",
+                            "competition_type":  "Coding Competition",
+                            "date":  "15 Aug 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Debug Dynasty",
+                            "competition_type":  "Coding Competition",
+                            "date":  "20 Aug 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "CodeCrusade",
+                            "competition_type":  "Coding Competition",
+                            "date":  "22 Aug 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "PixelPushers",
+                            "competition_type":  "Coding Competition",
+                            "date":  "27 Aug 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Algorithm Avengers",
+                            "competition_type":  "Coding Competition",
+                            "date":  "01 Sep 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "BitBrawl",
+                            "competition_type":  "Coding Competition",
+                            "date":  "04 Sep 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Syntax Showdown",
+                            "competition_type":  "Coding Competition",
+                            "date":  "08 Sep 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Loop Legends",
+                            "competition_type":  "Coding Competition",
+                            "date":  "11 Sep 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "HackHarvest",
+                            "competition_type":  "Coding Competition",
+                            "date":  "15 Sep 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Quantum Coders",
+                            "competition_type":  "Coding Competition",
+                            "date":  "18 Sep 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Function Frenzy",
+                            "competition_type":  "Coding Competition",
+                            "date":  "22 Sep 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Binary Blitz",
+                            "competition_type":  "Coding Competition",
+                            "date":  "25 Sep 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "ScriptSprint",
+                            "competition_type":  "Coding Competition",
+                            "date":  "01 Oct 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Compile Clash",
+                            "competition_type":  "Coding Competition",
+                            "date":  "03 Oct 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Neural Knights",
+                            "competition_type":  "Coding Competition",
+                            "date":  "07 Oct 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "CodeQuest",
+                            "competition_type":  "Coding Competition",
+                            "date":  "10 Oct 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "StackStorm",
+                            "competition_type":  "Coding Competition",
+                            "date":  "14 Oct 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Recursive Rumble",
+                            "competition_type":  "Coding Competition",
+                            "date":  "17 Oct 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "BitBattalion",
+                            "competition_type":  "Coding Competition",
+                            "date":  "21 Oct 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        },
+                        {
+                            "competition_name":  "Debugging Duel",
+                            "competition_type":  "Coding Competition",
+                            "date":  "24 Oct 2025",
+                            "proof_of_document":  "https://drive.google.com/drive/folders/18Z61nyoC-tEbc_LondA26X1pKZLqqIaT?usp=sharing"
+                        }
+                    ]
+    },
+    {
+        "source":  "IT Departmental_Magazines_template.xlsx",
+        "records":  [
+                        {
+                            "name_of_the_magazine":  "Harmony",
+                            "date_of_publication":  "04.08.2024",
+                            "volume_number":  "2.0",
+                            "proof_of_document":  "https://drive.google.com/file/d/14WEko7GXto0hCVe-TbIlQOdrBKMO92H5/view?usp=sharing"
+                        }
+                    ]
+    },
+    {
+        "source":  "IT Distinguished_Lecture_Series_template.xlsx",
+        "records":  [
+                        {
+                            "personality_name_and_organization":  "Dr Swarnendu Kumar Chakraborty,Dean(Academics), Associate Professor\u0027NIT, AP",
+                            "date":  "19 Aug 2024",
+                            "topic_name":  "Distinguished Lecture Series \"Building Resilient IoT Infrastructure\"",
+                            "attended_by":  "Students of IT, CSE(IOTCSBT), and CSE(IOT)",
+                            "proof_of_document":  "https://drive.google.com/open?id=1icG0ekAzVcwTtiuBHn801VKGqcqtnM7Z"
+                        },
+                        {
+                            "personality_name_and_organization":  "Mr. Souvik Roy",
+                            "date":  "06 Jul 2024",
+                            "topic_name":  "Alumni Talk",
+                            "attended_by":  "Students of IT and CSE",
+                            "proof_of_document":  "https://drive.google.com/open?id=1iSAOCwq70dw86DUkvb6inif_m_SH6D4q"
+                        },
+                        {
+                            "personality_name_and_organization":  "Mr. Medhajit Choudhury",
+                            "date":  "20 Jul 2024",
+                            "topic_name":  "Alumni Talk",
+                            "attended_by":  "Students of IT, CSE(IOTCSBT), and CSE(IOT)",
+                            "proof_of_document":  "https://drive.google.com/open?id=1xizHcnjLiXWW3Bt219_1wqH6LOdTvL7i"
+                        },
+                        {
+                            "personality_name_and_organization":  "Mr. Ravi Raj",
+                            "date":  "27 Jul 2024",
+                            "topic_name":  "Alumni Talk",
+                            "attended_by":  "Students of CSE and Alied Branches",
+                            "proof_of_document":  "https://drive.google.com/open?id=1Lq9aGhEX3c7hyRTxLk9YuwJqC7nHqNv3"
+                        },
+                        {
+                            "personality_name_and_organization":  "Dr. Aupendu Kar",
+                            "date":  "30 Aug 2024",
+                            "topic_name":  "Industry Talk",
+                            "attended_by":  "Students of IT, CSE(IOTCSBT), and CSE(IOT)",
+                            "proof_of_document":  "https://drive.google.com/open?id=1k1S6O-b3VZcqRY9YtK9CpVEy0ORYBJ2y"
+                        },
+                        {
+                            "personality_name_and_organization":  "Shuvam Chakraborty",
+                            "date":  "17 Aug 2024",
+                            "topic_name":  "Alumni Talk",
+                            "attended_by":  "Students of IT, CSE(IOTCSBT), and CSE(IOT)",
+                            "proof_of_document":  "https://drive.google.com/open?id=1xmN5MBbavQ8S1i1zr56lQuRNO3Sb5Gmk"
+                        },
+                        {
+                            "personality_name_and_organization":  "Dr Swarnendu Kumar Chakraborty",
+                            "date":  "19 Aug 2024",
+                            "topic_name":  "Distinguished Lecture Series",
+                            "attended_by":  "Students of IT, CSE(IOTCSBT), and CSE(IOT)",
+                            "proof_of_document":  "https://drive.google.com/open?id=1icG0ekAzVcwTtiuBHn801VKGqcqtnM7Z"
+                        },
+                        {
+                            "personality_name_and_organization":  "Angshuman Bhattacharjee, Arpan Singha, Rahul Saha, Pinaki Karuri, Sourav Chatterjee, Aninda Shankar Shukla",
+                            "date":  "28 Sep 2024",
+                            "topic_name":  "Hackathon",
+                            "attended_by":  "Students of IT, CSE(IOTCSBT), and CSE(IOT)",
+                            "proof_of_document":  "https://drive.google.com/open?id=1GW1YY3SysNVKOer478COUwUoIEV2uQUm"
+                        },
+                        {
+                            "personality_name_and_organization":  "Dr. Chandan Karfa",
+                            "date":  "14 Feb 2025",
+                            "topic_name":  "Distinguished Lecture Series",
+                            "attended_by":  "Students of IT, CSE(IOTCSBT), and CSE(IOT)",
+                            "proof_of_document":  "https://drive.google.com/open?id=1zOAiUQsosJvnOps4e0Yv09adjdzNEhh9"
+                        },
+                        {
+                            "personality_name_and_organization":  "Mr. Aninda Sankar Sukla",
+                            "date":  "12 Mar 2025",
+                            "topic_name":  "Industry Talk",
+                            "attended_by":  "Students of IT, CSE(IOTCSBT), and CSE(IOT)",
+                            "proof_of_document":  "https://drive.google.com/open?id=170GddV8nXgiPd9tym9K3yhxkwFcHGHN5"
+                        }
+                    ]
+    },
+    {
+        "source":  "IT Fdp_Organized_template.xlsx",
+        "records":  [
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "24 Jun 2024",
+                            "end_date":  "28 Jun 2024",
+                            "topic_name":  "Bytes to Bits: Navigating Cyber Security and Cryptography",
+                            "conducted_by":  "Department of Information Technology, Department of CSE(IOT) and Department of CSE(IOTCSBT) , IEM Kolkata in association with HRDC, IEM-UEM Group and Cyber Security Center of Excellence, Govt. of WB",
+                            "proof_of_document":  "Bytes to Bits.pdf"
+                        },
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "22 Jul 2024",
+                            "end_date":  "26 Jul 2024",
+                            "topic_name":  "Cutting-Edge Industrial Technologies and Bridge the Academic-Industry Gap",
+                            "conducted_by":  "Department of Information Technology, IEM, Kolkata, Salt Lake Campus in association with HRDC, IEM-UEM Group and IEM IQAC",
+                            "proof_of_document":  "Five-Day  FDP On Cutting-Edge Industrial Technologies and Bridge the Academic-Industry Gap.pdf"
+                        },
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "02 Sep 2024",
+                            "end_date":  "06 Sep 2024",
+                            "topic_name":  "Exploring IoT \u0026 AI Frontier in Teaching and Research",
+                            "conducted_by":  "Department of CSE(IOT), IEM, Kolkata, Salt Lake Campus in association with HRDC, IEM-UEM Group and IEM IQAC",
+                            "proof_of_document":  "Exploring IoT \u0026 AI Frontier in Teaching and Research.pdf"
+                        },
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "02 Dec 2024",
+                            "end_date":  "06 Dec 2024",
+                            "topic_name":  "Real-World Data Analytics: From Raw Data to Strategic Insights",
+                            "conducted_by":  "Department of CSE(IOTCSBT), IEM, Kolkata, Salt Lake Campus in association with HRDC, IEM-UEM Group and IEM IQAC",
+                            "proof_of_document":  "Real-World Data Analytics From Raw Data to Strategic Insights (2).pdf"
+                        },
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "17 Jun 2025",
+                            "end_date":  "21 Jun 2025",
+                            "topic_name":  "Argumentation in AI Ethics",
+                            "conducted_by":  "Department of Information Technology and CSE (IOTCSBT), IEM, Saltlake\nin association with\nHRDC, IEM-UEM Group and IEM IQAC",
+                            "proof_of_document":  "Argumentation in AI Ethics.pdf"
+                        },
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "04 Aug 2025",
+                            "end_date":  "08 Aug 2025",
+                            "topic_name":  "Agents \u0026 Artifacts: Exploring the World of Gen AI and Agentic AI",
+                            "conducted_by":  "HRDC, IEM-UEM Group and IEM IQAC",
+                            "proof_of_document":  "Agents \u0026 Artifacts Exploring the World of GenAI \u0026 Agentic AI.pdf"
+                        },
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "23 Jun 2025",
+                            "end_date":  "27 Jun 2025",
+                            "topic_name":  "Leadership in Curriculum Design : Aligning CS Education with Industry Needs",
+                            "conducted_by":  "Department of Information Technology\nin association with\nHRDC, IEM-UEM Group and IEM IQAC",
+                            "proof_of_document":  "FDP June 2025"
+                        },
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "25 Aug 2025",
+                            "end_date":  "29 Jun 2025",
+                            "topic_name":  "IoT Security",
+                            "conducted_by":  "Department of Computer Science \u0026 Engineering, IIT Guwahati and Department of Computer Science \u0026 Engineering and Information Technology, Institute Of Engineering and Management, Kolkata",
+                            "proof_of_document":  "FDP on IoT Security_ Report_V3 (1).pdf"
+                        },
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "30 Jun 2026",
+                            "end_date":  "30 Jun 2026",
+                            "topic_name":  "SYMPOSIUM ON SECURING THE FUTURE:CURRENT CYBER SECURITY CHALLENGES AND THE QUANTUM COMPUTING THREAT",
+                            "conducted_by":  "Department of Computer Science \u0026 Engineering and Information Technology, Institute Of Engineering and Management, Kolkata",
+                            "proof_of_document":  "One Day Symposium on Securing the Future Current Cyber Security Challenges and the Quantum Computing Threat (2).pdf"
+                        },
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "15 Dec 2025",
+                            "end_date":  "19 Dec 2025",
+                            "topic_name":  "Advanced ML techniques for real -world problem solving",
+                            "conducted_by":  "Department of CSE(IOT) and CSE (IOTCSBT), IEM, Saltlake\nin association with\nHRDC, IEM-UEM Group and IEM IQAC",
+                            "proof_of_document":  "https://drive.google.com/file/d/1sizu6_jVebSoJj7JMvs_iw7N3ussbC_3/view?usp=sharing"
+                        },
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "11 Dec 2025",
+                            "end_date":  "16 Dec 2025",
+                            "topic_name":  "Optimization strategies for real-world problem solving",
+                            "conducted_by":  "Department of Information Technology and CSE (IOT), IEM, Saltlake\nin association with\nHRDC, IEM-UEM Group and IEM IQAC",
+                            "proof_of_document":  "https://drive.google.com/file/d/1VdaB1_e2-TcYYaNIlGjfRxrIMSj6FKf4/view?usp=sharing"
+                        },
+                        {
+                            "type":  "Conducted",
+                            "start_date":  "25 Mar 2026",
+                            "end_date":  "31 Mar 2026",
+                            "topic_name":  "FDP  on Hand- crafted features to zero-shot intelligence",
+                            "conducted_by":  "Department of Information Technology and CSE (IOTCSBT), IEM, Saltlake\nin association with\nHRDC, IEM-UEM Group and IEM IQAC",
+                            "proof_of_document":  "https://drive.google.com/file/d/15cq19lyHT2_PrwdcW_S-kBmiISOTSLI6/view?usp=drive_link"
+                        }
+                    ]
+    },
+    {
+        "source":  "IT Hackathon_template.xlsx",
+        "records":  [
+                        {
+                            "name_of_the_event":  "Hackerrank",
+                            "date_of_event":  "09 Jun 2024",
+                            "no_of_participants":  "63.0"
+                        },
+                        {
+                            "name_of_the_event":  "IEM-HACKOASIS 1.0",
+                            "date_of_event":  "09-28-2024",
+                            "proof_of_document":  "https://drive.google.com/open?id=1GW1YY3SysNVKOer478COUwUoIEV2uQUm",
+                            "no_of_participants":  "400.0"
+                        },
+                        {
+                            "name_of_the_event":  "IEMHacks 3.0",
+                            "date_of_event":  "03-15-2025",
+                            "no_of_participants":  "889.0"
+                        }
+                    ]
+    },
+    {
+        "source":  "IT Industrial_Tour_template.xlsx",
+        "records":  [
+                        {
+                            "nature_of_industrial_tour":  "Physical",
+                            "date":  "19 Mar 2025",
+                            "industry_name":  "Ericsson",
+                            "attended_by":  "Students",
+                            "proof_of_document":  "Ericsson_Industry Visit.pdf"
+                        },
+                        {
+                            "nature_of_industrial_tour":  "Physical",
+                            "date":  "11 Mar 2025",
+                            "industry_name":  "Webel",
+                            "attended_by":  "Students",
+                            "proof_of_document":  "Webel_Industry Visit.pdf"
+                        },
+                        {
+                            "nature_of_industrial_tour":  "Physical",
+                            "date":  "25.09.2024",
+                            "industry_name":  "Field Visit for a project “Enhancing Sundarbans Mangrove Health: Integrative Fractal Dimension Analysis and Arduino-Based Cyclone Mitigation in the Saptamukhi Reserve Forest, India”",
+                            "attended_by":  "Students of IT, CSE and allied branches"
+                        },
+                        {
+                            "nature_of_industrial_tour":  "Physical",
+                            "date":  "24 Feb 2026",
+                            "industry_name":  "Ericsson",
+                            "attended_by":  "Students",
+                            "proof_of_document":  "Ericsson_Industry Visit_2026.pdf"
+                        },
+                        {
+                            "nature_of_industrial_tour":  "Physical",
+                            "date":  "14 Mar 2026",
+                            "industry_name":  "PwC",
+                            "attended_by":  "Students",
+                            "proof_of_document":  "Industry Visit_PwC.pdf"
+                        }
+                    ]
+    },
+    {
+        "source":  "IT Student_Chapter_Activity_Club_Activities_template.xlsx",
+        "records":  [
+                        {
+                            "date_of_activity":  "26 Jan 2024",
+                            "name_of_activity":  "Second Edition of \"Vision India Photography 2024\"",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Flyer.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "30 Jan 2024",
+                            "name_of_activity":  "Quiz Competition in Kolkata International Book Fair 2024",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "IMG_4701.JPG"
+                        },
+                        {
+                            "date_of_activity":  "17 Aug 2024",
+                            "name_of_activity":  "Alumni Talk - \"Aspirant to Achiever: A Roadmap to Success in GATE Examination\"",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "flyer_alumni talk.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "02 Sep 2024",
+                            "name_of_activity":  "5-Days Faculty Development Program on Exploring IoT \u0026 AI Frontier in Teaching and Research",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Flyer_Exploring IoT \u0026 AI Frontier in Teaching and Research.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "26 Jan 2025",
+                            "name_of_activity":  "Photography Competition - \"Vision India\"",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Flyer_vision india.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "04 Feb 2025",
+                            "name_of_activity":  "Quiz Competition in Kolkata International Book Fair 2025",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Book Fair Quiz.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "24 Feb 2025",
+                            "name_of_activity":  "Fun Game- \"Tech Sharads\"",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Tech Sharads.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "25 Feb 2025",
+                            "name_of_activity":  "Coding Competition- \"Blind Coding\"",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Blind Coding.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "26 Feb 2025",
+                            "name_of_activity":  "Hands-on Workshop on \"Top Trends Shaping IT Industry\"",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Aurora_workshop.png"
+                        },
+                        {
+                            "date_of_activity":  "27 Feb 2025",
+                            "name_of_activity":  "Quiz Competition",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Quiz Contest.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "28 Feb 2025",
+                            "name_of_activity":  "Invited talk on “Innovative Pedagogy in Human-Computer Interaction: Exploring using Deep Learning”",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Invited Talk Dr. Saha.png"
+                        },
+                        {
+                            "date_of_activity":  "22 Jul 2025",
+                            "name_of_activity":  "Umbrella Distribution to Traffic Police",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Umbrella Distribution_22_07_2025.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "11 Aug 2025",
+                            "name_of_activity":  "IEM-IETE Students\u0027 Forum Foundation Day Celebration with Invited Talk form Industry \u0026 Academia",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "IEM-IETE Foundation Day Celebration.jpg"
+                        },
+                        {
+                            "date_of_activity":  "28 Aug 2025",
+                            "name_of_activity":  "Industry Talk from LTI Mindtree",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Industry Talk 28-08-2025.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "04 Sep 2025",
+                            "name_of_activity":  "Workshop on AI \u0026 ML with MATLAB",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Workshop on MATLAB_04_09_2025.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "16 Sep 2025",
+                            "name_of_activity":  "Alumni Talk on DSA",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Alumni Talk_16-09-2025.jpeg"
+                        },
+                        {
+                            "date_of_activity":  "06 Mar 2026",
+                            "name_of_activity":  "Industry Talk on \"AI Powered Analytics: Transforming Data into Strategy\"",
+                            "name_of_chapter":  "IEM-IETE Students\u0027 Forum",
+                            "activity_status":  "Completed",
+                            "proof_of_documents":  "Poster_Industry_talk.jpeg"
+                        }
+                    ]
+    }
+]
