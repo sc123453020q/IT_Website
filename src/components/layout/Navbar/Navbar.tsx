@@ -70,7 +70,6 @@ const navItems = [
       { label: "Distinguished Lecture Series", href: "/events/distinguished-lectures" },
       { label: "Faculty Development Programs", href: "/events/faculty-development-programs" },
       { label: "Hackathons", href: "/events/hackathons" },
-      { label: "Industrial Tours", href: "/events/industrial-tours" },
       { label: "Student Chapter & Club Activities", href: "/events/student-chapter-activities" }
     ]
   },
@@ -101,6 +100,21 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setMenuOpen(false);
+    setOpenMobileDropdown(null);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [menuOpen]);
+
   const isHomePage = pathname === "/";
   const isSolid = scrolled || !isHomePage;
 
@@ -116,6 +130,7 @@ export default function Navbar() {
   };
 
   return (
+    <>
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isSolid 
@@ -209,7 +224,9 @@ export default function Navbar() {
               className={`rounded-full p-3 transition-colors xl:hidden ${
                 isSolid ? "text-content hover:bg-black/5" : "text-white hover:bg-white/10"
               }`}
-              aria-label="Toggle Menu"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-navigation"
               onClick={() => setMenuOpen(!menuOpen)}
             >
               {menuOpen ? <LuX className="text-2xl" /> : <LuMenu className="text-2xl" />}
@@ -217,10 +234,14 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+    </header>
 
       {/* ================= MOBILE NAVIGATION ================= */}
       <div 
-        className={`fixed inset-0 top-[68px] z-40 bg-white/98 backdrop-blur-3xl transition-all duration-300 ease-out xl:hidden ${
+        id="mobile-navigation"
+        className={`fixed inset-x-0 bottom-0 z-40 ${
+          isSolid ? "top-[68px]" : "top-[72px] md:top-[80px]"
+        } bg-white/98 backdrop-blur-3xl transition-all duration-300 ease-out xl:hidden ${
           menuOpen ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 -translate-y-4 pointer-events-none"
         }`}
       >
@@ -281,6 +302,6 @@ export default function Navbar() {
           </nav>
         </div>
       </div>
-    </header>
+    </>
   );
 }
