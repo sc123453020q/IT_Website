@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #6d28d9;
+  color: #a51d30;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -27,7 +27,7 @@
 .magazine-eyebrow span {
   width: 35px;
   height: 2px;
-  background: #6d28d9;
+  background: #a51d30;
 }
 
 .magazine-heading h1 {
@@ -39,7 +39,7 @@
 }
 
 .magazine-heading h1 span {
-  color: #6d28d9;
+  color: #a51d30;
 }
 
 .magazine-heading p {
@@ -75,7 +75,7 @@
   align-items: flex-start;
   justify-content: center;
   padding-top: 35px;
-  background: #6d28d9;
+  background: #a51d30;
   color: white;
   font-size: 20px;
   font-weight: 800;
@@ -101,7 +101,7 @@
 .magazine-content button {
   border: none;
   background: transparent;
-  color: #6d28d9;
+  color: #a51d30;
   font-size: 13px;
   font-weight: 700;
   cursor: pointer;

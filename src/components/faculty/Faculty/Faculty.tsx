@@ -169,6 +169,10 @@ export default function Faculty() {
         <div className="faculty-bg-glow faculty-bg-glow-two" />
 
         <div className="faculty-container">
+          <div className="faculty-intro">
+            <span className="site-section-kicker">Faculty directory</span>
+            <div><h2>Meet the people behind the teaching.</h2><p>Explore the department’s faculty and their roles. Select a profile for mentoring details and available links.</p></div>
+          </div>
 
           {/* -------------------------------------------------
               FACULTY GRID
@@ -209,6 +213,15 @@ export default function Faculty() {
                     }`}
                     key={faculty.id}
                     onClick={() => setSelectedFaculty(faculty)}
+                    onKeyDown={(event) => {
+                      if (event.key === "Enter" || event.key === " ") {
+                        event.preventDefault();
+                        setSelectedFaculty(faculty);
+                      }
+                    }}
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`View ${faculty.title} profile`}
                   >
 
                     {/* Card number */}

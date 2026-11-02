@@ -3,7 +3,7 @@
    ========================================================= */
 
 .achievements-section {
-  background: linear-gradient(180deg, #f0f7ff 0%, #e8f2fc 50%, #f4f9ff 100%);
+  background: linear-gradient(180deg, #f5f4f0 0%, #eceae5 50%, #fffefa 100%);
   padding: 80px 20px 100px;
   min-height: 80vh;
 }
@@ -21,7 +21,7 @@
 }
 
 .achievements-header > span {
-  color: #0066cc;
+  color: #b91f32;
   font-size: 12px;
   font-weight: 800;
   letter-spacing: 2px;
@@ -38,7 +38,7 @@
 
 .achievements-header h1 strong {
   display: block;
-  background: linear-gradient(135deg, #004080, #0066cc, #3b82f6);
+  background: linear-gradient(135deg, #94172a, #b91f32, #182238);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -133,7 +133,7 @@
   margin-top: auto;
   font-size: 0.82rem;
   font-weight: 700;
-  color: #0066cc;
+  color: #b91f32;
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -141,7 +141,7 @@
 }
 
 .achievement-card-grid:hover .achievement-read-more {
-  color: #004080;
+  color: #94172a;
   transform: translateX(4px);
 }
 

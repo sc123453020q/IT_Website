@@ -2,7 +2,7 @@ import Back from "@/components/common/Carousel/Back";
 
 export default function StudentScholarshipPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f8f9fc]">
+    <main className="min-h-screen overflow-x-hidden bg-[#f5f4f0]">
       <Back title="Student Scholarship" />
       
       <section className="py-12 md:py-16 px-4">
@@ -23,7 +23,7 @@ export default function StudentScholarshipPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
                 {/* Academic Scholarships */}
-                <div className="bg-[#eef4ff] rounded-2xl p-6 md:p-8 border border-blue-100/80 flex flex-col justify-between">
+                <div className="bg-[#f9e9eb] rounded-2xl p-6 md:p-8 border border-blue-100/80 flex flex-col justify-between">
                   <div>
                     <h2 className="text-xl font-bold text-[#0f2744] mb-4">
                       Academic Scholarships
@@ -99,7 +99,7 @@ export default function StudentScholarshipPage() {
               </div>
 
               {/* ROW 3: HOW TO APPLY */}
-              <div className="bg-[#f5f8ff] rounded-2xl p-6 md:p-8 border border-slate-200/80">
+              <div className="bg-[#f5f4f0] rounded-2xl p-6 md:p-8 border border-slate-200/80">
                 <h2 className="text-xl font-bold text-[#0f2744] mb-2">
                   How to Apply
                 </h2>

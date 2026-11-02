@@ -1,54 +1,29 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { aboutprog } from "@/lib/dummydata";
+const milestones = [
+  { marker: "1999", title: "The department begins", text: "Information Technology was established at IEM Salt Lake, Kolkata, with its first B.Tech cohort." },
+  { marker: "2011", title: "Postgraduate study follows", text: "The department introduced its M.Tech programme and continued expanding its academic work." },
+  { marker: "Today", title: "Learning through practice", text: "Laboratories, projects, internships and student chapters extend learning beyond lectures." },
+] as const;
 
 export default function AboutProgram() {
   return (
-    <section className="py-32 bg-white">
-      <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-[1400px]">
-        
-        {/* Section Header */}
-        <motion.div 
-          className="max-w-4xl mb-24"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <span className="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">
-            Information Technology
-          </span>
-          <h2 className="text-5xl md:text-7xl font-semibold text-content mb-8 tracking-tighter leading-[1.1]">
-            About the Program.
-          </h2>
-          <p className="text-2xl text-content-muted leading-relaxed font-light tracking-wide max-w-3xl">
-            Building strong foundations in technology, innovation, problem-solving and professional development.
-          </p>
-        </motion.div>
-
-        {/* Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-16">
-          {aboutprog.map((item, index) => (
-            <motion.article
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: index * 0.1, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col border-t border-black/5 pt-8"
-            >
-              <div className="text-4xl md:text-5xl font-semibold text-content/20 mb-6 tracking-tighter">
-                {String(index + 1).padStart(2, "0")}
-              </div>
-
-              <div className="text-lg text-content-muted leading-relaxed font-medium tracking-wide">
-                <p>{item.desc}</p>
-              </div>
-            </motion.article>
+    <section className="bg-surface px-5 py-20 sm:px-8 md:py-28" aria-labelledby="about-program-heading">
+      <div className="mx-auto max-w-[1320px]">
+        <div className="grid gap-10 border-t border-content/30 pt-6 lg:grid-cols-[.43fr_.57fr] lg:gap-20">
+          <div><p className="site-section-kicker">Our story / Since 1999</p><h2 id="about-program-heading" className="mt-5 max-w-lg text-[clamp(2.8rem,4.8vw,5.2rem)] font-semibold leading-[1.02] tracking-[-.055em] text-content">Built to turn ideas into work.</h2></div>
+          <div className="max-w-2xl space-y-5 self-end text-lg leading-8 text-content-muted">
+            <p>The Department of Information Technology began with a commitment to value-based education and research. It has grown from its first cohort into a community of students and faculty working across software, data and digital systems.</p>
+            <p>Alongside its academic programmes, the department encourages practical projects, internships, student chapters and entrepreneurial thinking. These experiences help students connect technical knowledge with the people and problems it can serve.</p>
+          </div>
+        </div>
+        <div className="mt-16 grid border-t border-content/25 lg:grid-cols-3">
+          {milestones.map((item, index) => (
+            <div key={item.marker} className="border-b border-content/20 py-7 lg:border-b-0 lg:border-r lg:px-8 lg:first:pl-0 lg:last:border-r-0">
+              <p className="text-sm font-semibold text-primary">0{index + 1} / {item.marker}</p>
+              <h3 className="mt-7 text-2xl font-semibold tracking-tight text-content">{item.title}</h3>
+              <p className="mt-3 max-w-sm text-sm leading-7 text-content-muted">{item.text}</p>
+            </div>
           ))}
         </div>
-
       </div>
     </section>
   );

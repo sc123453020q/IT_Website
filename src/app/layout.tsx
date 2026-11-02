@@ -1,22 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Merriweather } from "next/font/google";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./globals.css";
 
 import LayoutWrapper from "@/components/layout/LayoutWrapper";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const merriweather = Merriweather({
-  variable: "--font-merriweather",
-  weight: ["300", "400", "700", "900"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: {
@@ -51,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${merriweather.variable} font-sans text-content bg-surface antialiased`}
+        className="font-sans text-content bg-surface antialiased"
       >
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>

@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #6d28d9;
+  color: #a51d30;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -27,7 +27,7 @@
 .books-eyebrow span {
   width: 35px;
   height: 2px;
-  background: #6d28d9;
+  background: #a51d30;
 }
 
 .books-heading h1 {
@@ -39,7 +39,7 @@
 }
 
 .books-heading h1 span {
-  color: #6d28d9;
+  color: #a51d30;
 }
 
 .books-heading p {
@@ -67,13 +67,13 @@
 
 .book-card:hover {
   transform: translateY(-7px);
-  background: #f5efff;
+  background: #f5f4f0;
   box-shadow: 0 20px 45px rgba(109, 40, 217, 0.1);
 }
 
 .book-number {
   font-size: 13px;
-  color: #8b5cf6;
+  color: #c44859;
   font-weight: 700;
   margin-bottom: 60px;
 }
@@ -98,7 +98,7 @@
   left: 0;
   width: 100%;
   height: 4px;
-  background: #6d28d9;
+  background: #a51d30;
   transform: scaleX(0);
   transform-origin: left;
   transition: 0.35s ease;

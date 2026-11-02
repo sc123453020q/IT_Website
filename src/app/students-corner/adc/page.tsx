@@ -30,7 +30,7 @@ const committeeMembers: CommitteeMember[] = [
 
 export default function ADCPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f8f9fc]">
+    <main className="min-h-screen overflow-x-hidden bg-[#f5f4f0]">
       <Back title="Academic Disciplinary Committee (ADC)" />
       
       <section className="py-12 md:py-16 px-4">
@@ -47,7 +47,7 @@ export default function ADCPage() {
             </p>
 
             {/* RESPONSIBILITIES CARD */}
-            <div className="bg-[#eef4ff] rounded-2xl p-6 md:p-8 border border-blue-100/80 mb-8">
+            <div className="bg-[#f9e9eb] rounded-2xl p-6 md:p-8 border border-blue-100/80 mb-8">
               <h2 className="text-xl font-bold text-[#0f2744] mb-4">
                 Responsibilities
               </h2>
@@ -102,7 +102,7 @@ export default function ADCPage() {
             </div>
 
             {/* CONTACT ADC */}
-            <div className="bg-[#faf5ff] rounded-2xl p-6 md:p-8 border border-purple-100/80">
+            <div className="bg-[#fff1f2] rounded-2xl p-6 md:p-8 border border-primary/15">
               <h2 className="text-xl font-bold text-[#0f2744] mb-2">
                 Contact ADC
               </h2>

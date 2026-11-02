@@ -22,7 +22,7 @@
 
   margin-bottom: 10px;
 
-  color: #7c3aed;
+  color: #b91f32;
 
   font-size: 0.72rem;
 
@@ -79,7 +79,7 @@
 
   background: #ffffff;
 
-  color: #6d28d9;
+  color: #a51d30;
 
   font-size: 0.88rem;
 
@@ -97,18 +97,18 @@
 .publication-button:hover {
   transform: translateY(-2px);
 
-  background: #f5efff;
+  background: #f5f4f0;
 
   box-shadow:
     0 8px 25px rgba(109, 40, 217, 0.1);
 }
 
 .publication-button.active {
-  background: #7c3aed;
+  background: #b91f32;
 
   color: #ffffff;
 
-  border-color: #7c3aed;
+  border-color: #b91f32;
 
   box-shadow:
     0 10px 30px rgba(124, 58, 237, 0.2);
@@ -122,7 +122,7 @@
 .publication-results {
   padding: 30px;
 
-  border: 1px solid #e9e3f2;
+  border: 1px solid #f5f4f0;
 
   border-radius: 22px;
 
@@ -135,7 +135,7 @@
 .publication-results h3 {
   margin: 0 0 18px;
 
-  color: #5b21b6;
+  color: #94172a;
 
   font-size: 1.2rem;
 
@@ -185,7 +185,7 @@
 
   border-bottom: 2px solid #d9c7f4;
 
-  color: #4c1d95;
+  color: #94172a;
 
   font-size: 0.78rem;
 
@@ -215,7 +215,7 @@
 }
 
 .publication-table tbody tr:hover {
-  background: #faf7ff;
+  background: #fffefa;
 }
 
 .publication-table tbody tr:last-child td {
@@ -225,7 +225,7 @@
 .publication-table td:first-child {
   width: 70px;
 
-  color: #7c3aed;
+  color: #b91f32;
 
   font-weight: 800;
 

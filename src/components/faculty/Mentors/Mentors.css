@@ -37,13 +37,13 @@
   font-weight: 800;
   letter-spacing: 0.18em;
 
-  color: #7c3aed;
+  color: #b91f32;
 }
 
 .mentors-eyebrow-line {
   width: 35px;
   height: 2px;
-  background: #7c3aed;
+  background: #b91f32;
 }
 
 .mentors-heading h1 {
@@ -63,8 +63,8 @@
 
   background: linear-gradient(
     135deg,
-    #7c3aed,
-    #a855f7
+    #b91f32,
+    #c44859
   );
 
   -webkit-background-clip: text;
@@ -109,7 +109,7 @@
 
   padding: 20px;
 
-  border: 1px solid #e9e3f3;
+  border: 1px solid #f5f4f0;
   border-radius: 22px;
 
   background: #ffffff;
@@ -132,7 +132,7 @@
 .mentor-card:hover {
   transform: translateY(-7px);
 
-  border-color: #c9a9f7;
+  border-color: #e9a4ad;
 
   box-shadow:
     0 20px 45px rgba(88, 45, 140, 0.14);
@@ -280,7 +280,7 @@
 
   letter-spacing: 0.04em;
 
-  color: #7c3aed;
+  color: #b91f32;
 
   transition: transform 0.3s ease;
 }
@@ -305,8 +305,8 @@
 
   background: linear-gradient(
     90deg,
-    #7c3aed,
-    #a855f7
+    #b91f32,
+    #c44859
   );
 
   transform: scaleX(0);
@@ -330,10 +330,10 @@
 
   padding: 50px 20px;
 
-  border: 1px solid #e9e3f3;
+  border: 1px solid #f5f4f0;
   border-radius: 20px;
 
-  background: #faf8fd;
+  background: #fffefa;
 }
 
 .mentor-empty h2 {
@@ -453,7 +453,7 @@
 
   background: #f3edf9;
 
-  color: #6d28d9;
+  color: #a51d30;
 
   font-size: 16px;
 
@@ -466,7 +466,7 @@
 }
 
 .mentor-modal-close:hover {
-  background: #7c3aed;
+  background: #b91f32;
 
   color: #ffffff;
 
@@ -582,7 +582,7 @@
 
   border-radius: 50%;
 
-  background: #7c3aed;
+  background: #b91f32;
 
   color: #ffffff;
 
@@ -596,7 +596,7 @@
 .mentor-socials a:hover {
   transform: translateY(-3px);
 
-  background: #5b21b6;
+  background: #94172a;
 }
 
 
@@ -632,7 +632,7 @@
 
   letter-spacing: 0.16em;
 
-  color: #7c3aed;
+  color: #b91f32;
 }
 
 .mentees-heading h2 {
@@ -696,7 +696,7 @@
 
   padding-bottom: 6px;
 
-  border-bottom: 2px solid #7c3aed;
+  border-bottom: 2px solid #b91f32;
 
   font-size: 0.9rem;
 
@@ -704,7 +704,7 @@
 
   letter-spacing: 0.08em;
 
-  color: #5b21b6;
+  color: #94172a;
 }
 
 
@@ -733,7 +733,7 @@
 
   border-radius: 10px;
 
-  background: #faf8fd;
+  background: #fffefa;
 
   transition:
     background 0.25s ease,
@@ -746,7 +746,7 @@
 
   border-color: #d7c1f4;
 
-  background: #f5effc;
+  background: #f5f4f0;
 }
 
 .mentee-serial {
@@ -756,7 +756,7 @@
 
   font-weight: 800;
 
-  color: #7c3aed;
+  color: #b91f32;
 }
 
 .mentee-details {
@@ -793,7 +793,7 @@
 
   border-radius: 12px;
 
-  background: #faf8fd;
+  background: #fffefa;
 
   color: #817889;
 }

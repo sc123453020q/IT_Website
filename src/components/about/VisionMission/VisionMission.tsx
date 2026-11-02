@@ -1,129 +1,41 @@
-"use client";
-
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { LuEye, LuTarget } from "react-icons/lu";
+const missions = [
+  {
+    title: "Experiential education",
+    text: "Deliver multidisciplinary, outcome-based IT education that connects theory with practice and supports ethical, socially responsible professional work.",
+  },
+  {
+    title: "Research and transformation",
+    text: "Foster applied research, industry collaboration and entrepreneurship in emerging areas of Information Technology.",
+  },
+  {
+    title: "Continuous improvement",
+    text: "Keep developing the curriculum, infrastructure and faculty expertise through stakeholder engagement and contemporary teaching practice.",
+  },
+] as const;
 
 export default function VisionMission() {
   return (
-    <section className="py-32 bg-surface-alt border-y border-black/5">
-      <div className="container mx-auto px-4 md:px-6 lg:px-12 max-w-[1400px]">
-        
-        {/* Header */}
-        <motion.div 
-          className="max-w-4xl mb-24"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <span className="text-primary font-bold tracking-widest text-xs uppercase mb-4 block">
-            Our Direction
-          </span>
-          <h2 className="text-5xl md:text-7xl font-semibold text-content mb-8 tracking-tighter leading-[1.1]">
-            Vision & Mission.
-          </h2>
-          <p className="text-2xl text-content-muted leading-relaxed font-light tracking-wide max-w-3xl">
-            A clear vision, meaningful mission and commitment to excellence shape the future of our students.
-          </p>
-        </motion.div>
-
-        {/* Vision */}
-        <motion.article 
-          className="flex flex-col lg:flex-row gap-16 lg:gap-24 mb-32 items-center"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <div className="w-full lg:w-1/2 flex flex-col">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-16 rounded-full bg-black/5 flex items-center justify-center text-primary">
-                <LuEye className="text-3xl" />
-              </div>
-              <span className="text-content-muted font-bold tracking-widest text-xs uppercase">
-                01 — Vision
-              </span>
-            </div>
-
-            <h3 className="text-4xl font-semibold text-content tracking-tight mb-8">
-              Vision of the Department
-            </h3>
-
-            <div className="space-y-6 text-xl text-content/80 leading-relaxed font-light tracking-wide">
-              <p>
-                To be a nationally and internationally distinguished Department of Information Technology that advances transformative digital solutions through experiential learning, interdisciplinary collaboration, and research excellence in alignment with NEP 2020.
-              </p>
-              <p>
-                To create technology leaders and responsible innovators who harness data, intelligent systems, and digital infrastructure to drive inclusive growth and sustainable development in accordance with the SDGs.
-              </p>
-            </div>
+    <section aria-labelledby="vision-heading">
+      <div className="bg-[#18263b] px-5 py-20 text-white sm:px-8 md:py-28">
+        <div className="mx-auto grid max-w-[1320px] gap-12 border-t border-white/30 pt-6 lg:grid-cols-[.35fr_.65fr] lg:gap-20">
+          <div><p className="text-xs font-semibold uppercase tracking-[.2em] text-[#ff9ba3]">01 / Our vision</p><h2 id="vision-heading" className="mt-5 text-[clamp(3rem,5vw,5.5rem)] font-semibold leading-[1] tracking-[-.055em]">Purpose, made practical.</h2></div>
+          <div className="max-w-3xl self-end font-serif text-[clamp(1.5rem,2.5vw,2.7rem)] leading-[1.3] text-white/90">
+            <p>To be a distinguished Department of Information Technology advancing digital solutions through experiential learning, interdisciplinary collaboration and research excellence.</p>
+            <p className="mt-7 text-white/65">To develop responsible technology leaders who use data, intelligent systems and digital infrastructure for inclusive, sustainable growth.</p>
           </div>
-
-          <div className="w-full lg:w-1/2">
-            <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:h-[460px] rounded-[2rem] overflow-hidden bg-white border border-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.08)] group">
-              <Image
-                src="/images/vision.jpg"
-                alt="Vision of the Information Technology Department"
-                fill
-                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
+        </div>
+      </div>
+      <div className="bg-[#f2f0eb] px-5 py-20 sm:px-8 md:py-28">
+        <div className="mx-auto max-w-[1320px] border-t border-content/30 pt-6">
+          <div className="grid gap-8 lg:grid-cols-[.35fr_.65fr] lg:gap-20"><div><p className="site-section-kicker">02 / Our mission</p><h3 className="mt-5 text-[clamp(2.8rem,4.6vw,5.2rem)] font-semibold leading-[1] tracking-[-.055em] text-content">How we move forward.</h3></div><p className="max-w-2xl self-end text-lg leading-8 text-content-muted">The mission connects teaching, research and continuous improvement to the work of preparing students for a changing field.</p></div>
+          <div className="mt-12 border-t border-content/25">
+            {missions.map((mission, index) => (
+              <div key={mission.title} className="grid gap-4 border-b border-content/25 py-7 md:grid-cols-[90px_1fr_1.4fr] md:gap-8 md:py-9">
+                <span className="text-sm font-semibold text-primary">0{index + 1}</span><h4 className="text-xl font-semibold tracking-tight text-content sm:text-2xl">{mission.title}</h4><p className="max-w-xl text-base leading-7 text-content-muted">{mission.text}</p>
+              </div>
+            ))}
           </div>
-        </motion.article>
-
-        {/* Mission */}
-        <motion.article 
-          className="flex flex-col lg:flex-row-reverse gap-16 lg:gap-24 items-center"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        >
-          <div className="w-full lg:w-1/2 flex flex-col">
-            <div className="flex items-center gap-4 mb-8">
-              <div className="w-16 h-16 rounded-full bg-black/5 flex items-center justify-center text-primary">
-                <LuTarget className="text-3xl" />
-              </div>
-              <span className="text-content-muted font-bold tracking-widest text-xs uppercase">
-                02 — Mission
-              </span>
-            </div>
-
-            <h3 className="text-4xl font-semibold text-content tracking-tight mb-8">
-              Mission of the Department
-            </h3>
-
-            <div className="space-y-6 text-lg text-content/80 leading-relaxed font-light tracking-wide">
-              <div>
-                <h4 className="font-semibold text-content text-xl mb-1">Holistic & Experiential Education</h4>
-                <p>To deliver multidisciplinary, experiential, and outcome-based IT education aligned with NEP 2020, enabling students to integrate theory with practice and emerge as competent, ethical, and socially responsible professionals.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-content text-xl mb-1">Innovation, Research & Digital Transformation</h4>
-                <p>To foster innovation, applied research, and industry collaboration in emerging areas of Information Technology, encouraging entrepreneurship and the development of technology-driven solutions for national and global challenges.</p>
-              </div>
-              <div>
-                <h4 className="font-semibold text-content text-xl mb-1">Continuous Improvement & Sustainable Impact</h4>
-                <p>To continuously enhance curriculum, infrastructure, and faculty expertise through stakeholder engagement and modern pedagogical tools, preparing graduates to contribute to inclusive growth and the achievement of the Sustainable Development Goals (SDGs).</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full lg:w-1/2">
-            <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:h-[460px] rounded-[2rem] overflow-hidden bg-white border border-black/10 shadow-[0_20px_40px_rgba(0,0,0,0.08)] group">
-              <Image
-                src="/images/mission.jpg"
-                alt="Mission of the Information Technology Department"
-                fill
-                className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-            </div>
-          </div>
-        </motion.article>
-
+        </div>
       </div>
     </section>
   );

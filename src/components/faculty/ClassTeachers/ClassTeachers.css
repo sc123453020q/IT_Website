@@ -31,13 +31,13 @@
   font-size: 0.78rem;
   font-weight: 800;
   letter-spacing: 0.18em;
-  color: #0066cc;
+  color: #b91f32;
 }
 
 .class-teachers-eyebrow-line {
   width: 35px;
   height: 2px;
-  background: #0066cc;
+  background: #b91f32;
 }
 
 .class-teachers-heading h1 {
@@ -56,8 +56,8 @@
 
   background: linear-gradient(
     135deg,
-    #0066cc,
-    #3b82f6
+    #b91f32,
+    #182238
   );
 
   -webkit-background-clip: text;
@@ -92,7 +92,7 @@
   position: relative;
 
   padding: 22px;
-  border: 1px solid #e9e3f3;
+  border: 1px solid #f5f4f0;
   border-radius: 22px;
 
   background: #ffffff;
@@ -111,7 +111,7 @@
 .class-teacher-card:hover {
   transform: translateY(-8px);
 
-  border-color: #c9a9f7;
+  border-color: #e9a4ad;
 
   box-shadow:
     0 20px 45px rgba(88, 45, 140, 0.14);
@@ -208,7 +208,7 @@
   font-weight: 800;
   letter-spacing: 0.08em;
 
-  color: #7c3aed;
+  color: #b91f32;
 }
 
 .class-teacher-info h2 {
@@ -243,8 +243,8 @@
 
   background: linear-gradient(
     90deg,
-    #7c3aed,
-    #a855f7
+    #b91f32,
+    #c44859
   );
 
   transform: scaleX(0);

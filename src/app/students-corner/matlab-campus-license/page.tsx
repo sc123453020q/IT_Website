@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function MatlabCampusLicensePage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f8f9fc]">
+    <main className="min-h-screen overflow-x-hidden bg-[#f5f4f0]">
       <Back title="MatLab Campus License" />
       
       <section className="py-12 md:py-16 px-4">
@@ -18,7 +18,7 @@ export default function MatlabCampusLicensePage() {
               Access MATLAB through the Institute of Engineering and Management&apos;s MathWorks campus portal.
             </p>
 
-            <div className="bg-[#eef4ff] rounded-2xl p-6 md:p-8 border border-blue-100/80">
+            <div className="bg-[#f9e9eb] rounded-2xl p-6 md:p-8 border border-blue-100/80">
               <Link 
                 href="https://in.mathworks.com/academia/tah-portal/institute-of-engineering-and-management-31600358.html"
                 target="_blank"

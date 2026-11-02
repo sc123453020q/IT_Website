@@ -30,7 +30,7 @@ const cgcMembers: Member[] = [
 
 export default function CGCPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f8f9fc]">
+    <main className="min-h-screen overflow-x-hidden bg-[#f5f4f0]">
       <Back title="Career Guidance Cell (CGC)" />
       
       <section className="py-12 md:py-16 px-4">
@@ -47,7 +47,7 @@ export default function CGCPage() {
             </p>
 
             {/* RESPONSIBILITIES CARD */}
-            <div className="bg-[#eef4ff] rounded-2xl p-6 md:p-8 border border-blue-100/80 mb-8">
+            <div className="bg-[#f9e9eb] rounded-2xl p-6 md:p-8 border border-blue-100/80 mb-8">
               <h2 className="text-xl font-bold text-[#0f2744] mb-4">
                 Responsibilities
               </h2>

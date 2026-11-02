@@ -3,7 +3,7 @@
 import { usePathname } from 'next/navigation';
 import Header from '@/components/layout/Header/Header';
 
-import Footer from "@/components/common/Stack/Footer";
+import Footer from "@/components/layout/SiteFooter/SiteFooter";
 import GoToTop from "@/components/common/GotoTop/GoToTop";
 
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
@@ -13,7 +13,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
   const showHeaderFooter = !hideHeaderPaths.some(path => pathname === path || pathname?.startsWith(`${path}/`));
 
   return (
-    <div className="bg-white min-h-screen text-black selection:bg-accent selection:text-white flex flex-col">
+    <div className="flex min-h-screen flex-col bg-surface text-content">
       {showHeaderFooter && <Header />}
       <div className="flex-1">
         {children}

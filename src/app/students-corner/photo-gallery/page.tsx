@@ -3,7 +3,7 @@ import PhotoGallery from "@/components/gallery/PhotoGallery/PhotoGallery";
 
 export default function PhotoGalleryPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f8f9fc]">
+    <main className="min-h-screen overflow-x-hidden bg-[#f5f4f0]">
       <Back title="Photo Gallery" />
       
       <section className="py-12 md:py-16 px-4">

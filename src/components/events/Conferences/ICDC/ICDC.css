@@ -1,7 +1,7 @@
 .icdc-section {
   width: 100%;
   padding: 85px 20px 110px;
-  background: #f8f8fc;
+  background: #f5f4f0;
 }
 
 .icdc-container {
@@ -22,7 +22,7 @@
   padding: 6px 16px;
   border-radius: 9999px;
   background: rgba(124, 58, 237, 0.08);
-  color: #7c3aed;
+  color: #b91f32;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -65,7 +65,7 @@
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 20px 40px -15px rgba(124, 58, 237, 0.15);
-  background: #ede9fe;
+  background: #f9e9eb;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -103,7 +103,7 @@
 }
 
 .icdc-writeup-tag {
-  color: #7c3aed;
+  color: #b91f32;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -160,8 +160,8 @@
 
 .icdc-poster-badge {
   display: inline-block;
-  background: #f3e8ff;
-  color: #7c3aed;
+  background: #f9e9eb;
+  color: #b91f32;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -227,7 +227,7 @@
 }
 
 .icdc-btn-primary {
-  background: #7c3aed;
+  background: #b91f32;
   color: #ffffff;
   font-weight: 600;
   font-size: 0.9rem;
@@ -239,7 +239,7 @@
 }
 
 .icdc-btn-primary:hover {
-  background: #6d28d9;
+  background: #a51d30;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(124, 58, 237, 0.35);
 }
@@ -272,7 +272,7 @@
 }
 
 .icdc-section-title span {
-  color: #7c3aed;
+  color: #b91f32;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
@@ -312,7 +312,7 @@
   height: 48px;
   border-radius: 14px;
   background: rgba(124, 58, 237, 0.1);
-  color: #7c3aed;
+  color: #b91f32;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -368,7 +368,7 @@
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: #7c3aed;
+  color: #b91f32;
   background: rgba(124, 58, 237, 0.08);
   padding: 4px 12px;
   border-radius: 9999px;
@@ -379,8 +379,8 @@
   width: 44px;
   height: 44px;
   border-radius: 12px;
-  background: #f3e8ff;
-  color: #7c3aed;
+  background: #f9e9eb;
+  color: #b91f32;
   display: flex;
   align-items: center;
   justify-content: center;

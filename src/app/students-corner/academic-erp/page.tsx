@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function AcademicErpPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f8f9fc]">
+    <main className="min-h-screen overflow-x-hidden bg-[#f5f4f0]">
       <Back title="Academic ERP" />
       
       <section className="py-12 md:py-16 px-4">
@@ -24,7 +24,7 @@ export default function AcademicErpPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
                 {/* ERP Features */}
-                <div className="bg-[#eef4ff] rounded-2xl p-6 md:p-8 border border-blue-100/80 flex flex-col justify-between">
+                <div className="bg-[#f9e9eb] rounded-2xl p-6 md:p-8 border border-blue-100/80 flex flex-col justify-between">
                   <div>
                     <h2 className="text-xl font-bold text-[#0f2744] mb-4">
                       ERP Features
@@ -86,7 +86,7 @@ export default function AcademicErpPage() {
               </div>
 
               {/* BOTTOM CARD: NEED HELP? */}
-              <div className="bg-[#eef4ff] rounded-2xl p-6 md:p-8 border border-blue-100/80">
+              <div className="bg-[#f9e9eb] rounded-2xl p-6 md:p-8 border border-blue-100/80">
                 <h2 className="text-xl font-bold text-[#0f2744] mb-2">
                   Need Help?
                 </h2>

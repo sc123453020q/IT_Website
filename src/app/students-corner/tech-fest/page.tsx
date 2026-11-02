@@ -1,4 +1,5 @@
 import Back from "@/components/common/Carousel/Back";
+import UnpublishedPage from "@/components/layout/UnpublishedPage/UnpublishedPage";
 
 export default function Page() {
   return (
@@ -6,7 +7,7 @@ export default function Page() {
       <Back title="Tech-Fest" />
       
       <section aria-label="Tech-Fest">
-        <div className="py-20 text-center"><h2 className="text-3xl font-bold mb-4">Tech-Fest</h2><p className="text-content-muted">Content coming soon...</p></div>
+        <UnpublishedPage area="Tech fest" href="/events" linkLabel="Browse events" />
       </section>
     </main>
   );

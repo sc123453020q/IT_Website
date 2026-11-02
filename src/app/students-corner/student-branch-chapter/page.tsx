@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function StudentBranchChapterPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f8f9fc]">
+    <main className="min-h-screen overflow-x-hidden bg-[#f5f4f0]">
       <Back title="Student Branch Chapter" />
       
       <section className="py-12 md:py-16 px-4">
@@ -18,7 +18,7 @@ export default function StudentBranchChapterPage() {
               Explore student chapters, professional bodies and student forums.
             </p>
 
-            <div className="bg-[#eef4ff] rounded-2xl p-6 md:p-8 border border-blue-100/80">
+            <div className="bg-[#f9e9eb] rounded-2xl p-6 md:p-8 border border-blue-100/80">
               <Link 
                 href="https://iem-iete-students-forum.netlify.app/"
                 target="_blank"

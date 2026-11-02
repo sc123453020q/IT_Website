@@ -5,13 +5,13 @@
    ========================================================= */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fffefa;
+  --foreground: #182238;
 
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
-  --radius-lg: 1rem;
-  --radius-xl: 1.5rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.125rem;
 
   --transition-fast: 180ms ease;
   --transition-normal: 300ms ease;
@@ -21,22 +21,22 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  /* Apple-style minimalist palette */
-  --color-primary: #0066cc;
-  --color-primary-hover: #005bb5;
-  --color-primary-light: #f5f5f7;
+  /* IEM identity: institutional navy, restrained red, warm paper. */
+  --color-primary: #b91f32;
+  --color-primary-hover: #94172a;
+  --color-primary-light: #fff1f2;
 
-  --color-surface: #ffffff;
-  --color-surface-alt: #f5f5f7;
-  --color-surface-muted: #e8e8ed;
+  --color-surface: #fffefa;
+  --color-surface-alt: #f5f4f0;
+  --color-surface-muted: #eceae5;
 
-  --color-content: #1d1d1f;
-  --color-content-muted: #86868b;
+  --color-content: #182238;
+  --color-content-muted: #5e6876;
 
-  --color-border: #d2d2d7;
+  --color-border: #d9dce0;
 
-  --font-sans: var(--font-inter);
-  --font-serif: var(--font-merriweather);
+  --font-sans: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
 }
 
 /* =========================================================
@@ -51,10 +51,10 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 * {
@@ -62,64 +62,35 @@ body {
 }
 
 ::selection {
-  background: rgba(122, 47, 227, 0.25);
+  background: rgba(185, 31, 50, 0.18);
   color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+img, video, iframe {
+  max-width: 100%;
+}
+
+/* Shared proportions for the legacy sections as well as new pages. */
+main > section:not(:first-child) {
+  scroll-margin-top: 5rem;
+}
+
+.site-section-kicker {
+  color: var(--color-primary);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
 }
 
 button,
 a {
   -webkit-tap-highlight-color: transparent;
-}
-
-/* =========================================================
-   PAGE BACKGROUNDS
-   Existing visual identity preserved
-   ========================================================= */
-
-.bg-home {
-  background: #ad5389;
-  background: -webkit-linear-gradient(to right, #3c1053, #ad5389);
-  background: linear-gradient(to right, #3c1053, #ad5389);
-}
-
-.bg-about {
-  background: #c31432;
-  background: -webkit-linear-gradient(to right, #240b36, #c31432);
-  background: linear-gradient(to right, #240b36, #c31432);
-}
-
-.bg-academics {
-  background: #43c6ac;
-  background: -webkit-linear-gradient(to right, #191654, #43c6ac);
-  background: linear-gradient(to right, #191654, #43c6ac);
-}
-
-.bg-faculty {
-  background: #c33764;
-  background: -webkit-linear-gradient(to right, #1d2671, #c33764);
-  background: linear-gradient(to right, #1d2671, #c33764);
-}
-
-.bg-innovation_initiatives {
-  background: #0f0c29;
-  background: -webkit-linear-gradient(to right,
-      #24243e,
-      #302b63,
-      #0f0c29);
-  background: linear-gradient(to right,
-      #24243e,
-      #302b63,
-      #0f0c29);
-}
-
-.bg-land_students {
-  background: #1a2980;
-  background: -webkit-linear-gradient(to right, #26d0ce, #1a2980);
-  background: linear-gradient(to right, #26d0ce, #1a2980);
-}
-
-.bg-default {
-  background: linear-gradient(90deg, #f0f0f0, #d3d3d3);
 }
 
 /* =========================================================
@@ -129,7 +100,7 @@ a {
 .react-calendar {
   width: 100% !important;
   border: none !important;
-  font-family: "Inter", sans-serif !important;
+  font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif !important;
 }
 
 .react-calendar__navigation__label__labelText {
@@ -137,13 +108,13 @@ a {
 }
 
 .react-calendar__tile--active {
-  background-color: #c3ebfa !important;
-  color: #000 !important;
+  background-color: #b91f32 !important;
+  color: #fff !important;
 }
 
 .react-calendar__tile.highlight {
-  background-color: #cfceff;
-  border: 1px solid rgb(78, 14, 14);
+  background-color: #fff1f2;
+  border: 1px solid #b91f32;
 }
 
 /* =========================================================
@@ -166,11 +137,11 @@ a {
 .rbc-btn-group:last-child button {
   margin-left: 2px !important;
   border: none !important;
-  background-color: #f1f0ff !important;
+  background-color: #f2f0eb !important;
 }
 
 .rbc-toolbar button.rbc-active {
-  background-color: #dbdafe !important;
+  background-color: #f3d9dc !important;
   box-shadow: none !important;
 }
 
@@ -195,7 +166,7 @@ a {
 }
 
 .rbc-timeslot-group {
-  background-color: #f7fdff !important;
+  background-color: #fffefa !important;
 }
 
 .rbc-day-slot {
@@ -211,35 +182,35 @@ a {
 }
 
 .rbc-event:nth-child(1) {
-  background-color: #e2f8ff !important;
+  background-color: #f5f4f0 !important;
 }
 
 .rbc-event:nth-child(2) {
-  background-color: #fefce8 !important;
+  background-color: #fff1f2 !important;
 }
 
 .rbc-event:nth-child(3) {
-  background-color: #f2f1ff !important;
+  background-color: #eceae5 !important;
 }
 
 .rbc-event:nth-child(4) {
-  background-color: #fdf2fb !important;
+  background-color: #f3d9dc !important;
 }
 
 .rbc-event:nth-child(5) {
-  background-color: #e2f8ff !important;
+  background-color: #f5f4f0 !important;
 }
 
 .rbc-event:nth-child(6) {
-  background-color: #fefce8 !important;
+  background-color: #fff1f2 !important;
 }
 
 .rbc-event:nth-child(7) {
-  background-color: #f2f1ff !important;
+  background-color: #eceae5 !important;
 }
 
 .rbc-event:nth-child(8) {
-  background-color: #fdf2fb !important;
+  background-color: #f3d9dc !important;
 }
 
 .rbc-event-label {

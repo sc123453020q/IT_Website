@@ -4,63 +4,33 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+const paths = [
+  { number: "01", title: "Academics", href: "/course-curriculum/curriculum" },
+  { number: "02", title: "Research", href: "/research" },
+  { number: "03", title: "Student life", href: "/students" },
+] as const;
+
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[85vh] flex flex-col justify-end bg-black">
-      {/* Background Image & Overlay */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/images/bg_1.jpg"
-          alt="IEM Campus"
-          fill
-          priority
-          className="object-cover object-center opacity-70"
-          sizes="100vw"
-        />
-        {/* Apple-style smooth gradient fade to black at the bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+    <section className="relative flex min-h-[760px] flex-col justify-end overflow-hidden bg-[#111827] text-white lg:min-h-[min(920px,100svh)]">
+      <div className="absolute inset-0">
+        <Image src="/images/bg_1.jpg" alt="IEM students and faculty at HackOasis" fill priority sizes="100vw" className="object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#101827]/90 via-[#101827]/55 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#101827]/85 via-transparent to-[#101827]/25" />
       </div>
-
-      {/* Main Content */}
-      <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-12 max-w-[1400px] pb-20 pt-36 md:pb-28">
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-4xl"
-        >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-8 rounded-full bg-white/10 backdrop-blur-2xl border border-white/10 text-white/90 text-xs font-semibold tracking-widest uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse"></span>
-            Institute of Engineering & Management
-          </div>
-          
-          {/* Huge typography with tight tracking typical of Apple */}
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-semibold text-white leading-[1.05] tracking-tight mb-8">
-            Leading the Future of <br className="hidden md:block"/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">
-              Information Technology
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-2xl text-white/70 max-w-2xl mb-12 leading-relaxed font-light tracking-wide">
-            Creating technology-driven thinkers, innovators, and problem solvers through quality education and industry-oriented learning.
-          </p>
-          
-          <div className="flex flex-wrap items-center gap-4">
-            <Link 
-              href="/about" 
-              className="px-8 py-4 bg-white text-black hover:bg-gray-100 rounded-full font-semibold transition-all duration-300 shadow-xl flex items-center gap-2 active:scale-95"
-            >
-              Explore Department
-            </Link>
-            <Link 
-              href="/course-curriculum/curriculum" 
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-xl text-white border border-white/10 rounded-full font-semibold transition-all duration-300 active:scale-95"
-            >
-              Academic Programs
-            </Link>
+      <div className="relative mx-auto w-full max-w-[1440px] px-5 pb-12 pt-40 sm:px-8 lg:px-10 lg:pb-16">
+        <motion.div className="max-w-5xl" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>
+          <div className="mb-6 flex items-center gap-4 text-xs font-bold uppercase tracking-[.16em] text-white/85"><span className="h-0.5 w-9 bg-[#f36c78]" /> Institute of Engineering & Management · Kolkata</div>
+          <h1 className="text-[clamp(2.65rem,7.8vw,8.5rem)] font-semibold leading-[.98] tracking-[-.055em]">Leading the future of <span className="block text-white">Information <em className="font-normal not-italic text-[#ff9ba3]">Technology.</em></span></h1>
+          <p className="mt-8 max-w-2xl text-base leading-8 text-white/85 sm:text-xl">Study, research and student experience in a department shaped by practical learning and new ideas.</p>
+          <div className="mt-9 flex flex-wrap gap-4">
+            <Link href="/about" className="inline-flex min-h-12 items-center gap-4 bg-white px-6 py-3 text-sm font-semibold text-[#182238] transition-colors hover:bg-[#f7e8e9]">Explore the department <span aria-hidden="true">↗</span></Link>
+            <Link href="/course-curriculum/curriculum" className="inline-flex min-h-12 items-center border border-white/65 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/15">Academic programs</Link>
           </div>
         </motion.div>
+        <div className="mt-16 grid border-t border-white/30 sm:grid-cols-3 lg:mt-20">
+          {paths.map((path) => <Link key={path.title} href={path.href} className="group flex items-center gap-4 border-b border-white/25 py-5 text-white transition-colors hover:bg-white/10 sm:border-b-0 sm:border-r sm:px-5 sm:first:pl-0 sm:last:border-r-0"><span className="text-xs font-bold text-[#ff9ba3]">{path.number}</span><span className="flex-1 text-sm font-semibold sm:text-base">{path.title}</span><span className="text-lg transition-transform group-hover:translate-x-1" aria-hidden="true">↗</span></Link>)}
+        </div>
       </div>
     </section>
   );

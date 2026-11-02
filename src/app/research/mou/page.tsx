@@ -2,7 +2,7 @@ import Back from "@/components/common/Carousel/Back";
 
 export default function MoUPage() {
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f8f9fc]">
+    <main className="min-h-screen overflow-x-hidden bg-[#f5f4f0]">
       <Back title="Memorandum of Understanding (MoU)" />
       
       <section className="py-12 md:py-16 px-4">
@@ -22,7 +22,7 @@ export default function MoUPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
               
               {/* Card 1: IIT Guwahati */}
-              <div className="bg-[#eef4ff] rounded-2xl p-6 border border-blue-100/80 flex flex-col justify-between shadow-sm">
+              <div className="bg-[#f9e9eb] rounded-2xl p-6 border border-blue-100/80 flex flex-col justify-between shadow-sm">
                 <div>
                   <h2 className="text-lg font-bold text-[#0f2744] mb-2">
                     IIT Guwahati
@@ -106,7 +106,7 @@ export default function MoUPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               
               {/* Left Column: IIT Guwahati Details */}
-              <div className="bg-[#eef4ff] rounded-2xl p-6 md:p-8 border border-blue-100/80">
+              <div className="bg-[#f9e9eb] rounded-2xl p-6 md:p-8 border border-blue-100/80">
                 <h2 className="text-xl font-bold text-[#0f2744] mb-3">
                   IIT Guwahati
                 </h2>
@@ -136,7 +136,7 @@ export default function MoUPage() {
               </div>
 
               {/* Right Column: WEBEL, Capgemini, PEGA, TCS Details */}
-              <div className="bg-[#faf5ff] rounded-2xl p-6 md:p-8 border border-purple-100/80 flex flex-col justify-between">
+              <div className="bg-[#fff1f2] rounded-2xl p-6 md:p-8 border border-primary/15 flex flex-col justify-between">
                 <div>
                   <h2 className="text-xl font-bold text-[#0f2744] mb-3">
                     WEBEL, Capgemini, PEGA &amp; TCS

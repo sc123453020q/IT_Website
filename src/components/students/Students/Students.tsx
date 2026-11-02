@@ -10,7 +10,7 @@ const studentSections = [
     title: "Placements",
     description:
       "Explore placement opportunities, recruiters, statistics and career guidance for our students.",
-    image: "/images/students.jpg",
+    image: "/images/bg_3.JPG",
     href: "/students/placements",
     number: "01",
   },
@@ -18,7 +18,7 @@ const studentSections = [
     title: "Study Materials & Assignments",
     description:
       "Access study materials, notes, assignments and academic resources in one place.",
-    image: "/images/books.jpg",
+    image: "/images/infrastructure/Lab2.jpg",
     href: "/students/study-materials",
     number: "02",
   },
@@ -26,15 +26,15 @@ const studentSections = [
     title: "Students Achievements",
     description:
       "Discover the accomplishments, awards, competitions and milestones achieved by our students.",
-    image: "/images/trophy.jpg",
+    image: "/images/achievements/Picture1.jpg",
     href: "/students/achievements",
     number: "03",
   },
   {
     title: "Industry Visit",
     description:
-      "Explore workshops, seminars, competitions, celebrations and other department activities.",
-    image: "/images/students/events.jpg",
+      "See how students connect classroom learning with visits to working technology organisations.",
+    image: "/images/ericsson_visit1.jpeg",
     href: "/students/industry-visit",
     number: "04",
   },

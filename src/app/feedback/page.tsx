@@ -121,7 +121,7 @@ export default function FeedbackPage() {
           </div>
 
           {/* FEEDBACK PROCESS SECTION */}
-          <div className="bg-[#faf5ff] border border-[#f3e8ff] rounded-2xl p-6 sm:p-8 mb-8">
+          <div className="bg-[#fff1f2] border border-primary/15 rounded-2xl p-6 sm:p-8 mb-8">
             <h2 className="text-xl sm:text-2xl font-bold text-[#0f2744] mb-4">
               Feedback Process
             </h2>

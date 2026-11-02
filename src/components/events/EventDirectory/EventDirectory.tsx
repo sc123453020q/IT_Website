@@ -1,114 +1,73 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { LuExternalLink, LuFileText, LuSearch, LuUsers } from "react-icons/lu";
 import Back from "@/components/common/Carousel/Back";
 import type { EventGroup, EventRecord } from "@/data/events";
 
 const labels: Record<string, string> = {
-  topic_name: "Topic",
-  competition_name: "Competition",
-  competition_type: "Category",
-  name_of_the_event: "Event",
-  name_of_activity: "Activity",
-  name_of_chapter: "Chapter / Club",
-  name_of_the_magazine: "Magazine",
-  personality_name_and_organization: "Speaker & Organization",
-  organizing_institute: "Organized by",
-  conducted_by: "Conducted by",
-  industry_name: "Industry",
-  nature_of_industrial_tour: "Tour type",
-  attended_by: "Attended by",
-  no_of_participants: "Participants",
-  activity_status: "Status",
-  volume_number: "Volume",
-  date_of_publication: "Published",
-  date_of_event: "Date",
-  date_of_activity: "Date",
-  start_date: "Starts",
-  end_date: "Ends",
-  event_type: "Event type",
-  type: "Format",
-  date: "Date",
+  competition_type: "Category", event_type: "Event type", type: "Format",
+  organizing_institute: "Organised by", conducted_by: "Conducted by",
+  personality_name_and_organization: "Speaker", attended_by: "Attended by",
+  industry_name: "Industry", nature_of_industrial_tour: "Tour type",
+  no_of_participants: "Participants", activity_status: "Status",
+  name_of_chapter: "Chapter / club", volume_number: "Volume",
+  date: "Date", date_of_event: "Date", date_of_activity: "Date",
+  date_of_publication: "Published", start_date: "Starts", end_date: "Ends",
 };
-
 const titleKeys = ["topic_name", "competition_name", "name_of_the_event", "name_of_activity", "name_of_the_magazine", "industry_name"];
 const documentKeys = ["proof_of_document", "proof_of_documents"];
+const dateKeys = ["date", "date_of_event", "date_of_activity", "date_of_publication", "start_date"];
 
-function getTitle(record: EventRecord) {
+function titleFor(record: EventRecord) {
   const key = titleKeys.find((candidate) => record[candidate]);
-  return key ? record[key] : "Department Event";
-}
-
-function isWebLink(value: string) {
-  return /^https?:\/\//i.test(value);
+  return key ? record[key] : "Department event";
 }
 
 export default function EventDirectory({ group }: { group: EventGroup }) {
   const [query, setQuery] = useState("");
-  const normalizedQuery = query.trim().toLowerCase();
-  const records = useMemo(
-    () => group.records.filter((record) => !normalizedQuery || Object.values(record).some((value) => value.toLowerCase().includes(normalizedQuery))),
-    [group.records, normalizedQuery],
-  );
+  const results = useMemo(() => {
+    const term = query.trim().toLocaleLowerCase();
+    return group.records.filter((record) => !term || Object.values(record).some((value) => value.toLocaleLowerCase().includes(term)));
+  }, [group.records, query]);
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-white">
+    <main className="min-h-screen bg-surface">
       <Back title={group.title} />
-
-      <section className="py-20 md:py-24">
-        <div className="container mx-auto max-w-[1400px] px-4 md:px-6 lg:px-12">
-        <div className="mb-16 flex flex-col justify-between gap-8 border-b border-black/5 pb-10 md:flex-row md:items-end">
+      <section className="mx-auto max-w-[1280px] px-5 py-16 sm:px-8 md:py-24">
+        <div className="mb-10 grid gap-8 border-b border-border pb-9 lg:grid-cols-[1fr_20rem] lg:items-end">
           <div>
-            <span className="mb-4 block text-xs font-bold uppercase tracking-widest text-primary">Department activities</span>
-            <h2 className="max-w-2xl text-3xl font-semibold tracking-tight text-content md:text-5xl">Event archive.</h2>
-            <p className="mt-5 max-w-2xl text-lg font-light leading-relaxed tracking-wide text-content-muted">{group.description}</p>
-            <p className="mt-4 text-sm font-semibold text-content-muted">{group.records.length} {group.records.length === 1 ? "record" : "records"}</p>
+            <span className="site-section-kicker">Department archive · {group.records.length} records</span>
+            <h2 className="mt-4 text-2xl font-semibold tracking-tight text-content sm:text-3xl">{group.title}</h2>
+            <p className="mt-3 max-w-2xl text-base leading-7 text-content-muted">{group.description}</p>
           </div>
-          <label className="flex w-full items-center gap-3 border-b border-black/15 py-3 transition-colors focus-within:border-primary md:max-w-sm">
-            <LuSearch className="shrink-0 text-content-muted" />
-            <span className="sr-only">Search events</span>
-            <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search this archive" className="min-w-0 flex-1 bg-transparent text-sm text-content outline-none placeholder:text-content-muted" />
+          <label className="block text-xs font-semibold uppercase tracking-wide text-content-muted">
+            Search this archive
+            <input type="search" value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Name, topic or date" className="mt-2 block h-12 w-full border border-border bg-white px-4 text-sm font-normal normal-case tracking-normal text-content outline-none focus:border-primary" />
           </label>
         </div>
-
-        {records.length ? (
-          <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {records.map((record, index) => {
-              const title = getTitle(record);
+        <p className="mb-4 text-sm text-content-muted" aria-live="polite">Showing {results.length} of {group.records.length}</p>
+        {results.length ? (
+          <div className="divide-y divide-border border-y border-border">
+            {results.map((record, index) => {
+              const title = titleFor(record);
+              const dateKey = dateKeys.find((key) => record[key]);
               const documentKey = documentKeys.find((key) => record[key]);
-              const details = Object.entries(record).filter(([key]) => !titleKeys.includes(key) && !documentKeys.includes(key));
+              const details = Object.entries(record).filter(([key]) => !titleKeys.includes(key) && !documentKeys.includes(key) && !dateKeys.includes(key));
+              const document = documentKey && record[documentKey];
               return (
-                <article key={`${title}-${index}`} className="flex min-w-0 flex-col rounded-[2rem] border border-black/5 bg-surface-alt p-7 transition-shadow duration-300 hover:shadow-[0_20px_40px_rgba(0,0,0,0.06)]">
-                  <div className="mb-8 font-mono text-4xl font-bold text-black/5">{String(index + 1).padStart(2, "0")}</div>
-                  <h3 className="text-xl font-semibold leading-snug tracking-tight text-content">{title}</h3>
-                  <dl className="mt-5 space-y-3 text-sm">
-                    {details.map(([key, value]) => (
-                      <div key={key} className="grid grid-cols-[7rem_minmax(0,1fr)] gap-3 border-t border-black/5 pt-3 first:border-0 first:pt-0">
-                        <dt className="text-xs font-bold uppercase tracking-wide text-content-muted">{labels[key] ?? key.replaceAll("_", " ")}</dt>
-                        <dd className="min-w-0 whitespace-pre-line break-words font-medium leading-relaxed text-content/80">{value}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                  {documentKey && (
-                    <div className="mt-auto pt-6">
-                      {isWebLink(record[documentKey]) ? (
-                        <a href={record[documentKey]} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-70">View document <LuExternalLink /></a>
-                      ) : (
-                        <div className="flex items-start gap-2 border-t border-black/5 pt-4 text-sm text-content-muted"><LuFileText className="mt-0.5 shrink-0" /><span className="break-all">{record[documentKey]}</span></div>
-                      )}
-                    </div>
-                  )}
+                <article key={`${title}-${index}`} className="grid gap-5 py-7 sm:grid-cols-[7rem_minmax(0,1fr)] sm:gap-8 md:py-9">
+                  <div><span className="site-section-kicker">{String(index + 1).padStart(2, "0")}</span>{dateKey && <p className="mt-2 text-sm font-medium text-content-muted">{record[dateKey]}</p>}</div>
+                  <div className="min-w-0">
+                    <h3 className="text-xl font-semibold leading-snug text-content md:text-2xl">{title}</h3>
+                    {details.length > 0 && <dl className="mt-4 flex flex-wrap gap-x-7 gap-y-2 text-sm leading-6">{details.map(([key, value]) => <div key={key} className="min-w-0 max-w-full"><dt className="inline font-semibold text-content-muted">{labels[key] ?? key.replaceAll("_", " ")}: </dt><dd className="inline whitespace-pre-line break-words text-content">{value}</dd></div>)}</dl>}
+                    {document && (/^https?:\/\//i.test(document) ? <a href={document} target="_blank" rel="noopener noreferrer" className="mt-5 inline-block border-b border-primary pb-1 text-sm font-semibold text-primary hover:text-primary-hover">View document ↗</a> : <p className="mt-4 break-words text-sm text-content-muted">Document reference: {document}</p>)}
+                  </div>
                 </article>
               );
             })}
           </div>
-        ) : (
-          <div className="rounded-[2rem] bg-surface-alt px-6 py-16 text-center"><LuUsers className="mx-auto mb-4 text-3xl text-content-muted" /><p className="font-semibold text-content">No events match “{query}”.</p></div>
-        )}
-        </div>
+        ) : <div className="border-y border-border py-16 text-center text-content-muted">No records match your search.</div>}
       </section>
     </main>
   );
 }
-

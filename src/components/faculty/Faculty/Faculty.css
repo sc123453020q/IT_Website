@@ -75,7 +75,7 @@
   gap: 10px;
   margin-bottom: 18px;
 
-  color: #0066cc;
+  color: #b91f32;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.2em;
@@ -87,8 +87,8 @@
   border-radius: 999px;
   background: linear-gradient(
     90deg,
-    #004080,
-    #0066cc
+    #94172a,
+    #b91f32
   );
 }
 
@@ -108,8 +108,8 @@
   background: linear-gradient(
     90deg,
     #0f172a,
-    #0066cc,
-    #3b82f6
+    #b91f32,
+    #182238
   );
 
   -webkit-background-clip: text;
@@ -193,7 +193,7 @@
 }
 
 .faculty-card:hover .faculty-number {
-  color: #0066cc;
+  color: #b91f32;
 }
 
 /* =========================================================
@@ -252,9 +252,9 @@
   background:
     linear-gradient(
       135deg,
-      #004080,
-      #0066cc,
-      #3b82f6
+      #94172a,
+      #b91f32,
+      #182238
     );
 
   box-shadow:
@@ -381,7 +381,7 @@
 
   border-radius: 999px;
 
-  color: #0066cc;
+  color: #b91f32;
 
   background: rgba(0, 102, 204, 0.08);
 
@@ -434,9 +434,9 @@
   background:
     linear-gradient(
       90deg,
-      #004080,
-      #0066cc,
-      #3b82f6
+      #94172a,
+      #b91f32,
+      #182238
     );
 
   transform: scaleX(0);
@@ -461,7 +461,7 @@
     linear-gradient(
       145deg,
       #ffffff,
-      #f0f7ff
+      #f5f4f0
     );
 }
 
@@ -523,7 +523,7 @@
 .faculty-navigation-text span {
   display: block;
 
-  color: #0066cc;
+  color: #b91f32;
 
   font-size: 9px;
   font-weight: 800;
@@ -566,8 +566,8 @@
   background:
     linear-gradient(
       135deg,
-      #004080,
-      #0066cc
+      #94172a,
+      #b91f32
     );
 
   text-decoration: none;
@@ -598,7 +598,7 @@
 }
 
 .faculty-nav-button-outline:hover {
-  color: #0066cc;
+  color: #b91f32;
 
   background: #ffffff;
 }
@@ -726,7 +726,7 @@
   padding: 6px 14px;
   border-radius: 999px;
   background: rgba(0, 102, 204, 0.08);
-  color: #0066cc;
+  color: #b91f32;
   font-size: 0.8rem;
   font-weight: 700;
   border: 1px solid rgba(0, 102, 204, 0.16);
@@ -735,9 +735,32 @@
 }
 
 .faculty-card:hover .faculty-view-mentees {
-  background: #0066cc;
+  background: #b91f32;
   color: #ffffff;
-  border-color: #0066cc;
+  border-color: #b91f32;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 102, 204, 0.25);
 }
+
+/* Inside IEM IT directory treatment */
+.faculty-section { background: #f2f0eb; padding: 80px 0 110px; }
+.faculty-bg-glow, .faculty-image-glow, .faculty-card-accent { display: none; }
+.faculty-container { width: min(1320px, calc(100% - 40px)); }
+.faculty-intro { display: grid; grid-template-columns: .4fr .6fr; gap: 48px; border-top: 1px solid rgba(24,34,56,.35); padding-top: 24px; margin-bottom: 56px; }
+.faculty-intro h2 { margin: 0; max-width: 700px; color: #182238; font-size: clamp(2.6rem,4.5vw,5rem); line-height: 1.03; letter-spacing: -.055em; font-weight: 650; }
+.faculty-intro p { max-width: 580px; margin: 20px 0 0; color: #5e6876; font-size: 1rem; line-height: 1.8; }
+.faculty-grid { gap: 14px; }
+.faculty-card, .faculty-card-hod { padding: 0; border: 1px solid #d9dce0; border-radius: 0; background: #fffefa; box-shadow: none; }
+.faculty-card:hover, .faculty-card:focus-visible { transform: none; border-color: #b91f32; box-shadow: none; }
+.faculty-number { z-index: 3; top: 14px; right: 14px; padding: 6px 8px; background: #fffefa; color: #182238; }
+.faculty-image-wrapper { padding: 0; }
+.faculty-image { width: 100%; height: 310px; border: 0; border-radius: 0; box-shadow: none; background: #eceae5; }
+.faculty-image::after { display: none; }
+.faculty-socials { right: 14px; bottom: 14px; opacity: 1; transform: none; }
+.faculty-info { padding: 24px; text-align: left; }
+.faculty-info h2 { font-size: 1.3rem; font-weight: 650; letter-spacing: -.025em; color: #182238; }
+.faculty-info p { color: #5e6876; font-size: .85rem; }
+.faculty-role-badge, .faculty-program-badge { border-radius: 0; background: #fff1f2; color: #94172a; }
+.faculty-view-mentees { border-radius: 0; border: 0; border-bottom: 1px solid #b91f32; padding: 0 0 4px; background: transparent; box-shadow: none; }
+.faculty-card:hover .faculty-view-mentees { transform: none; border-color: #94172a; background: transparent; color: #94172a; box-shadow: none; }
+@media (max-width: 767px) { .faculty-intro { grid-template-columns: 1fr; gap: 12px; } .faculty-section { padding: 64px 0 80px; } .faculty-image { height: 290px; } }
