@@ -32,7 +32,6 @@ const navItems = [
       { label: "Alumni", href: "/students-corner/alumni" },
       { label: "Benefits", href: "/students-corner/benefits" },
       { label: "Batch Photography", href: "/students-corner/batch-photography" },
-      { label: "Tech-Fest", href: "/students-corner/tech-fest" },
       { label: "Student's Achievement", href: "/students-corner/students-achievement" },
       { label: "Student Branch Chapter", href: "/students-corner/student-branch-chapter" },
       { label: "Industrial Visit", href: "/students-corner/industrial-visit" },
@@ -44,9 +43,6 @@ const navItems = [
     label: "Research", 
     href: "/research",
     dropdown: [
-      { label: "IEDC-IT", href: "/research/iedc-it" },
-      { label: "AMRL Facility", href: "/research/amrl-facility" },
-      { label: "IoT Research Lab", href: "/research/iot-research-lab" },
       { label: "Publications", href: "/research/publications" },
       { label: "Patent", href: "/research/patent" },
       { label: "MoU", href: "/research/mou" }
@@ -151,7 +147,7 @@ export default function Navbar() {
                 Department of<br /> Information Technology
               </span>
               <span className={`mt-0.5 hidden text-[9px] font-medium uppercase tracking-wide transition-colors duration-300 sm:block ${isSolid ? 'text-content-muted' : 'text-white/80'}`}>
-                Institute of Engineering and Management
+                Institute of Engineering & Management
               </span>
             </div>
           </Link>
