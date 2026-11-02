@@ -42,7 +42,6 @@ const navItems = [
       { label: "Student Branch Chapter", href: "/students-corner/student-branch-chapter" },
       { label: "Industrial Visit", href: "/students-corner/industrial-visit" },
       { label: "MatLab Campus License", href: "/students-corner/matlab-campus-license" },
-      { label: "Photo Gallery", href: "/students-corner/photo-gallery" },
       { label: "Extra Curricular Activity", href: "/students-corner/extra-curricular-activity" }
     ]
   },
@@ -55,8 +54,7 @@ const navItems = [
       { label: "IoT Research Lab", href: "/research/iot-research-lab" },
       { label: "Publications", href: "/research/publications" },
       { label: "Patent", href: "/research/patent" },
-      { label: "MoU", href: "/research/mou" },
-      { label: "Departmental Journal", href: "/research/departmental-journal" }
+      { label: "MoU", href: "/research/mou" }
     ]
   },
   { label: "Feedback", href: "/feedback" },
