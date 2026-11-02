@@ -43,8 +43,8 @@ export default function Explore() {
             <p className="max-w-xl text-lg leading-8 text-content-muted">
               Since 1999, the Department of Information Technology has brought together classroom learning, practical work and a community of people who share ideas.
             </p>
-            <Link href="/about" className="mt-7 w-fit border-b-2 border-primary pb-2 text-sm font-semibold text-content transition-colors hover:text-primary">
-              Get to know the department <span aria-hidden="true">&rarr;</span>
+            <Link href="/course-curriculum/curriculum" className="mt-7 w-fit border-b-2 border-primary pb-2 text-sm font-semibold text-content transition-colors hover:text-primary">
+              Explore the curriculum <span aria-hidden="true">&rarr;</span>
             </Link>
           </div>
         </div>
