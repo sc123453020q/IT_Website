@@ -14,9 +14,9 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-[760px] flex-col justify-end overflow-hidden bg-[#111827] text-white lg:min-h-[min(920px,100svh)]">
       <div className="absolute inset-0">
-        <Image src="/images/bg_1.jpg" alt="IEM students and faculty at HackOasis" fill priority sizes="100vw" className="object-cover object-center" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#101827]/90 via-[#101827]/55 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#101827]/85 via-transparent to-[#101827]/25" />
+        <Image src="/images/hero_bg.jpg" alt="IEM Department of Information Technology students and faculty" fill priority sizes="100vw" className="object-cover object-center" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#101827]/80 via-[#101827]/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#101827]/75 via-transparent to-[#101827]/15" />
       </div>
       <div className="relative mx-auto w-full max-w-[1440px] px-5 pb-12 pt-40 sm:px-8 lg:px-10 lg:pb-16">
         <motion.div className="max-w-5xl" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>
