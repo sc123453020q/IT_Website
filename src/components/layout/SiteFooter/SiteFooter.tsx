@@ -59,8 +59,14 @@ export default function SiteFooter() {
         </div>
         <div className="flex flex-col gap-3 pt-7 text-xs text-white/55 sm:flex-row sm:justify-between">
           <p>© {new Date().getFullYear()} Department of Information Technology, IEM.</p>
-          <p>Gurukul, Sector V, Salt Lake, Kolkata 700091</p>
+          <p>IEM Gurukul, Sector V, Salt Lake, Kolkata 700091</p>
         </div>
+        <p className="mt-4 text-xs leading-6 text-white/55">
+          Designed and Developed by{" "}
+          <a href="https://www.linkedin.com/in/saraswata-chatterjee-b560972b3/" target="_blank" rel="noopener noreferrer" className="font-medium text-white/85 underline decoration-white/30 underline-offset-4 transition-colors hover:text-white hover:decoration-white">Saraswata Chatterjee</a>
+          {" and "}
+          <a href="https://www.linkedin.com/in/debanurag" target="_blank" rel="noopener noreferrer" className="font-medium text-white/85 underline decoration-white/30 underline-offset-4 transition-colors hover:text-white hover:decoration-white">Anurag Deb</a>
+        </p>
       </div>
     </footer>
   );
